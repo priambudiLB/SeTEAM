@@ -1,6 +1,5 @@
-# SeTEAM
-
-Repository for team SeTEAM Binar Academy FSW Wave 12
+<h1 align="center">SeTEAM</h1>
+<p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
 
 <p align="center">
 
