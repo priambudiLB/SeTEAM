@@ -1,4 +1,6 @@
-<h1 align="center">SeTEAM</h1>
+<h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
+</a></h1>
 <p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
 
 <p align="center">
