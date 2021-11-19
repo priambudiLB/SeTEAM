@@ -1,7 +1,3 @@
-# SeTEAM
-
-# Repository for team SeTEAM Binar Academy FSW Wave 12
-
 <h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=alert_status">
 </a></h1>
