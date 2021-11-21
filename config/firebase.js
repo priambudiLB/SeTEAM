@@ -1,17 +1,29 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {initializeApp} from "firebase/app";
+import {getAuth} from 'firebase/auth'
+import {getFireStore} from 'firebase/firestore'
 
-const firebaseConfig = {
-  apiKey: process.env.local.frb_key,
-  authDomain: process.env.local.frb_authDomain,
-  projectId: process.env.local.frb_projectId,
-  storageBucket: process.env.local.frb_storageBucke,
-  messagingSenderId: process.env.local.frb_messaginSenderId,
-  appId: process.env.local.frb_appId,
-  measurementId: process.env.local.frb_measurementId
-};
+const firebaseConfig = initializeApp({
+  apiKey: process.env.frb_key,
+  authDomain: process.env.frb_authDomain,
+  projectId: process.env.frb_projectId,
+  storageBucket: process.env.frb_storageBucke,
+  messagingSenderId: process.env.frb_messaginSenderId,
+  appId: process.env.frb_appId,
+  measurementId: process.env.frb_measurementId
+});
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// firebase.initializeApp(firebaseConfig);
 
-export default firebase
+const auth = getAuth(firebaseConfig)
+const db = getFireStore
+
+// detect auth state
+onAuthStateChanged(auth, user =>{
+  if(user!=null){
+    console.log('login')
+  } else {
+    console.log('No user')
+  }
+})
+
+export default firebase;

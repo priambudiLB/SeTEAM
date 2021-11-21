@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
   FormHelperText,Button,Heading,Center} from "@chakra-ui/react"
 
-export default function Login() {
+export default function Signin() {
   const [error, setError] = useState("");
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -20,7 +20,7 @@ export default function Login() {
     </GridItem>
     <GridItem colSpan={2} bg="gainsboro">
     
-        <Heading className={styles.textSignUp}>Sign Up</Heading>
+        <Heading className={styles.textSignUp}>Sign In</Heading>
         {error && <Alert variant="danger">{error}</Alert>}
 
 
@@ -35,13 +35,15 @@ export default function Login() {
             <Input type="password" placeholder='Password' ref={passwordRef} w="250px" isRequired />
             </FormControl>
 
-            
-            
-            <Button colorScheme="teal" mr="4" h="30px" w="70px"  padding="5px">
-              Sign Up
+            <Button colorScheme="teal" mr="4" h="30px" w="70px"  className={styles.btn}>
+              Sign In
             </Button>
+    
+            
     </GridItem>
+   
   </Grid>
-         </form>
+  
+  </form>
          
     )}

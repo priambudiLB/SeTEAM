@@ -1,10 +1,14 @@
 import styles from '../styles/signup.module.css'
 import { useState,useRef } from "react";
+import {useHistory} from 'react-router-dom'
 import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
-  FormHelperText,Button,Heading,Center} from "@chakra-ui/react"
-import firebase from '../config/firebase'
+  FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
+import firestore from "../config/firebase";
+import {getAuth,createUserWithEmailAndPassword} from 'firebase/auth'
+// const firebaseAuthentication = firebase.auth();
 
+// firebase.initializeApp(firebaseClient,firebaseAuthentication)
 
 export default function SignUp() {
   const [error, setError] = useState("");
@@ -12,27 +16,30 @@ export default function SignUp() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const confPassRef = useRef()
-  const firebaseAuth = firebase.auth()
+  // const history = useHistory();
   
-  async function handleSubmit(){
-    
+
+  async function handleSubmit(e){
+    e.preventDefault()
     if (passwordRef.current.value!==confPassRef.current.value){
         return setError("Invalid Credential")
     }
-    firebaseAuth
-    .createUserWithEmailAndPassword(
+     firestore.auth().createUserWithEmailAndPassword(
         emailRef.current.value,passwordRef.current.value)
         .then((res)=>{
-            firebaseAuth.currentUser
+          firestore.currentUser
             .sendEmailVerification()
-            .then(()=>{
-                <Alert status="success">
-                <AlertIcon />
-                Data uploaded to the server. Fire on!
-              </Alert>
-              push('./login')
-
+            .then(() => {
+              alert("Please Kindly Check Your Email");
+              history.push("/signin");
             })
+            .catch((error) => {
+              setError("Login Failed Check your Credential");
+            });
+        })
+        .catch((err) => {
+          alert(err.message);
+        
         })
   }
   return (
@@ -50,26 +57,42 @@ export default function SignUp() {
 
             <FormControl id="fullname"  >
             <FormLabel padding="3px"><Center>Username</Center></FormLabel>
-            <Input type="text"placeholder='Username' ref={usernameRef}  w="250px" isRequired/>
+            <Input type="text"
+            placeholder='Username' 
+            ref={usernameRef}  
+            w="250px" 
+            isRequired/>
             </FormControl> 
 
             <FormControl id="email" >
             <FormLabel  padding="3px" ><Center>Email address</Center></FormLabel>
-            <Input type="email" placeholder='Email@email.com' ref={emailRef} w="250px" isRequired />
+            <Input type="email" 
+            placeholder='Email@email.com' 
+            ref={emailRef} 
+            w="250px" 
+            isRequired />
             <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl id="password" >
             <FormLabel   padding="3px"><Center>Passwords</Center></FormLabel>
-            <Input type="password" placeholder='Password' ref={passwordRef} w="250px" isRequired  />
+            <Input type="password" 
+            placeholder='Password' 
+            ref={passwordRef}
+            w="250px" 
+            isRequired  />
             </FormControl>
 
             <FormControl id="confirmPass"  >
             <FormLabel  padding="3px"><Center>Confirm Password</Center></FormLabel>
-            <Input type="password" placeholder='Confirm your password' ref={confPassRef} w="250px" isRequired />
+            <Input type="password" 
+            placeholder='Confirm your password' 
+            ref={confPassRef} 
+            w="250px" 
+            isRequired />
             </FormControl>
 
-            <Button colorScheme="teal" mr="4" h="30px" w="70px"  padding="5px">
+            <Button colorScheme="teal" mr="4" h="30px" w="70px" onClick={handleSubmit}  padding="5px">
               Sign Up
             </Button>
     </GridItem>
