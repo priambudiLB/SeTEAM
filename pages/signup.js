@@ -1,13 +1,11 @@
 import styles from '../styles/signup.module.css'
-// import { NextResponse, NextRequest } from 'next/server'
 import { useState,useRef } from "react";
 import {useRouter} from 'next/router'
 import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
   FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
-  
 import firebase from '../config/firebase';
-// import { redirect } from 'next/dist/server/api-utils';
+
 
 const firebaseAuthentication = firebase.auth();
 
@@ -19,7 +17,7 @@ export default function SignUp() {
   const passwordRef = useRef()
   const confPassRef = useRef()
   const router = useRouter()
-  // const { pathname } = req.nextUrl
+  
   
 
   async function handleSubmit(e){
@@ -45,6 +43,12 @@ export default function SignUp() {
           alert(err.message);
         
         })
+  }
+
+  async function handleDB(){
+    if(usernameRef.current.value,emailRef.current.value,passwordRef.current.value !=null){
+      console.log(+usernameRef,emailRef,passwordRef)
+    }
   }
   return (
          <form className={styles.container}>
