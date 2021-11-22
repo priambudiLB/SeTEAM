@@ -1,12 +1,16 @@
 {
-  "name": "challenge-chapter-10",
-  "private": true,
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@chakra-ui/icons": "^1.1.1",

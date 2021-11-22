@@ -45,7 +45,7 @@ const CourseCreate = () => {
       } catch (err) {
         console.log(err);
         setValues({ ...values, loading: false });
-        toast("Image upload failed");
+        toast("Image upload failed. Try later.");
       }
     });
   };
@@ -62,7 +62,7 @@ const CourseCreate = () => {
     } catch (err) {
       console.log(err);
       setValues({ ...values, loading: false });
-      toast("Image upload failed");
+      toast("Image upload failed. Try later.");
     }
   };
 
@@ -96,7 +96,9 @@ const CourseCreate = () => {
           handleImageRemove={handleImageRemove}
         />
       </div>
+      <pre>{JSON.stringify(values, null, 4)}</pre>
       <hr />
+      <pre>{JSON.stringify(image, null, 4)}</pre>
     </InstructorRoute>
   );
 };

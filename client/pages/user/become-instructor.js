@@ -35,7 +35,7 @@ const BecomeInstructor = () => {
 
   return (
     <>
-      <h1 className="jumbotron text-center square">Become Instructor</h1>
+      <h1>Become Instructor</h1>
 
       <div className="container">
         <div className="row">       
