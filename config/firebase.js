@@ -1,8 +1,6 @@
-import {initializeApp} from "firebase/app";
-import {getAuth} from 'firebase/auth'
-import {getFireStore} from 'firebase/firestore'
+import firebase from "firebase";
 
-const firebaseConfig = initializeApp({
+const firebaseConfig = ({
   apiKey: process.env.frb_key,
   authDomain: process.env.frb_authDomain,
   projectId: process.env.frb_projectId,
@@ -12,18 +10,9 @@ const firebaseConfig = initializeApp({
   measurementId: process.env.frb_measurementId
 });
 
-// firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-const auth = getAuth(firebaseConfig)
-const db = getFireStore
 
-// detect auth state
-onAuthStateChanged(auth, user =>{
-  if(user!=null){
-    console.log('login')
-  } else {
-    console.log('No user')
-  }
-})
+
 
 export default firebase;
