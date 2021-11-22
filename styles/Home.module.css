@@ -1,12 +1,29 @@
-.container {
-  padding: 0 2rem;
+.title-homepage {
+  color: brown;
 }
+
+
+
+.container {
+  padding:0 2rem;
+}
+/* <<<<<<< krisna/authlandpage */
 .btnColor{
   background-color: turquoise;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 10px;
 }
+
+
+.table_width {
+  padding: 0 20rem;
+  padding-left: 50px;
+}
+
+
+
+/* >>>>>>> branch_lkm */
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -118,4 +135,41 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+
+
+.sidebar-items:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebar-items {
+    margin-bottom: 0 !important;
+  }
+}
+
+.sidebar-items {
+  color: gray;
+  font-size: large;
+}
+
+.sidebar-items p {
+  margin-left: 1em;
+}
+
+.sidebar-items:hover svg {
+  color: #B57295;
+}
+
+.sidebar-items:hover p {
+  color: #fff;
+}
+
+.active {
+  color: #fff;
+}
+
+.active-icon {
+  color: #B57295 !important;
 }
