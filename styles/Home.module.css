@@ -7,6 +7,14 @@
 .container {
   padding:0 2rem;
 }
+/* <<<<<<< krisna/authlandpage */
+.btnColor{
+  background-color: turquoise;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+}
+
 
 .table_width {
   padding: 0 20rem;
@@ -15,6 +23,7 @@
 
 
 
+/* >>>>>>> branch_lkm */
 .main {
   min-height: 100vh;
   padding: 4rem 0;

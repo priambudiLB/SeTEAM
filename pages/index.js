@@ -9,5 +9,6 @@ export default function Home() {
       <Header/>
       <h1 className={styles["title-homepage"]}> Welcome Lukman</h1>
     </>
+
   )
 }
