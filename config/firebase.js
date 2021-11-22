@@ -1,18 +1,20 @@
 import firebase from "firebase";
 
-const firebaseConfig = ({
-  apiKey: process.env.frb_key,
-  authDomain: process.env.frb_authDomain,
-  projectId: process.env.frb_projectId,
-  storageBucket: process.env.frb_storageBucke,
-  messagingSenderId: process.env.frb_messaginSenderId,
-  appId: process.env.frb_appId,
-  measurementId: process.env.frb_measurementId
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyCoe2_uc-ZdeKdLPnvyBMdv6-pmnD96Tiw",
+  authDomain: "auth-sinau-cp10.firebaseapp.com",
+  projectId: "auth-sinau-cp10",
+  storageBucket: "auth-sinau-cp10.appspot.com",
+  messagingSenderId: "264099407276",
+  appId: "1:264099407276:web:c948783fa8cb958a698609",
+  measurementId: "G-FLW7CPTEQV"
+};
+// envnya ga mau jalan
 
-firebase.initializeApp(firebaseConfig);
-
-
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+// firebase.initializeApp(firebaseConfig);
 
 
 export default firebase;

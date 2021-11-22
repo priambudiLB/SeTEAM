@@ -1,155 +1,106 @@
-import React, { useState, useRef } from "react";
-import { Form, Button, Container, Alert } from "react-bootstrap";
+import styles from '../styles/signup.module.css'
+// import { NextResponse, NextRequest } from 'next/server'
+import { useState,useRef } from "react";
+import {useRouter} from 'next/router'
+import Image from 'next/image'
+import {FormControl,FormLabel,GridItem,Input,Grid,
+  FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
+  
+import firebase from '../config/firebase';
+// import { redirect } from 'next/dist/server/api-utils';
 
-import { Link, useHistory } from "react-router-dom";
-import firebase from "../config/firebase";
 const firebaseAuthentication = firebase.auth();
-const firebaseFirestore = firebase.firestore();
 
-// logic 2
-export default function Register() {
+
+export default function SignUp() {
   const [error, setError] = useState("");
+  const usernameRef = useRef()
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  const confPassRef = useRef()
+  const router = useRouter()
+  // const { pathname } = req.nextUrl
+  
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [desc, setDesc] = useState("");
-
-  const passwordRef = useRef();
-  const confirmPassRef = useRef();
-  const emailRef = useRef();
-  const usernameRef = useRef();
-  const history = useHistory;
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (passwordRef.current.value !== confirmPassRef.current.value) {
-      return setError("Password Did Not Match");
+  async function handleSubmit(e){
+    e.preventDefault()
+    if (passwordRef.current.value!==confPassRef.current.value){
+        return setError("Invalid Credential")
     }
-
-    // Add data to the store
-    firebaseFirestore
-      .collection("players")
-      .add({
-        Username: username,
-        Email: email,
-        Description: desc,
-      })
-      .then((docRef) => {
-        console.log("Data Successfully Submitted");
-      })
-      .catch((error) => {
-        console.error("Error adding document: ", error);
-      });
-
-    firebaseAuthentication
-      .createUserWithEmailAndPassword(
-        emailRef.current.value,
-        passwordRef.current.value
-      )
-      .then((res) => {
-        firebaseAuthentication.currentUser
-          .sendEmailVerification()
-          .then(() => {
-            alert("Please Kindly Check Your Email");
-            history.push("/login");
-          })
-          .catch((error) => {
-            setError("Login Failed Check your Credential");
-          });
-      })
-      .catch((err) => {
-        alert(err.message);
-      });
+     firebaseAuthentication.createUserWithEmailAndPassword(
+        emailRef.current.value,passwordRef.current.value)
+        .then((res)=>{
+          firebaseAuthentication.currentUser
+            .sendEmailVerification()
+            .then(() => {
+              alert("Please Kindly Check Your Email")
+             router.push('/signin')
+              
+            })
+            .catch((error) => {
+              setError("Login Failed Check your Credential");
+            });
+        })
+        .catch((err) => {
+          alert(err.message);
+        
+        })
   }
-
   return (
-    <Container className="registerbg">
-      <Form className="register" onSubmit={handleSubmit}>
-        <h1 className="textsignup">Sign Up</h1>
+         <form className={styles.container}>
+   <Grid h="400px" templateRows="repeat(1, 1fr)"templateColumns="repeat(4, 1fr)"
+    gap={0} id='grid'>
+      
+    <GridItem rowSpan={1} colSpan={2} bg="darkgrey" w="700px" >
+    <Image src='/pic.jpg' className='img-box' width={700} height={450}/>
+    </GridItem>
+    <GridItem colSpan={2} bg="gainsboro">
+    
+        <Heading className={styles.textSignUp}>Sign Up</Heading>
         {error && <Alert variant="danger">{error}</Alert>}
 
-        <Form.Group
-          className="mb-3"
-          controlId="username"
-          style={{ color: "white" }}
-        >
-          <Form.Label style={{ fontSize: "medium" }}>Username</Form.Label>
-          <Form.Control
-            type="username"
-            ref={usernameRef}
-            placeholder="Username"
-            name="username"
-            required
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-          />
-          <Form.Text></Form.Text>
-        </Form.Group>
+            <FormControl id="fullname"  >
+            <FormLabel padding="3px"><Center>Username</Center></FormLabel>
+            <Input type="text"
+            placeholder='Username' 
+            ref={usernameRef}  
+            w="250px" 
+            isRequired/>
+            </FormControl> 
 
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label style={{ fontSize: "medium" }}>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            ref={emailRef}
-            placeholder="Example@email.com"
-            name="email"
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <Form.Text></Form.Text>
-        </Form.Group>
+            <FormControl id="email" >
+            <FormLabel  padding="3px" ><Center>Email address</Center></FormLabel>
+            <Input type="email" 
+            placeholder='Email@email.com' 
+            ref={emailRef} 
+            w="250px" 
+            isRequired />
+            <FormHelperText>We'll never share your email.</FormHelperText>
+            </FormControl>
 
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label style={{ fontSize: "medium" }}>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Password"
+            <FormControl id="password" >
+            <FormLabel   padding="3px"><Center>Passwords</Center></FormLabel>
+            <Input type="password" 
+            placeholder='Password' 
             ref={passwordRef}
-            name="password"
-            required
-          />
-        </Form.Group>
-        <Form.Text></Form.Text>
+            w="250px" 
+            isRequired  />
+            </FormControl>
 
-        <Form.Group className="mb-3" controlId="confirmpassword">
-          <Form.Label style={{ fontSize: "medium" }}>
-            Confirm Password
-          </Form.Label>
-          <Form.Control
-            type="password"
-            ref={confirmPassRef}
-            name="confirmpass"
-            placeholder="Confirm Password"
-            required
-          />
-          <Form.Text></Form.Text>
-        </Form.Group>
-        <Form>
-          {["checkbox"].map((type) => (
-            <div key={`inline-${type}`} className="mb-3">
-              <Form.Check
-                inline
-                label="I Already Agree with Terms and Conditions"
-                name="group1"
-                type={type}
-                id={`inline-${type}-1`}
-                required
-              />
-            </div>
-          ))}
-        </Form>
-        <Button type="submit">Sign Up</Button>
+            <FormControl id="confirmPass"  >
+            <FormLabel  padding="3px"><Center>Confirm Password</Center></FormLabel>
+            <Input type="password" 
+            placeholder='Confirm your password' 
+            ref={confPassRef} 
+            w="250px" 
+            isRequired />
+            </FormControl>
 
-        <p style={{ color: "white", fontSize: "small" }}>
-          Have an account ?{" "}
-          <Link to="/login" style={{ color: "white" }}>
-            Login here
-          </Link>
-        </p>
-      </Form>
-    </Container>
-  );
-}
+            <Button  colorScheme="teal" mr="4" h="30px" w="70px" onClick={handleSubmit}  padding="5px">
+              Sign Up
+            </Button>
+    </GridItem>
+  </Grid>
+         </form>
+         
+    )}
