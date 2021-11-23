@@ -20,10 +20,6 @@ import {
 import { Progress } from "@chakra-ui/react"
 
 
-
-
-
-
 const ProgressDashboard = () => {
 
 

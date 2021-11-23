@@ -46,9 +46,9 @@ import StudentDashboard from "./StudentDashboard";
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashboard/index';
 
-
 function dashboard() {
     const [value, changeValue] = useState(1)
+
     const themeColor = "#B2F5EA";
     const fontColor = "#@30c040";
     return (
@@ -97,8 +97,8 @@ function dashboard() {
                                 <Link display={["none", "none", "flex", "flex", "flex"]} >
                                     <Icon as={FiHome} fontSize="2xl" className="active-icon" />
                                 </Link>
-                                <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-                                    <Text className="active" ml={3} ><a href="/">Home</a></Text>
+                                <Link href="/" _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
+                                    <Text className="active" ml={3} >Home</Text>
                                 </Link>
                             </Flex>
                             <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
