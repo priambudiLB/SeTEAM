@@ -5,9 +5,9 @@ import { Text } from '@chakra-ui/layout';
 
 export default function footer() {
     return (
-        <Box as="footer" role="contentinfo" mx="auto" pt="40" px={{ base: '4', md: '8' }}>
+        <Box as="footer" role="contentinfo" mx="auto" pt="180px" px={{ base: '4', md:"8" }}>
             <Stack justify="space-between">
-                <Stack alignSelf={{ base: 'center', sm: 'end'}}>
+                <Stack alignSelf={{ base: 'center', sm: 'start'}}>
                     <ButtonGroup variant="ghost" color="gray.600">
                         <IconButton as="a" href="#" aria-label="Facebook" icon={<FaFacebook fontSize="20px" />} />
                         <IconButton as="a" href="#" aria-label="Instagram" icon={<FaInstagram fontSize="20px" />} />
@@ -15,8 +15,8 @@ export default function footer() {
                         <IconButton as="a" href="#" aria-label="Youtube" icon={<FaYoutube fontSize="20px" />} />
                     </ButtonGroup>
                 </Stack>
-                <Text alignSelf={{ base: 'center', sm: 'start' }} fontSize="sm">
-                    &copy; {new Date().getFullYear()} SeTEAM
+                <Text alignSelf={{ base: 'center', sm: 'end' }} fontSize="sm">
+                    &copy; SeTEAM
                 </Text>
             </Stack>
         </Box>
