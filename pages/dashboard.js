@@ -20,11 +20,17 @@ import {
     Button,
     Input,
     InputGroup,
-    InputLeftElement
+    InputLeftElement,
+    Stack,
+    HStack,
+    VStack,
 } from '@chakra-ui/react'
+
+
 import {
     FiHome,
     FiPieChart,
+    FiBook,
     FiDollarSign,
     FiBox,
     FiCalendar,
@@ -33,15 +39,18 @@ import {
     FiPlus,
     FiCreditCard,
     FiSearch,
+    FiUsers,
     FiBell
 } from "react-icons/fi"
 import StudentDashboard from "./StudentDashboard";
 import { useState } from "react";
+import ProgressDashboard from '../components/ProgressDashboard/index';
 
 
 function dashboard() {
     const [value, changeValue] = useState(1)
     const themeColor = "#B2F5EA";
+    const fontColor = "#@30c040";
     return (
         <Flex
             h={[null, null, "100vh"]}
@@ -54,13 +63,14 @@ function dashboard() {
                 w={["100%", "100%", "10%", "15%", "15%"]}
                 flexDir="column"
                 alignItems="center"
-                backgroundColor="#020202"
-                color="#fff"
+                bgColor="#F5F5F5"
+                color=""
             >
                 <Flex
                     flexDir="column"
                     h={[null, null, "100vh"]}
                     justifyContent="space-between"
+                    color={fontColor}
                 >
                     <Flex
                         flexDir="column"
@@ -81,39 +91,34 @@ function dashboard() {
                             align={["center", "center", "center", "flex-start", "flex-start"]}
                             wrap={["wrap", "wrap", "nowrap", "nowrap", "nowrap"]}
                             justifyContent="center"
+
                         >
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
-                                <Link display={["none", "none", "flex", "flex", "flex"]}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
+                                <Link display={["none", "none", "flex", "flex", "flex"]} >
                                     <Icon as={FiHome} fontSize="2xl" className="active-icon" />
                                 </Link>
                                 <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-                                    <Text className="active"><a href="/">Home</a></Text>
+                                    <Text className="active" ml={3} ><a href="/">Home</a></Text>
                                 </Link>
                             </Flex>
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                                    <Icon as={FiPieChart} fontSize="2xl" />
+                                    <Icon as={FiBook} fontSize="2xl" />
                                 </Link>
                                 <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-                                    <Text>Other Courses</Text>
+                                    <Text ml={3}>Other Courses</Text>
                                 </Link>
                             </Flex>
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                                    {/* <Icon as={FiDollarSign} fontSize="2xl" /> */}
+                                    <Icon as={FiUsers} fontSize="2xl" />
                                 </Link>
                                 <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-                                    <Text>Instructor</Text>
+                                    <Text ml={3}>Instructor</Text>
                                 </Link>
                             </Flex>
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
-                                <Link display={["none", "none", "flex", "flex", "flex"]}>
-                                    {/* <Icon as={FiBox} fontSize="2xl" /> */}
-                                    </Link>
-                                <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-                                    <Text>xxxxxx</Text>
-                                </Link>
-                            </Flex>
+
+
                         </Flex>
                     </Flex>
                     <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
@@ -129,21 +134,31 @@ function dashboard() {
 
             {/* col 2 */}
             <Flex
-                width={["100%", "100%", "60%", "60%", "55%"]}
-                padding="3%"
-                flexDir="column"
-                overflow="auto"
-                minH="100vh"
-            >
-                <Heading
-                    fontWeight="normal"
-                    margin-bottom={4}
-                    letterSpacing="tight"
+            
+            w={["100%", "100%", "60%", "60%", "55%"]}
+            p="3%"
+            flexDir="column"
+            overflow="auto"
+            minH="100vh">
+                <VStack
+                    spacing={4}
+                    align="stretch"
                 >
-                    Welcome back, <Flex display="inline-flex" fontWeight="bold">WOKEDOKE</Flex>
-                </Heading>
+                    <Box >
+                        <Heading
+                            fontWeight="normal"
+                            mb={4}
+                            letterSpacing="tight"
+                            color={fontColor}
+                        >
+                            Welcome back, <Flex display="inline-flex" fontWeight="bold">WOKEDOKE</Flex>
+                        </Heading>
+                    </Box>
+                    <Box >
+                        <ProgressDashboard />
+                    </Box>
 
-                <StudentDashboard />
+                </VStack>
             </Flex>
 
             {/* col 3 */}
@@ -153,16 +168,17 @@ function dashboard() {
                 flexDirection="column"
                 overflow="auto"
                 minWidth={[null, null, "300px", "300px", "400px"]}
+                color={fontColor}
             >
                 <Flex >
                     <InputGroup bgColor="#fff" mb={4} border="none" borderColor="#fff" borderRadius="10px" mr={2}>
                         <InputLeftElement
                             pointerEvents="none"
-                          
+
                         />
                         <Input type="string" placeholder="Find Course" borderRadius="10px" />
                     </InputGroup>
-                    
+
                     <IconButton icon={<FiBell />} fontSize="sm" bgColor="#fff" borderRadius="50%" padding="10px" />
 
                     <Flex
@@ -170,7 +186,7 @@ function dashboard() {
                         height={25}
                         bgColor={themeColor}
                         borderRadius="50%"
-                        color="black"
+                        color="#0e0e0e"
                         align="center"
                         justify="center"
                         margin-left="-3"
@@ -206,7 +222,7 @@ function dashboard() {
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
-                                        <Text textTransform="uppercase" fontSize="xs">Course Instructor</Text>
+                                        <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
                                         {/* <Text fontSize="lg">12/23</Text> */}
                                     </Flex>
                                     <Flex flexDir="column">
@@ -225,12 +241,12 @@ function dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-                        bgGradient="linear(to-t, yellow.300, blue.500)"
+                        backgroundColor={themeColor}
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
                             <Flex justify="space-between" w="100%" align="flex-start">
                                 <Flex flexDir="column">
-                                <Text color="#1C4532">Python</Text>
+                                    <Text color="#1C4532">Python</Text>
                                     <Text fontWeight="bold" fontSize="xl">Rp.50.000,00</Text>
                                 </Flex>
                                 <Flex align="center">
@@ -242,7 +258,7 @@ function dashboard() {
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
-                                        <Text textTransform="uppercase" fontSize="xs">Course Instructor</Text>
+                                        <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
                                         {/* <Text fontSize="lg">9/24</Text> */}
                                     </Flex>
                                     <Flex flexDir="column">
@@ -261,7 +277,7 @@ function dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-                        bgGradient="linear(to-t, orange.300, pink.600)"
+                        backgroundColor={themeColor}
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
                             <Flex justify="space-between" w="100%" align="flex-start">
@@ -278,7 +294,7 @@ function dashboard() {
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
-                                        <Text textTransform="uppercase" fontSize="xs">Course Instructor</Text>
+                                        <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
                                         {/* <Text fontSize="lg">11/22</Text> */}
                                     </Flex>
                                     <Flex flexDir="column">
@@ -317,7 +333,7 @@ function dashboard() {
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>
-                
+
                 <Text color="gray" mt={4} mb={2}>Sum</Text>
                 <InputGroup>
                     <InputLeftElement
