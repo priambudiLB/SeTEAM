@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+import firebase from "../../client/config/firebase";
 
-const { ObjectId } = mongoose.Schema;
+const { ObjectId } = firebase.Schema;
 
-const lessonSchema = new mongoose.Schema(
+const lessonSchema = new firebase.Schema(
   {
     title: {
       type: String,
@@ -28,7 +28,7 @@ const lessonSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const courseSchema = new mongoose.Schema(
+const courseSchema = new firebase.Schema(
   {
     name: {
       type: String,
@@ -62,4 +62,4 @@ const courseSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Course", courseSchema);
+export default firebase.model("Course", courseSchema);

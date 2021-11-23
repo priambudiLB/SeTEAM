@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-const { Schema } = mongoose;
+import firebase from "../../client/config/firebase";
+const { Schema } = firebase;
 
 const userSchema = new Schema(
   {
@@ -33,4 +33,4 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("User", userSchema);
+export default firebase.model("User", userSchema);

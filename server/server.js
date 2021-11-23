@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { readdirSync } from "fs";
-import mongoose from "mongoose";
+import firebase from "../client/config/firebase";
 import csrf from "csurf";
 import cookieParser from "cookie-parser";
 const morgan = require("morgan");
@@ -13,7 +13,7 @@ const csrfProtection = csrf({ cookie: true });
 const app = express();
 
 // db
-mongoose
+firebase
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useFindAndModify: false,
