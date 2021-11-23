@@ -35,8 +35,9 @@ const ProgressDashboard = () => {
       <Container >
 
         <Flex>
-          <Table>
 
+          <Table variant="simple">
+            <TableCaption placement="top" fontSize="large"> Course Progress.</TableCaption>
             <Thead>
               <Th>
                 No
@@ -68,13 +69,13 @@ const ProgressDashboard = () => {
               </Tr>
               <Tr>
                 <Td>
-                  1
+                  2
                 </Td>
                 <Td>
-                  Python3
+                  Database
                 </Td>
                 <Td>
-                  Ben
+                  Ron
                 </Td>
                 <Td>
                   <Progress hasStripe value={64} />

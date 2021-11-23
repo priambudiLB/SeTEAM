@@ -63,8 +63,8 @@ function dashboard() {
                 w={["100%", "100%", "10%", "15%", "15%"]}
                 flexDir="column"
                 alignItems="center"
-                bgColor="#F5F5F5"
-                color=""
+                bgColor="#171A21"
+                color="#FFF"
             >
                 <Flex
                     flexDir="column"
@@ -93,7 +93,7 @@ function dashboard() {
                             justifyContent="center"
 
                         >
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]} >
                                     <Icon as={FiHome} fontSize="2xl" className="active-icon" />
                                 </Link>
@@ -101,7 +101,7 @@ function dashboard() {
                                     <Text className="active" ml={3} ><a href="/">Home</a></Text>
                                 </Link>
                             </Flex>
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]}>
                                     <Icon as={FiBook} fontSize="2xl" />
                                 </Link>
@@ -109,7 +109,7 @@ function dashboard() {
                                     <Text ml={3}>Other Courses</Text>
                                 </Link>
                             </Flex>
-                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={3}>
+                            <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]}>
                                     <Icon as={FiUsers} fontSize="2xl" />
                                 </Link>
@@ -127,7 +127,7 @@ function dashboard() {
 
                         {/* USING REDUX IN THIS "CALVIN PART" !!!!!!!!!!!!!!!!!!*/}
 
-                        <Text textAlign="center">WOKEDOKE</Text>
+                        <Text textAlign="center">TEST REDUX</Text>
                     </Flex>
                 </Flex>
             </Flex>
@@ -151,7 +151,7 @@ function dashboard() {
                             letterSpacing="tight"
                             color={fontColor}
                         >
-                            Welcome back, <Flex display="inline-flex" fontWeight="bold">WOKEDOKE</Flex>
+                            Welcome back, <Flex display="inline-flex" fontWeight="bold">TEST REDUX</Flex>
                         </Heading>
                     </Box>
                     <Box >
@@ -164,14 +164,14 @@ function dashboard() {
             {/* col 3 */}
             <Flex
                 width={["100%", "100%", "30%"]}
-                bgColor="#F5F5F5" padding="3%"
+                bgColor="#171A21" padding="3%"
                 flexDirection="column"
                 overflow="auto"
                 minWidth={[null, null, "300px", "300px", "400px"]}
-                color={fontColor}
+                color="#FFF"
             >
                 <Flex >
-                    <InputGroup bgColor="#fff" mb={4} border="none" borderColor="#fff" borderRadius="10px" mr={2}>
+                    <InputGroup bgColor="#171A21" mb={4} border="none" borderColor="#fff" borderRadius="10px" mr={2}>
                         <InputLeftElement
                             pointerEvents="none"
 
@@ -179,22 +179,22 @@ function dashboard() {
                         <Input type="string" placeholder="Find Course" borderRadius="10px" />
                     </InputGroup>
 
-                    <IconButton icon={<FiBell />} fontSize="sm" bgColor="#fff" borderRadius="50%" padding="10px" />
+                    <IconButton icon={<FiBell color="#171A21" />} fontSize="sm" bgColor="#fff" borderRadius="50%" padding="10px" />
 
                     <Flex
                         width={30}
                         height={25}
-                        bgColor={themeColor}
+                        bgColor="#fff"
                         borderRadius="50%"
-                        color="#0e0e0e"
+                        color="#171A21"
                         align="center"
                         justify="center"
                         margin-left="-3"
                         margin-top="-2"
                         zIndex="100"
-                        fontSize="xs"
+                        fontSize="s"
                     >
-                        0
+                        3
                     </Flex>
                 </Flex>
                 <Heading letterSpacing="tight">My Courses</Heading>
@@ -205,7 +205,7 @@ function dashboard() {
                         w="100%"
                         h="150px"
                         // bgGradient="linear(to-t, #B57295, #29259A)"
-                        backgroundColor={themeColor}
+                        backgroundColor="#FFF"
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
                             <Flex justify="space-between" w="100%" align="flex-start">
@@ -241,7 +241,7 @@ function dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-                        backgroundColor={themeColor}
+                        backgroundColor="#FFF"
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
                             <Flex justify="space-between" w="100%" align="flex-start">
@@ -277,7 +277,7 @@ function dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-                        backgroundColor={themeColor}
+                        backgroundColor="#FFF"
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
                             <Flex justify="space-between" w="100%" align="flex-start">
