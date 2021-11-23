@@ -44,12 +44,13 @@ const Login = () => {
 
   return (
     <>
-      <h1>Login</h1>
+      <h1 className="jumbotron text-center bg-primary square">Login</h1>
 
-      <div>
+      <div className="container col-md-4 offset-md-4 pb-5">
         <form onSubmit={handleSubmit}>
           <input
             type="email"
+            className="form-control mb-4 p-4"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email"

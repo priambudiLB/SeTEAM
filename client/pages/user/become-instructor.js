@@ -35,10 +35,14 @@ const BecomeInstructor = () => {
 
   return (
     <>
-      <h1>Become Instructor</h1>
+      <h1 className="jumbotron text-center square">Become Instructor</h1>
 
       <div className="container">
-        <div className="row">       
+        <div className="row">  
+          <div className="col-md-6 offset-md-3 text-center">
+            <div className="pt-4">
+            <UserSwitchOutlined className="display-1 pb-3" />
+              <br />   
               <h2>Apply for Instructor</h2>
               <Button
                 className="mb-3"
@@ -57,6 +61,8 @@ const BecomeInstructor = () => {
               </Button>
         </div>
       </div>
+      </div>
+    </div>
     </>
   );
 };

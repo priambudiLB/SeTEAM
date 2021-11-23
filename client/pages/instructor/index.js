@@ -32,15 +32,15 @@ const InstructorIndex = () => {
                 src={course.image ? course.image.Location : "/course.png"}
               />
 
-              <div>
-                <div>
-                  <div>
+              <div className="media-body pl-2">
+                <div className="row">
+                  <div className="col">
                     <Link
                       href={`/instructor/course/view/${course.slug}`}
                       className="pointer"
                     >
-                      <a>
-                        <h5>{course.name}</h5>
+                      <a className="mt-2 text-primary">
+                        <h5 className="pt-2">{course.name}</h5>
                       </a>
                     </Link>
                     <p style={{ marginTop: "-10px" }}>
@@ -48,13 +48,13 @@ const InstructorIndex = () => {
                     </p>
 
                     {course.lessons.length < 1 ? (
-                      <p> At least 1 lessons are required</p>
+                      <p style={myStyle} className="text-warning"> At least 1 lessons are required</p>
                     ) : (
-                      <p> Your course is ready </p>
+                      <p style={myStyle} className="text-success"> Your course is ready </p>
                     )}
                   </div>
 
-                  <div>
+                  <div className="col-md-3 mt-3 text-center">
                     {course.published ? (
                       <Tooltip title="Published">
                         <CheckCircleOutlined className="h5 pointer text-success" />

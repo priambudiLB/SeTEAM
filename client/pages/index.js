@@ -6,6 +6,8 @@ const Index = ({ courses }) => {
   return (
     <>
       <h1 className="jumbotron text-center bg-primary square">
+        SeTeam
+        <br />
         Online Education Marketplace
       </h1>
       <div className="container-fluid">
