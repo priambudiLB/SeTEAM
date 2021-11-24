@@ -2,7 +2,7 @@ import styles from '../styles/signin.module.css'
 import { useState,useRef } from "react";
 import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
-  FormHelperText,Button,Heading,Center} from "@chakra-ui/react"
+  FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
   import firebase from '../config/firebase';
 import {useRouter} from 'next/router';
   const firebaseAuthentication = firebase.auth();  
@@ -37,7 +37,7 @@ export default function Signin() {
     gap={0} id='grid'>
       
     <GridItem rowSpan={1} colSpan={2} bg="darkgrey" w="700px" >
-    <Image src='/pic.jpg' className='img-box' width={700} height={450}/>
+    <Image src='/pic.jpg' alt='frontimage' className='img-box' width={700} height={450}/>
     </GridItem>
     <GridItem colSpan={2} bg="gainsboro">
     
@@ -48,7 +48,7 @@ export default function Signin() {
             <FormControl id="email" className={styles.content} >
             <FormLabel  padding="3px" ><Center>Email address</Center></FormLabel>
             <Input type="email" placeholder='Email@email.com' ref={emailRef} w="250px" isRequired/>
-            <FormHelperText>We'll never share your email.</FormHelperText>
+            <FormHelperText>We will never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl id="password" className={styles.content} >

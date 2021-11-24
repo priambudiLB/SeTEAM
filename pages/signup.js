@@ -66,7 +66,7 @@ export default function SignUp() {
     gap={0} id='grid'>
       
     <GridItem rowSpan={1} colSpan={2} bg="darkgrey" w="700px" >
-    <Image src='/pic.jpg' className='img-box' width={700} height={450}/>
+    <Image src='/pic.jpg' alt='frontimage' className='img-box' width={700} height={450}/>
     </GridItem>
     <GridItem colSpan={2} bg="gainsboro">
     
@@ -90,7 +90,7 @@ export default function SignUp() {
             id="emaill"
             w="250px" 
             isRequired />
-            <FormHelperText>We'll never share your email.</FormHelperText>
+            <FormHelperText>We will never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl id="password" >
