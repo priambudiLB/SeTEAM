@@ -27,7 +27,7 @@ export default function SignUp() {
        password:passwordRef.current.value,
        email:emailRef.current.value
    })
-       console.log('data added to realtime')
+       console.log('This Data was Uploaded to Database')
        
         e.preventDefault()
         if (passwordRef.current.value!==confPassRef.current.value){
