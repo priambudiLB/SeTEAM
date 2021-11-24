@@ -5,7 +5,6 @@ import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
   FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
 import firebase from '../config/firebase';
-import addData,{userDBref} from './userDb';
 
 const firebaseAuthentication = firebase.auth();
 
