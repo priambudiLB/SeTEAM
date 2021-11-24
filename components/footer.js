@@ -1,23 +1,15 @@
 import React from 'react';
-import { Box, Stack, ButtonGroup, IconButton } from '@chakra-ui/react';
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { Box, Stack } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/layout';
 
 export default function footer() {
     return (
-        <Box as="footer" role="contentinfo" mx="auto" pt="180px" px={{ base: '4', md:"8" }}>
-            <Stack justify="space-between">
-                <Stack alignSelf={{ base: 'center', sm: 'start'}}>
-                    <ButtonGroup variant="ghost" color="gray.600">
-                        <IconButton as="a" href="#" aria-label="Facebook" icon={<FaFacebook fontSize="20px" />} />
-                        <IconButton as="a" href="#" aria-label="Instagram" icon={<FaInstagram fontSize="20px" />} />
-                        <IconButton as="a" href="#" aria-label="Twitter" icon={<FaTwitter fontSize="20px" />} />
-                        <IconButton as="a" href="#" aria-label="Youtube" icon={<FaYoutube fontSize="20px" />} />
-                    </ButtonGroup>
-                </Stack>
-                <Text alignSelf={{ base: 'center', sm: 'end' }} fontSize="sm">
-                    &copy; SeTEAM
-                </Text>
+        <Box as="footer" role="contentinfo" mx="auto" mt="230px" pr="5rem" pl="5rem" borderTop="solid" borderBottom="solid" borderWidth="1px" borderColor="black" width="90%">
+            <Stack direction="horizontal" gridGap={5} fontSize="sm">
+                <Text>Home</Text>
+                <Text>About</Text>
+                <Text>Contact Us</Text>
+                <Text>&copy; SeTEAM</Text>
             </Stack>
         </Box>
     )

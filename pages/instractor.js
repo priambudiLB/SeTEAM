@@ -30,10 +30,9 @@ const studentPage = () => {
       <Table variant="simple" colorScheme="white" mt="20px" size="md" w="90%" mx="auto" borderLeft="solid" borderRight="solid" borderWidth="1px">
         <Thead>
           <Tr>
-            <Th>Id</Th>
-            <Th>Student Name</Th>
+            <Th>Instractor Name</Th>
             <Th>Course</Th>
-            <Th>Instructor Name</Th>
+            <Th>Number of student</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -41,16 +40,8 @@ const studentPage = () => {
             <Td></Td>
             <Td></Td>
             <Td></Td>
-            <Td></Td>
           </Tr>
           <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
             <Td></Td>
             <Td></Td>
             <Td></Td>
@@ -59,16 +50,8 @@ const studentPage = () => {
             <Td></Td>
             <Td></Td>
             <Td></Td>
-            <Td></Td>
           </Tr>
           <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
             <Td></Td>
             <Td></Td>
             <Td></Td>
