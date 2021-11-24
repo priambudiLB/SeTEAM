@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import {
   Box,
   Flex,
@@ -17,6 +16,7 @@ import {
   useColorMode,
   Stack,
 } from "@chakra-ui/react";
+
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Links = ["Dashboard", "Projects", "Team"];
