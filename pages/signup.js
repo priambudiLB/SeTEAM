@@ -5,7 +5,7 @@ import Image from 'next/image'
 import {FormControl,FormLabel,GridItem,Input,Grid,
   FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
 import firebase from '../config/firebase';
-
+import addData,{userDBref} from './userDb';
 
 const firebaseAuthentication = firebase.auth();
 
@@ -18,40 +18,51 @@ export default function SignUp() {
   const confPassRef = useRef()
   const router = useRouter()
   
-  
-
-  async function handleSubmit(e){
-    e.preventDefault()
-    if (passwordRef.current.value!==confPassRef.current.value){
-        return setError("Invalid Credential")
-    }
-     firebaseAuthentication.createUserWithEmailAndPassword(
-        emailRef.current.value,passwordRef.current.value)
-        .then((res)=>{
-          firebaseAuthentication.currentUser
-            .sendEmailVerification()
-            .then(() => {
-              alert("Please Kindly Check Your Email")
-             router.push('/signin')
-              
+ 
+  var db = firebase.database()
+  var userDBRef = db.ref('userData')
+  async function addData(e){
+    await userDBRef.push({
+       username:usernameRef.current.value,
+       password:passwordRef.current.value,
+       email:emailRef.current.value
+   })
+       console.log('data added to realtime')
+       
+        e.preventDefault()
+        if (passwordRef.current.value!==confPassRef.current.value){
+            return setError("Invalid Credential")
+        }
+        await firebaseAuthentication.createUserWithEmailAndPassword(
+            emailRef.current.value,passwordRef.current.value)
+            .then((res)=>{
+              firebaseAuthentication.currentUser
+                .sendEmailVerification()
+                .then(() => {
+                  alert("Please Kindly Check Your Email")
+                 router.push('/signin')
+                 
+                })
+                .catch((error) => {
+                  setError("Login Failed Check your Credential");
+                });
             })
-            .catch((error) => {
-              setError("Login Failed Check your Credential");
-            });
-        })
-        .catch((err) => {
-          alert(err.message);
-        
-        })
-  }
+            .catch((err) => {
+              alert(err.message);
+            
+            })
+      
+   }
 
-  async function handleDB(){
-    if(usernameRef.current.value,emailRef.current.value,passwordRef.current.value !=null){
-      console.log(+usernameRef,emailRef,passwordRef)
-    }
-  }
+
   return (
-         <form className={styles.container}>
+         <form className={styles.container}
+         onSubmit={(e)=>{
+          userDBRef.on('child_added',addData)
+      
+     
+         
+         }} >
    <Grid h="400px" templateRows="repeat(1, 1fr)"templateColumns="repeat(4, 1fr)"
     gap={0} id='grid'>
       
@@ -67,7 +78,7 @@ export default function SignUp() {
             <FormLabel padding="3px"><Center>Username</Center></FormLabel>
             <Input type="text"
             placeholder='Username' 
-            ref={usernameRef}  
+            ref={usernameRef}
             w="250px" 
             isRequired/>
             </FormControl> 
@@ -77,6 +88,7 @@ export default function SignUp() {
             <Input type="email" 
             placeholder='Email@email.com' 
             ref={emailRef} 
+            id="emaill"
             w="250px" 
             isRequired />
             <FormHelperText>We'll never share your email.</FormHelperText>
@@ -100,11 +112,12 @@ export default function SignUp() {
             isRequired />
             </FormControl>
 
-            <Button  colorScheme="teal" mr="4" h="30px" w="70px" onClick={handleSubmit}  padding="5px">
+            <Button  colorScheme="teal" mr="4" h="30px" w="70px" id="sendDt" onClick={addData}  padding="5px">
               Sign Up
             </Button>
     </GridItem>
   </Grid>
+  
          </form>
          
     )}
