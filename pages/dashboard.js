@@ -42,7 +42,11 @@ import {
     FiUsers,
     FiBell
 } from "react-icons/fi"
+<<<<<<< HEAD
 
+=======
+import StudentDashboard from "./StudentDashboard";
+>>>>>>> 1fe17f1b685732705eb2a76a7c1ab0031cf4d27f
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashboard/index';
 
@@ -57,7 +61,10 @@ function dashboard() {
             maxW="2000px"
             flexDir={["column", "column", "row"]}
             overflow="hidden"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1fe17f1b685732705eb2a76a7c1ab0031cf4d27f
         >
             {/* col 1 */}
             <Flex
