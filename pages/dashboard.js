@@ -79,7 +79,6 @@ function dashboard() {
                         <Heading
                             mt={50}
                             mb={[25, 50, 100]}
-                            // fontSize={["2xl", "2xl", "1.5xl", "2xl", "2xl",]}
                             fontSize={["4xl", "5xl", "1.5xl", "2xl", "2xl",]}
                             alignSelf="center"
                             letterSpacing="tight"
@@ -223,14 +222,11 @@ function dashboard() {
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
                                         <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
-                                        {/* <Text fontSize="lg">12/23</Text> */}
                                     </Flex>
                                     <Flex flexDir="column">
-                                        {/* <Text textTransform="uppercase" fontSize="xs">CVV</Text> */}
-                                        {/* <Text fontSize="lg">***</Text> */}
+                                       
                                     </Flex>
                                 </Flex>
-                                {/* <Icon as={FiCreditCard} /> */}
                             </Flex>
                         </Flex>
                     </Box>
@@ -250,23 +246,16 @@ function dashboard() {
                                     <Text fontWeight="bold" fontSize="xl">Rp.50.000,00</Text>
                                 </Flex>
                                 <Flex align="center">
-                                    {/* <Icon mr={2} as={FiCreditCard} /> */}
-                                    {/* <Text>Rise.</Text> */}
                                 </Flex>
                             </Flex>
-                            {/* <Text mb={4}>**** **** **** 8956</Text> */}
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
                                         <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
-                                        {/* <Text fontSize="lg">9/24</Text> */}
                                     </Flex>
                                     <Flex flexDir="column">
-                                        {/* <Text textTransform="uppercase" fontSize="xs">CVV</Text> */}
-                                        {/* <Text fontSize="lg">***</Text> */}
                                     </Flex>
                                 </Flex>
-                                {/* <Icon as={FiCreditCard} /> */}
                             </Flex>
                         </Flex>
                     </Box>
@@ -286,23 +275,17 @@ function dashboard() {
                                     <Text fontWeight="bold" fontSize="xl">Rp.100.000,00</Text>
                                 </Flex>
                                 <Flex align="center">
-                                    {/* <Icon mr={2} as={FiCreditCard} /> */}
-                                    {/* <Text>Rise.</Text> */}
                                 </Flex>
                             </Flex>
-                            {/* <Text mb={4}>**** **** **** 8353</Text> */}
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
                                         <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
-                                        {/* <Text fontSize="lg">11/22</Text> */}
+
                                     </Flex>
                                     <Flex flexDir="column">
-                                        {/* <Text textTransform="uppercase" fontSize="xs">CVV</Text> */}
-                                        {/* <Text fontSize="lg">***</Text> */}
                                     </Flex>
                                 </Flex>
-                                {/* <Icon as={FiCreditCard} /> */}
                             </Flex>
                         </Flex>
                     </Box>
@@ -313,14 +296,7 @@ function dashboard() {
                     <Button bgColor={value == 3 ? "gray.600" : "gray.400"} size="xs" mx={1} onClick={() => changeValue(3)} />
                 </Flex>
                 <Flex flexDir="column" my={4}>
-                    {/* <Flex justify="space-between" mb={2}>
-                        <Text>Balance</Text>
-                        <Text fontWeight="bold">$140.42</Text>
-                    </Flex>
-                    <Flex justify="space-between">
-                        <Text>Credit Limit</Text>
-                        <Text fontWeight="bold">$150.00</Text>
-                    </Flex> */}
+                    
                 </Flex>
                 <Heading letterSpacing="tight" size="md" my={4}>Send money to</Heading>
                 <Flex>
