@@ -69,6 +69,7 @@ stack yang kita pake masih ini aja sih
 - [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
 - [chakra-ui](https://chakra-ui.com/)
+- [firebase]
 
 ### Features
 
