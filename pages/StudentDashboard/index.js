@@ -12,7 +12,7 @@ import { connect, useDispatch } from "react-redux";
 import { ADD_COURSE } from "../../redux/actions/student";
 import styles from "../../styles/Home.module.css";
 
-import ProfileUser from "../../components/ProfileUser";
+
 
 const stateToProp = (state) => ({
     state: state,
