@@ -1,11 +1,11 @@
 import styles from '../styles/signin.module.css'
 import { useState,useRef } from "react";
 import Image from 'next/image'
-import {FormControl,FormLabel,GridItem,Input,Grid,
-  FormHelperText,Button,Heading,Center,Alert} from "@chakra-ui/react"
-  import firebase from '../config/firebase';
+import {FormControl,FormLabel,GridItem,Input,Grid } from "@chakra-ui"
+
+import firebase from '../config/firebase';
 import {useRouter} from 'next/router';
-  const firebaseAuthentication = firebase.auth();  
+const firebaseAuthentication = firebase.auth();  
 
 export default function Signin() {
   const [error, setError] = useState("");
