@@ -1,7 +1,7 @@
 import styles from '../styles/signin.module.css'
 import { useState,useRef } from "react";
 import Image from 'next/image'
-import {FormControl,FormLabel,GridItem,Input,Grid } from "@chakra-ui"
+import {FormControl,FormLabel,GridItem,Input,Grid, Head } from "chakrau"
 
 import firebase from '../config/firebase';
 import {useRouter} from 'next/router';
