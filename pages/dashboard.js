@@ -46,7 +46,7 @@ import StudentDashboard from "./StudentDashboard";
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashboard/index';
 
-function dashboard() {
+function Dashboard() {
     const [value, changeValue] = useState(1)
 
     const themeColor = "#B2F5EA";
@@ -321,4 +321,4 @@ function dashboard() {
     )
 }
 
-export default dashboard;
+export default Dashboard;
