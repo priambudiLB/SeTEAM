@@ -1,7 +1,5 @@
 import "../styles/globals.css";
-<<<<<<< HEAD
 
-// 1. import `ChakraProvider` component
 
 
 import { Provider } from "react-redux";

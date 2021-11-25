@@ -124,7 +124,7 @@ function dashboard() {
                         <Avatar my={2} src="avatar-1.jpg" />
 
 
-                        {/* USING REDUX IN THIS "CALVIN PART" !!!!!!!!!!!!!!!!!!*/}
+                    
 
                         <Text textAlign="center">TEST REDUX</Text>
                     </Flex>
@@ -203,7 +203,7 @@ function dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-                        // bgGradient="linear(to-t, #B57295, #29259A)"
+     
                         backgroundColor="#FFF"
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
@@ -213,11 +213,10 @@ function dashboard() {
                                     <Text fontWeight="bold" fontSize="xl">Rp.100.000,00</Text>
                                 </Flex>
                                 <Flex align="center">
-                                    {/* <Icon mr={2} as={FiCreditCard} /> */}
-                                    {/* <Text>Rise.</Text> */}
+                                   
                                 </Flex>
                             </Flex>
-                            {/* <Text mb={4}>**** **** **** 1289</Text> */}
+                         
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
@@ -302,10 +301,7 @@ function dashboard() {
                 <Flex>
                     <AvatarGroup size="md" max={3}>
                         <Avatar src="avatar-2.jpg" />
-                        {/* <Avatar src="avatar-3.jpg" />
-                        <Avatar src="avatar-4.jpg" />
-                        <Avatar src="avatar-4.jpg" />
-                        <Avatar src="avatar-4.jpg" /> */}
+                     
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>
