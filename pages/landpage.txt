@@ -1,0 +1,966 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-75f7e4cfa4053101bbf",applicationID:"898631167"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>LMS - Dashboard</title>
+        <link rel="icon"  href="/favicon.ico?v=211129070939">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/vendor/materialize/dist/css/materialize.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/vendor/circliful/css/jquery.circliful.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/vendor/air-datepicker/dist/css/datepicker.min.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/vendor/tooltipster/dist/css/tooltipster.bundle.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/vendor/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/css/enscroll.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/css/login.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/css/main.css">
+        <link rel="stylesheet" href="https://ithb-lms.harukaedu.com/css/mobile.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
+        <!-- you don't need to keep this, but it's cool for stats! -->
+        <meta name="generator" content="Nanoc 4.1.5">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107121683-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107121683-3');
+</script>        <!-- global config -->
+<script type="text/javascript">
+    var csrfToken = "CWv8qX3FHN4U2KeGOCdF4hJuv3yU6TCveZvYDuNo";
+    var firebaseApiKey = "AIzaSyADHuRkkc3bvTUKYTlPwho7y9QrCn8qsSc";
+    var firebaseAuthDomain = "ithb-production.firebaseapp.com";
+    var databaseUrl = "https://ithb-production.firebaseio.com";
+    var siteUrl = "https://ithb-lms.harukaedu.com";
+    var siteUrlApi = "https://ithb-lms.harukaedu.com/api/lms";
+    var ckeditors = [];
+    var subdomain = "ithb-lms";
+    var pintariaLogoutUrl = "https://pintaria.com/keluar";
+
+    var umsUrlApi = "http://ums.harukaeduapps.com/api/ums/v1/";
+    var currentUser = "89228";
+    var isAdmin = "";
+    var userType = "student";
+    var partnerId = "6";
+    var FCToken = "";
+    var firebaseProjectId = "ithb-production";
+    var firebaseStorageBucket = "";
+    var firebaseMessagingSenderId = "232049614711";
+</script>
+    <script id="ze-snippet" src=" https://static.zdassets.com/ekr/snippet.js?key=9e70c183-e8d5-4ae0-9d32-dc2adc741c16"> </script>
+    </head>
+    <body>
+
+        <div id="main">
+            <div class="page-content dashboard students">
+                <header class="student fixed-header">
+                    <div class="trigger-menu">
+    <i class="material-icons">menu</i>
+</div>
+
+<aside id="main-menu" class="main-menu">
+    <ul class="web-navigation">
+        <li class="course-menu">
+            <a href="#"><i class="material-icons"></i>Course Menu<i class="material-icons">chevron_right</i></a>
+        </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students"><i class="material-icons">dashboard</i>Dashboard</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/study_plans"><i class="material-icons">golf_course</i>Study Plan</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/my_study"><i class="material-icons">assessment</i>My Study</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/news"><i class="material-icons">description</i>News</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/public/events"><i class="material-icons">date_range</i>Calendar</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/theses"><i class="material-icons">book</i>Thesis Title Application Form</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/elibrary"><i class="material-icons">library_books</i>E-Library</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/my_course_histories"><i class="material-icons">history</i>My Course Histories</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/payment_histories"><i class="material-icons">assignment</i>Payment History</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/helpdesk"><i class="material-icons">live_help</i>Helpdesk</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/terms_and_conditions"><i class="material-icons">descriptions</i>Terms and Conditions</a>
+            </li>
+                    <li class="">
+                <a href="https://ithb-lms.harukaedu.com/students/my_transcript"><i class="material-icons">assessment</i>My Transcript</a>
+            </li>
+            </ul>
+
+    <!-- mobile only -->
+    <ul class="mobile-navigation">
+        <li class="public-menu"><a href="#" id="public-menu"><i class="material-icons">chevron_left</i>Public Menu</a></li>
+                                    
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/public/course_info">Course Info</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/public/learning_activity">Learning Activity</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/discussions">Discussion</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/attendances">Attendance</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/analytics">Analytic</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/grades">Grade</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/groupmates">Classmate &amp; Group</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/peer_reviews">Peer Review</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/messages">Message</a>
+                    </li>
+                                            
+                                    <li class="">
+                        <a href="https://ithb-lms.harukaedu.com/students/live-session">Live Session</a>
+                    </li>
+                                        </ul>
+</aside>
+
+<div class="block-overlay"></div>
+
+<h1 class="logo">
+    <a href="https://ithb-lms.harukaedu.com"><img src="https://ithb-lms.harukaedu.com/storage-files/ums%2F6-Institut-Teknologi-Harapan-Bangsa%2Fpartners%2F6%2FLogo_Baru_ITHB_17_HA-19698.png" alt="harukaedu"/></a>
+</h1>
+<h2></h2>
+    <div class="account" id="vue-notifications">
+        <notifications-navbar user-id="89228" notifications-page-url="https://ithb-lms.harukaedu.com/students/notifications"></notifications-navbar>
+        <div class="user">
+            <label>Hi Krisna Dwi Setya Adi</label>
+            <span class="image-wrap"><img src="https://ithb-lms.harukaedu.com/img/profile_pictures/anonymous.png" alt="user pic"/></span>
+        </div>
+                    <a class="toggle-menu dropdown-button" href="#!" data-activates="user-account"><i class="material-icons right">more_vert</i></a>
+                <!-- dropdown menu -->
+        <ul id="user-account" class="dropdown-content">
+                        <li><a href="https://ithb-lms.harukaedu.com/students/profile">Edit Profile</a></li>
+            <li class="divider"></li>
+                            <li onclick="appFirebase.signOut()"><a href="#"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+        </ul>
+    </div>
+                </header>
+
+                <div class="page-title">
+                    <h2><i class="material-icons">dashboard</i>Dashboard &nbsp;&nbsp; &#8212;&#8212;</h2>
+                    <ul class="week">
+                        <li>Section :</li>
+
+                                                    <li class="count-section hide-mobile active"><a href="https://ithb-lms.harukaedu.com/students?section=1">1</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=2">2</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=3">3</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=4">4</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=5">5</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=6">6</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=7">7</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=8">8</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=9">9</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=10">10</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=11">11</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=12">12</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=13">13</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=14">14</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=15">15</a></li>
+                                                    <li class="count-section hide-mobile "><a href="https://ithb-lms.harukaedu.com/students?section=16">16</a></li>
+                        
+                        <!-- mobile only -->
+                        <li class="show-mobile section-picker">
+                            <select onchange="window.location='students?section=' + this.value" class="dropdown-section">
+                                                                    <option value="1" selected>1</option>
+                                                                    <option value="2" >2</option>
+                                                                    <option value="3" >3</option>
+                                                                    <option value="4" >4</option>
+                                                                    <option value="5" >5</option>
+                                                                    <option value="6" >6</option>
+                                                                    <option value="7" >7</option>
+                                                                    <option value="8" >8</option>
+                                                                    <option value="9" >9</option>
+                                                                    <option value="10" >10</option>
+                                                                    <option value="11" >11</option>
+                                                                    <option value="12" >12</option>
+                                                                    <option value="13" >13</option>
+                                                                    <option value="14" >14</option>
+                                                                    <option value="15" >15</option>
+                                                                    <option value="16" >16</option>
+                                                            </select>
+                        </li>
+                    </ul>
+                </div>
+
+                    <div class="main-content">
+        <div class="row">
+            <div class="col s12">
+                <div class="notif-container">
+        <div class="card-panel teal lighten-2">
+        <span class="close">+</span>
+        <span class="white-text">Anda berhasil masuk ke akun Anda.</span>
+    </div>
+    
+    
+    
+    </div>
+            </div>
+        </div>
+
+        <div class="row">
+    <div class="col l9 m12 s12">
+        <div class="left-content">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2><i class="material-icons">timeline</i> Learning Activities</h2>
+                </div>
+                <div class="panel-body learning-activity">
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036?section=1" ">
+                                     <span class="color-secondary">Online</span><br/>                                    Kelas Knowledge Management (&nbsp;DS-505) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426741" class="tooltip" data-tooltip-content="#tooltip_content-0-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-0">
+                                                        <span class="tooltip-text">Pre Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426740" class="tooltip" data-tooltip-content="#tooltip_content-0-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-1">
+                                                        <span class="tooltip-text">Konsep dasar knowledge management</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426739" class="tooltip" data-tooltip-content="#tooltip_content-0-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-2">
+                                                        <span class="tooltip-text">Manfaat knowledge management</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426738" class="tooltip" data-tooltip-content="#tooltip_content-0-3"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-3">
+                                                        <span class="tooltip-text">Knowledge management system</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426737" class="tooltip" data-tooltip-content="#tooltip_content-0-4"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-4">
+                                                        <span class="tooltip-text">Practice Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426736" class="tooltip" data-tooltip-content="#tooltip_content-0-5"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-5">
+                                                        <span class="tooltip-text">Post Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/426735" class="tooltip" data-tooltip-content="#tooltip_content-0-6"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-6">
+                                                        <span class="tooltip-text">Forum Discussion</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10036/sections/109068/units/431129" class="tooltip" data-tooltip-content="#tooltip_content-0-7"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-7">
+                                                        <span class="tooltip-text">Informasi Soal Individual Assignment</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/10036" class="tooltip" data-tooltip-content="#tooltip_content-0-8"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-0-8">
+                                                        <span class="tooltip-text">[ITHB] Knowledge Management</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 78"></div>
+                                        <span class="percentage-text">78%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10028?section=1" ">
+                                     <span class="color-secondary">Offline</span><br/>                                    Kelas Manajemen Big Data (&nbsp;DS-501) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10028/sections/109440/units/427678" class="tooltip" data-tooltip-content="#tooltip_content-1-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-1-0">
+                                                        <span class="tooltip-text">Discussion Forum</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10028/sections/109440/units/433272" class="tooltip" data-tooltip-content="#tooltip_content-1-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-1-1">
+                                                        <span class="tooltip-text">Pengenalan Big Data</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/10028" class="tooltip" data-tooltip-content="#tooltip_content-1-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-1-2">
+                                                        <span class="tooltip-text">[ITHB] Manajemem Big Data</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 67"></div>
+                                        <span class="percentage-text">67%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10029?section=1" ">
+                                     <span class="color-secondary">Offline</span><br/>                                    Kelas Practical Cloud Computing (&nbsp;DS-502) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10029/sections/109434/units/427674" class="tooltip" data-tooltip-content="#tooltip_content-2-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-2-0">
+                                                        <span class="tooltip-text">Discussion Forum</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10029/sections/109434/units/429864" class="tooltip" data-tooltip-content="#tooltip_content-2-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-2-1">
+                                                        <span class="tooltip-text">Pengenalan Cloud Computing</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10029/sections/109434/units/429865" class="tooltip" data-tooltip-content="#tooltip_content-2-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-2-2">
+                                                        <span class="tooltip-text">CLOUD COMPUTING</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">play_circle_filled</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/10029" class="tooltip" data-tooltip-content="#tooltip_content-2-3"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-2-3">
+                                                        <span class="tooltip-text">[ITHB] Practical Cloud Computing </span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 75"></div>
+                                        <span class="percentage-text">75%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/8607?section=1" ">
+                                     <span class="color-secondary">Offline</span><br/>                                    Kelas SAP Introduction to SAP ERP with GBI V2 (P1-135) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/8607/sections/90140/units/354698" class="tooltip" data-tooltip-content="#tooltip_content-3-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-3-0">
+                                                        <span class="tooltip-text">Forum Discussion Sesi 1-9</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/8607/sections/90140/units/365018" class="tooltip" data-tooltip-content="#tooltip_content-3-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-3-1">
+                                                        <span class="tooltip-text">Sesi 1 - Introduction to SAP HANA</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/8607/sections/90140/units/365020" class="tooltip" data-tooltip-content="#tooltip_content-3-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-3-2">
+                                                        <span class="tooltip-text">Discussion Sesi 1</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/8607" class="tooltip" data-tooltip-content="#tooltip_content-3-3"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-3-3">
+                                                        <span class="tooltip-text">[ITHB] SAP Introduction to SAP ERP with GB IV2</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 75"></div>
+                                        <span class="percentage-text">75%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027?section=1" ">
+                                     <span class="color-secondary">Online</span><br/>                                    Kelas Sistem Cerdas Berbasiskan Teks (&nbsp;DS-402) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427660" class="tooltip" data-tooltip-content="#tooltip_content-4-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-0">
+                                                        <span class="tooltip-text">Pre Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427659" class="tooltip" data-tooltip-content="#tooltip_content-4-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-1">
+                                                        <span class="tooltip-text">Overview</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">play_circle_filled</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427658" class="tooltip" data-tooltip-content="#tooltip_content-4-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-2">
+                                                        <span class="tooltip-text">Latar Belakang Text Analytics</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427657" class="tooltip" data-tooltip-content="#tooltip_content-4-3"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-3">
+                                                        <span class="tooltip-text">Konsep Text Analytics/Text Mining</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427656" class="tooltip" data-tooltip-content="#tooltip_content-4-4"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-4">
+                                                        <span class="tooltip-text">Text Analytics di Dunia Bisnis dan Industri</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427655" class="tooltip" data-tooltip-content="#tooltip_content-4-5"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-5">
+                                                        <span class="tooltip-text">Practice Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427654" class="tooltip" data-tooltip-content="#tooltip_content-4-6"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-6">
+                                                        <span class="tooltip-text">Post Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/427653" class="tooltip" data-tooltip-content="#tooltip_content-4-7"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-7">
+                                                        <span class="tooltip-text">Forum Discussion</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10027/sections/109420/units/435173" class="tooltip" data-tooltip-content="#tooltip_content-4-8"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-8">
+                                                        <span class="tooltip-text">Informasi Individual Assignment</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/10027" class="tooltip" data-tooltip-content="#tooltip_content-4-9"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-4-9">
+                                                        <span class="tooltip-text">[ITHB] Sistem Cerdas Berbasiskan Teks</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 80"></div>
+                                        <span class="percentage-text">80%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                            <div class="course-row">
+                            <h3 class="course-name">
+                                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026?section=1" ">
+                                     <span class="color-secondary">Online</span><br/>                                    Kelas Social Network Analysis (&nbsp;DS-503) A
+                                </a>
+                            </h3>
+                                <div>
+                                    <div class="units-wrap">
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428084" class="tooltip" data-tooltip-content="#tooltip_content-5-0"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-0">
+                                                        <span class="tooltip-text">Pre Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428083" class="tooltip" data-tooltip-content="#tooltip_content-5-1"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-1">
+                                                        <span class="tooltip-text">Overview</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">play_circle_filled</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428082" class="tooltip" data-tooltip-content="#tooltip_content-5-2"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-2">
+                                                        <span class="tooltip-text">Revolusi Komunikasi dan Penyebaran Informasi</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428081" class="tooltip" data-tooltip-content="#tooltip_content-5-3"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-3">
+                                                        <span class="tooltip-text">Motivasi Pengambilan Data Online</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428080" class="tooltip" data-tooltip-content="#tooltip_content-5-4"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-4">
+                                                        <span class="tooltip-text">Contoh Penerapan Social Network Analysis</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">description</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428079" class="tooltip" data-tooltip-content="#tooltip_content-5-5"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-5">
+                                                        <span class="tooltip-text">Practice Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428077" class="tooltip" data-tooltip-content="#tooltip_content-5-6"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-6">
+                                                        <span class="tooltip-text">Post Quiz</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">assessment</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/428076" class="tooltip" data-tooltip-content="#tooltip_content-5-7"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-7">
+                                                        <span class="tooltip-text">Forum Discussion</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">chat</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/public/learning_activity/10026/sections/109557/units/431131" class="tooltip" data-tooltip-content="#tooltip_content-5-8"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-8">
+                                                        <span class="tooltip-text">Informasi Soal Individual Assignment</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">content_copy</i></span>
+                                                <div class="progress-circle 100"></div>
+                                                <span class="percentage-text">100%</span>
+                                            </div>
+                                                                                    
+                                            <div class="circle-wrap">
+                                                <a href="https://ithb-lms.harukaedu.com/students/live-session/10026" class="tooltip" data-tooltip-content="#tooltip_content-5-9"></a>
+                                                <div class="tooltip-templates">
+                                                    <span id="tooltip_content-5-9">
+                                                        <span class="tooltip-text">[ITHB] Social Network Analysis</span>
+                                                    </span>
+                                                </div>
+                                                <span class="circle-icon"><i class="material-icons">video_call</i></span>
+                                                <div class="progress-circle 0"></div>
+                                                <span class="percentage-text">0%</span>
+                                            </div>
+                                                                            </div>
+
+                                                                        <div class="circle-wrap completion">
+                                        <span class="title">Completion</span>
+                                        <div class="progress-circle 80"></div>
+                                        <span class="percentage-text">80%</span>
+                                    </div>
+                                                                    </div>
+                        </div>
+                                    </div>
+                <div class="panel-footer hide-mobile">
+                    <p>Legend :</p>
+                    <ul class="legend">
+                                                <li>
+                            <i class="material-icons">description</i> Learning Material
+                        </li>
+                                                <li>
+                            <i class="material-icons">assessment</i> Quiz
+                        </li>
+                                                <li>
+                            <i class="material-icons">forum</i> Discussion
+                        </li>
+                                                <li>
+                            <i class="material-icons">chat</i> Discussion Forum
+                        </li>
+                                                <li>
+                            <i class="material-icons">assignment</i> Group Assignment
+                        </li>
+                                                <li>
+                            <i class="material-icons">play_circle_filled</i> Video
+                        </li>
+                                                <li>
+                            <i class="material-icons">volume_up</i> Audio
+                        </li>
+                                                <li>
+                            <i class="material-icons">content_copy</i> Presentation
+                        </li>
+                                                <li>
+                            <i class="material-icons">border_color</i> Lecture Note
+                        </li>
+                                                <li>
+                            <i class="material-icons">subject</i> Learning Objective
+                        </li>
+                                                <li>
+                            <i class="material-icons">video_call</i> Live Session
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col l3 m12 s12">
+        <div class="right-content">
+                        <div class="panel">
+                <div id="latest_todos" class="panel-body latest" style="margin-bottom: 10px">
+                    <h2>
+                        <i class="material-icons">playlist_add_check</i> To Do List
+                        <a href="https://ithb-lms.harukaedu.com/students/calendar" id="see-all-todos"> SEE ALL </a>
+                        <span class="total">2</span>
+                    </h2>
+                                            <div class="item-list" style="padding:0 15px 35px 35px">
+                                                        <label for="todo_checkbox_0"></label>
+                            <div class="to-do" style="margin-left:-30px">
+                                                                    <a href="https://ithb-lms.harukaedu.com/students/live-session/10029">[ITHB] Practical Cloud Computing</a><br/>
+                                                                <span>
+                                    <i>Start</i>: 
+                                                                            29/11/2021 18:30 - 20:30
+                                                                    </span>
+                                                                    <br/><span class="right">
+                                        <a href="https://ithb-lms.harukaedu.com/students/live-session/10029/meetings/21922?calid=27677" target="_blank" class="white-text btn waves-effect waves-light small-btn disabled" id="join-session">Join</a>
+                                    </span>
+                                                            </div>
+                        </div>
+                                            <div class="item-list" style="padding:0 15px 35px 35px">
+                                                        <label for="todo_checkbox_1"></label>
+                            <div class="to-do" style="margin-left:-30px">
+                                                                    <a href="https://ithb-lms.harukaedu.com/students/live-session/10029">[ITHB] Practical Cloud Computing</a><br/>
+                                                                <span>
+                                    <i>Start</i>: 
+                                                                            29/11/2021 18:30 - 20:30
+                                                                    </span>
+                                                                    <br/><span class="right">
+                                        <a href="https://ithb-lms.harukaedu.com/students/live-session/10029/meetings/21922?calid=27676" target="_blank" class="white-text btn waves-effect waves-light small-btn disabled" id="join-session">Join</a>
+                                    </span>
+                                                            </div>
+                        </div>
+                                    </div>
+            </div>
+            <div class="panel">
+                <div id="latest_posts" class="panel-body latest">
+                    <h2>
+                        <i class="material-icons">list</i> Latest Post
+                        <a href="https://ithb-lms.harukaedu.com/students/discussions" id="see-all-posts"> SEE ALL </a>
+                                            </h2>
+                    <div class="post-list">
+                                            </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div id="latest_news" class="panel-body latest">
+                    <h2>
+                        <i class="material-icons">chrome_reader_mode</i>Latest News
+                        <a href="https://ithb-lms.harukaedu.com/students/news" id="see-all-news" class="hide">See all <span></span></a>
+                    </h2>
+                    <div class="news-item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    
+
+                <div id="terms-and-conditions">
+                                    </div>
+
+                <div id="payment-notif">
+                                    </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/jquery-2.1.1.min/index.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/moment/min/moment.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/air-datepicker/dist/js/datepicker.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/materialize/dist/js/materialize.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/circliful/js/jquery.circliful.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/enscroll/js/mylibs/enscroll.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/rateyo/min/jquery.rateyo.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/rateyo/min/jquery.rateyo.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/jquery-truncate-html/jquery.truncate.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/vendor/ckeditor/ckeditor.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+        <script src="/js/app-firebase.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/script.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app/profile.js"></script>
+
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app/vue_notification.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app/vue_tc_modal.js"></script>
+        <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app/vue_payment_notif_modal.js"></script>
+
+            <script type="text/javascript" src="https://ithb-lms.harukaedu.com/js/app/dashboard.js"></script>
+
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-75f7e4cfa4053101bbf","applicationID":"898631167","transactionName":"MVYBbUFQC0tYB0VZDQgcIlpHWApWFgVSRAsQWhdQVkJLS00RVVUMEkBNUF1VAEA=","queueTime":0,"applicationTime":612,"atts":"HRECGwlKGEU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
