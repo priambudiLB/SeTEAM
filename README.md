@@ -1,24 +1,29 @@
 <h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=alert_status">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
 </a></h1>
 <p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
 
 <p align="center">
 
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=bugs">
+
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=bugs">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=duplicated_lines_density">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=duplicated_lines_density">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
+</a>
+<a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
+
 </a>
 
 </p>
