@@ -1,0 +1,78 @@
+gua mikir nya gini sih buat pembagiannya,
+
+SPRINT PLANNING
+
+
+LMS // Learning Management System
+-Setup server  /devops
+-Setup DB  /devops
+
+-- 
+A. Landing -> Krisna √
+A. Home page dengan log in-> Krisna √
+A. Registration page -> Krisna √
+A. Login page -> Krisna √
+B. Profile page -> Prasetio √
+B. Edit Profile page -> Prasetio progress
+B. Courses page -> Prasetio 
+C. Student dashboard page -> Kevin
+C. Instructor dashboard page -> Kevin
+
+--
+
+========================================================================
+--
+A. Login with instructor access or student access -> Krisna 
+D. Create/update/delete courses as instructor -> Baresi
+D. Upload/update/delete video or pdf and lessons to courses as instructor -> Baresi
+D. Open video or pdf and lessons in courses as student -> Baresi
+
+
+// logic
+E. List of courses on student dashboard -> Lukman
+E. List of progress finish/unfinished lesson on student dashboard -> Lukman
+E. List of student on instructor dashboard -> Lukman
+E. List of courses on instructor dashboard -> Lukman
+
+F. Checkout Courses UInterface-> Krisna
+
+
+
+dashboard
+    - Student
+        - list of joined courses
+            - lesson progress A
+        - list of joined courses
+            - lesson progress B
+    - Instructor
+        - provided courses 1
+            - list of student in each courses
+        - provided courses 2
+            - list of student in each courses
+
+
+
+
+
+Btw itu alur nya, yg atas (A,B,C) buat tampilan page nya.
+(D,E) buat logic nya.
+
+Nanti pas registrasi ada 2 role.
+1. instructor
+2. student
+
+instructor bisa 
+1. create/update/delete courses di courses page
+2. Upload/update/delete video or pdf and lessons to courses di courses page
+3. ngeliat list student sama courses di instructor dashboard
+
+student bisa
+1. Open video or pdf and lessons in courses di courses page
+2. ngeliat progress student sudah selesai / belum in courses di courses page
+3. ngeliat list courses sama finish/unfinished lesson di instructor dashboard
+
+
+-run NEXT --> npx next dev -p port_number
+
+- handling nested data in no sql:
+     --> https://howtofirebase.com/firebase-data-modeling-939585ade7f4
