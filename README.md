@@ -46,7 +46,7 @@ stack yang kita pake masih ini aja sih
 
 ### Features
 
-kira-kira pasti bakal udah tahu lah ya fitur-fitur nya apa ja. Kita list in aja dulu deh
+hmm kira-kira pasti bakal udah tahu lah ya fitur-fitur nya apa ja. Kita list in aja dulu deh
 
 1. Login with instructor access or student access
 2. Create/update/delete courses as instructor
