@@ -66,9 +66,10 @@ const firebaseAuthentication = firebase.auth();
             <form onSubmit={(e) => {
             userDBRef.on('child_added', addData)
            }}>
-            
+
            {error && <Alert variant="danger">{error}</Alert>
            }
+
            <Text fontWeight='bold' fontSize='20px'  >Registration Form for Instructor</Text>
             <FormControl pt={2} id="username" className={styles.content} >
             <FormLabel  padding="3px" ><Center>Full Name</Center></FormLabel>

@@ -1,13 +1,13 @@
 import styles from '../styles/signup.module.css'
 import { useState, useRef } from "react";
 import { useRouter } from 'next/router'
-
 import {
   FormControl, FormLabel, WrapItem, Input, Wrap,
   FormHelperText, Button, Text, Center, Alert,Container,Image
 } from "@chakra-ui/react"
 import firebase from '../config/firebase';
 import getStudentReg from './api/student';
+
 
 
 const firebaseAuthentication = firebase.auth();
@@ -135,6 +135,7 @@ export default function SignUp() {
         </WrapItem>
         </Wrap>
         </div>
+
          
     )
 }

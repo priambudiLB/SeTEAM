@@ -1,6 +1,7 @@
 import styles from '../styles/signin.module.css'
 import { useState,useRef } from "react";
 
+
 import {FormControl,FormLabel,WrapItem,Input,Wrap,
   Center,Alert,FormHelperText,Button,Image,Container,Text } from "@chakra-ui/react";
 
@@ -29,11 +30,14 @@ export default function Signin() {
       );
       alert("SuccessFully Login");
       localStorage.setItem("username", emailRef.current.value);
+
       router.push("/dashboard");
+
     }
   }
   
   return (
+
     <div className={styles.container}>
         <Wrap spacing='3px' >
         <WrapItem>
@@ -70,5 +74,5 @@ export default function Signin() {
         </WrapItem>
         </Wrap>
         </div>
-         
+
     )}
