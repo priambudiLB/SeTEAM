@@ -20,13 +20,13 @@ export default function Home() {
     <br/><br/>
  <Text fontSize='70px' fontWeight='bold'>KNOWLEDGE ISNT POWER UNTIL IT IS APPLIED</Text>
  <br/><br/>
-  <Button colorScheme='teal' variant='solid' right={3}
+  <Button data-testid="instructor-signup" colorScheme='teal' variant='solid' right={3}
   onClick={()=>{
     router.push('/instructorsignup')
   }}>
   SignUp for Instructor
   </Button>
-  <Button colorScheme='teal' variant='solid'
+  <Button data-testid="instructor-signin" colorScheme='teal' variant='solid'
   onClick={()=>{
     router.push('/instructorsignin')
   }}>
