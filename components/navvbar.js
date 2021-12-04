@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 
     return (
       <>
-        <Box bg={useColorModeValue("red.300", "gray.900")} px={4}>
+        <Box data-testid="navbar-home" bg={useColorModeValue("red.300", "gray.900")} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
        
             <HStack spacing={8} alignItems={"center"}>
@@ -30,7 +30,7 @@ import { useRouter } from "next/router";
               </HStack>
             </HStack>
             <Flex alignItems={"center"}>
-              <Button onClick={toggleColorMode}>
+              <Button onClick={toggleColorMode} data-testid={`navbar-${colorMode}`}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
               <Menu>

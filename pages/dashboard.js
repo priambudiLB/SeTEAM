@@ -59,7 +59,7 @@ function Dashboard() {
         >
             {/* col 1 */}
             <Flex
-                w={["100%", "100%", "10%", "15%", "15%"]}
+                w={["100%", "100%", "10%", "15%"]}
                 flexDir="column"
                 alignItems="center"
                 bgColor="#171A21"
