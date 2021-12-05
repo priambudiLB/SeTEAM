@@ -59,7 +59,11 @@ function Dashboard() {
         >
             {/* col 1 */}
             <Flex
+<<<<<<< HEAD
                 w={["100%", "100%", "10%", "15%"]}
+=======
+                w={["100%", "100%", "10%", "15%", "15%"]}
+>>>>>>> 7445a26659d5a633887c8ab11a831618b844af92
                 flexDir="column"
                 alignItems="center"
                 bgColor="#171A21"
@@ -320,4 +324,8 @@ function Dashboard() {
     )
 }
 
+<<<<<<< HEAD
 export default Dashboard;
+=======
+export default dashboard;
+>>>>>>> 7445a26659d5a633887c8ab11a831618b844af92

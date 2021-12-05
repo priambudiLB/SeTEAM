@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head'
 import { Wrap,WrapItem,Box,Center,Container,Text } from '@chakra-ui/layout'
 import {Button,Image} from '@chakra-ui/react'
@@ -42,6 +43,21 @@ export default function Home() {
   </WrapItem>
   </Wrap>
   </div>
+=======
+
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css';
+import Header from "../components/header"
+
+export default function Home() {
+  return (
+    <>
+      <Header/>
+      <h1 className={styles["title-homepage"]}> Welcome Lukman</h1>
+    </>
+
+>>>>>>> 7445a26659d5a633887c8ab11a831618b844af92
   )
 
 }
