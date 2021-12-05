@@ -12,7 +12,7 @@ app
 .then(()=>{
     const server = express()
     server.get('*',(req,res)=>{
-        return handle(req,res)
+        return handle(req,res) 
     })
 
     server.post('/api/signup',async(req,res)=>{
