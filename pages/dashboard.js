@@ -1,53 +1,15 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 import {
-    Flex,
-    Heading,
-    Avatar,
-    AvatarGroup,
-    Text,
-    Icon,
-    IconButton,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    Divider,
-    Link,
-    Box,
-    Button,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Stack,
-    HStack,
-    VStack,
-} from '@chakra-ui/react'
-
-
+    Flex,Heading,Avatar,AvatarGroup,Text,Icon,IconButton,Table,Thead,Tbody,Tr,Th,
+    Td,Divider,Link,Box,Button,Input,InputGroup,InputLeftElement,
+    Stack,HStack,VStack} from '@chakra-ui/react'
 import {
-    FiHome,
-    FiPieChart,
-    FiBook,
-    FiDollarSign,
-    FiBox,
-    FiCalendar,
-    FiChevronDown,
-    FiChevronUp,
-    FiPlus,
-    FiCreditCard,
-    FiSearch,
-    FiUsers,
-    FiBell
+    FiHome,FiPieChart,FiBook,FiDollarSign,FiBox,FiCalendar,FiChevronDown,FiChevronUp,
+    FiPlus,FiCreditCard,FiSearch,FiUsers,FiBell
 } from "react-icons/fi"
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashoard/index';
-
 function Dashboard() {
     const [value, changeValue] = useState(1)
-
     const themeColor = "#B2F5EA";
     const fontColor = "#@30c040";
     return (
@@ -89,7 +51,6 @@ function Dashboard() {
                             align={["center", "center", "center", "flex-start", "flex-start"]}
                             wrap={["wrap", "wrap", "nowrap", "nowrap", "nowrap"]}
                             justifyContent="center"
-
                         >
                             <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                                 <Link display={["none", "none", "flex", "flex", "flex"]} >
@@ -116,24 +77,16 @@ function Dashboard() {
                                 </Link>
                             </Flex>
 
-
                         </Flex>
                     </Flex>
                     <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
                         <Avatar my={2} src="avatar-1.jpg" />
-
-
-                    
-
                         <Text textAlign="center">TEST REDUX</Text>
                     </Flex>
                 </Flex>
             </Flex>
-
-            {/* col 2 */}
             <Flex
-            
-            w={["100%", "100%", "60%", "60%", "55%"]}
+           w={["100%", "100%", "60%", "60%", "55%"]}
             p="3%"
             flexDir="column"
             overflow="auto"
@@ -172,13 +125,10 @@ function Dashboard() {
                     <InputGroup bgColor="#171A21" mb={4} border="none" borderColor="#fff" borderRadius="10px" mr={2}>
                         <InputLeftElement
                             pointerEvents="none"
-
                         />
                         <Input type="string" placeholder="Find Course" borderRadius="10px" />
                     </InputGroup>
-
                     <IconButton icon={<FiBell color="#171A21" />} fontSize="sm" bgColor="#fff" borderRadius="50%" padding="10px" />
-
                     <Flex
                         width={30}
                         height={25}
@@ -202,7 +152,6 @@ function Dashboard() {
                         mt={4}
                         w="100%"
                         h="150px"
-     
                         backgroundColor="#FFF"
                     >
                         <Flex p="1em" color="#1C4532" flexDir="column" h="100%" justify="space-between">
@@ -211,18 +160,15 @@ function Dashboard() {
                                     <Text color="#1C4532">Data Structure</Text>
                                     <Text fontWeight="bold" fontSize="xl">Rp.100.000,00</Text>
                                 </Flex>
-                                <Flex align="center">
-                                   
+                                <Flex align="center">   
                                 </Flex>
                             </Flex>
-                         
                             <Flex align="flex-end" justify="space-between">
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
                                         <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
                                     </Flex>
                                     <Flex flexDir="column">
-                                       
                                     </Flex>
                                 </Flex>
                             </Flex>
@@ -279,7 +225,6 @@ function Dashboard() {
                                 <Flex>
                                     <Flex flexDir="column" mr={4}>
                                         <Text textTransform="uppercase" fontSize="xs">Instructor</Text>
-
                                     </Flex>
                                     <Flex flexDir="column">
                                     </Flex>
@@ -304,19 +249,16 @@ function Dashboard() {
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>
-
                 <Text color="gray" mt={4} mb={2}>Sum</Text>
                 <InputGroup>
                     <InputLeftElement
                         pointerEvents="none"
-
                     />
                     <Input type="number" placeholder="100.000" />
                 </InputGroup>
                 <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
             </Flex>
         </Flex>
-
     )
 }
 

@@ -1,26 +1,9 @@
-import { ReactNode } from "react";
 import {
-  Box,
-  Flex,
-  Avatar,
-  HStack,
-  Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  useColorMode,
-  Stack,
+  Box,Flex,Avatar,HStack,Link,IconButton,Button,Menu,
+  MenuButton,MenuList,MenuItem,MenuDivider,useDisclosure,useColorModeValue,useColorMode,Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-
 const Links = ["Dashboard", "Projects", "Team"];
-
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -92,7 +75,6 @@ export default function NavbarHome() {
             </Menu>
           </Flex>
         </Flex>
-
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>

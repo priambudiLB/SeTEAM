@@ -2,10 +2,8 @@ import {
     Box,Flex,HStack,Button,Menu,
     useDisclosure,useColorModeValue,useColorMode,Stack,Image,Text
   } from "@chakra-ui/react";
- 
-  import {MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-  
   export default function Navvbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter()
@@ -14,18 +12,15 @@ import { useRouter } from "next/router";
       <>
         <Box data-testid="navbar-home" bg={useColorModeValue("red.300", "gray.900")} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-       
             <HStack spacing={8} alignItems={"center"}>
               <Image src='/book.png' alt='bookLogo' borderRadius='full' boxSize='50px' />
               <HStack
                 as={"nav"}
                 spacing={4}
                 display={{ base: "none", md: "flex" }}
-              >
-               
+              >  
                   <Text fontSize='20px'>Welcome to</Text>
-                  <Text fontSize='30px' fontWeight='bold'>Sinau.id</Text>
-                 
+                  <Text fontSize='30px' fontWeight='bold'>Sinau.id</Text>  
                 ))
               </HStack>
             </HStack>
