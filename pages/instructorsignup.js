@@ -1,7 +1,6 @@
 import styles from '../styles/instructorsignup.module.css'
 import { useState, useRef } from "react";
 import { useRouter } from 'next/router'
-// import Image from 'next/image'
 import {
   FormControl, FormLabel, Container, Input, Image,
   FormHelperText, Button, Center, Alert,Wrap,WrapItem,Box,Text
@@ -82,6 +81,5 @@ const firebaseAuthentication = firebase.auth();
         </WrapItem>
         </Wrap>
         </div>
-         
     )
 }

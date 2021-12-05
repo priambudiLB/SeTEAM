@@ -1,23 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 import {
     Flex,Heading,Avatar,AvatarGroup,Text,Icon,IconButton,Table,Thead,Tbody,Tr,Th,
     Td,Divider,Link,Box,Button,Input,InputGroup,InputLeftElement,
     Stack,HStack,VStack} from '@chakra-ui/react'
 import {
-    FiHome,
-    FiPieChart,
-    FiBook,
-    FiDollarSign,
-    FiBox,
-    FiCalendar,
-    FiChevronDown,
-    FiChevronUp,
-    FiPlus,
-    FiCreditCard,
-    FiSearch,
-    FiUsers,
-    FiBell
+    FiHome,FiPieChart,FiBook,FiDollarSign,FiBox,FiCalendar,FiChevronDown,FiChevronUp,
+    FiPlus,FiCreditCard,FiSearch,FiUsers,FiBell
 } from "react-icons/fi"
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashoard/index';

@@ -337,6 +337,5 @@ export default function Home (){
     </Center>
     </Container>     
         </div>
-
     )
 }
