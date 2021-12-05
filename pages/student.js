@@ -1,80 +1,32 @@
 import React from "react";
 import Navbar from "../components/navbardashboard";
 import Footer from "../components/footer";
-import { Table, Thead, Tbody, Tr, Th, Td, Menu, MenuButton, MenuList, IconButton, MenuItem } from "@chakra-ui/react"
-import { HamburgerIcon, ArrowForwardIcon } from "@chakra-ui/icons"
+import { Button, Stack } from "@chakra-ui/react"
+import { ChevronRightIcon } from "@chakra-ui/icons"
 
 const studentPage = () => {
   return (
     <div>
       <title>Student Page</title>
       <Navbar></Navbar>
-      <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          variant="outline"
-          marginTop="10px"
-          marginLeft="10px"
-        />
-        <MenuList>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem icon={<ArrowForwardIcon/>}>Course</MenuItem>
-          <MenuItem>Progress</MenuItem>
-          <MenuItem>Statistic</MenuItem>
-          <MenuItem icon={<ArrowForwardIcon/>}>Setting</MenuItem>
-          <MenuItem icon={<ArrowForwardIcon/>}>Log Out</MenuItem>
-        </MenuList>
-      </Menu>
-      <Table variant="simple" colorScheme="white" mt="20px" size="md" w="90%" mx="auto" borderLeft="solid" borderRight="solid" borderWidth="1px">
-        <Thead>
-          <Tr>
-            <Th>Id</Th>
-            <Th>Student Name</Th>
-            <Th>Course</Th>
-            <Th>Instructor Name</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-          <Tr>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-            <Td></Td>
-          </Tr>
-        </Tbody>
-      </Table>
+      <Stack direction='column' align='start' ml="5px">
+        <Button colorScheme='white' variant='ghost'>
+          <ChevronRightIcon color="cyan" />
+          Profile
+        </Button>
+        <Button colorScheme='white' variant='ghost'>
+          <ChevronRightIcon color="cyan" />
+          Courses Progress
+        </Button>
+        <Button colorScheme='white' variant='ghost'>
+          <ChevronRightIcon color="cyan" />
+          Setting
+        </Button>
+        <Button colorScheme='white' variant='ghost'>
+          <ChevronRightIcon color="cyan" />
+          Log Out
+        </Button>
+      </Stack>
       <Footer></Footer>
     </div>
   );
