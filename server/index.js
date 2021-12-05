@@ -7,6 +7,7 @@ const handle = app.getRequestHandler()
 const bcrypt = require('bcrypt')
 const pool = require('../config/db')
 
+
 app
 .prepare()
 .then(()=>{
@@ -30,6 +31,7 @@ app
             
         }
         
+
     })
     server.listen(PORT,err=>{
         if(err) throw err

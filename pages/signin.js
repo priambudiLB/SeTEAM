@@ -2,8 +2,10 @@ import styles from '../styles/signin.module.css'
 import { useState,useRef } from "react";
 
 
+
 import {FormControl,FormLabel,WrapItem,Input,Wrap,
   Center,Alert,FormHelperText,Button,Image,Container,Text } from "@chakra-ui/react";
+
 
 
 import firebase from '../config/firebase';
@@ -33,10 +35,12 @@ export default function Signin() {
 
       router.push("/dashboard");
 
+
     }
   }
   
   return (
+
 
     <div className={styles.container}>
         <Wrap spacing='3px' >
@@ -74,5 +78,6 @@ export default function Signin() {
         </WrapItem>
         </Wrap>
         </div>
+
 
     )}
