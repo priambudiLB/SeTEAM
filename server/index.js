@@ -11,12 +11,12 @@ const pool = require('../config/db')
 app
 .prepare()
 .then(()=>{
-    let server = express()
-    server.get('*',(req,res)=>{
+    const svr = express()
+    svr.get('*',(req,res)=>{
         return handle(req,res) 
     })
 
-    server.post('/api/signup',async(req,res)=>{
+    svr.post('/api/signup',async(req,res)=>{
         let errors={}
             const {username,email,password} = req.body
         if(password === null){
@@ -33,7 +33,7 @@ app
         
 
     })
-    server.listen(PORT,err=>{
+    svr.listen(PORT,err=>{
         if(err) throw err
         console.log(`THIS SERVER RUNNING ON PORT ${PORT}`)
     })
