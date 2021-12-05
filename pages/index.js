@@ -1,11 +1,8 @@
-import Head from 'next/head'
 import { Wrap,WrapItem,Box,Center,Container,Text } from '@chakra-ui/layout'
 import {Button,Image} from '@chakra-ui/react'
 import styles from '../styles/Homee.module.css'
 import Navvbar from '../components/navvbar'
 import { useRouter } from 'next/router'
-
-
 
 export default function Home() {
   const router = useRouter()
@@ -43,5 +40,4 @@ export default function Home() {
   </Wrap>
   </div>
   )
-
 }

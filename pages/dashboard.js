@@ -1,31 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import {
-    Flex,
-    Heading,
-    Avatar,
-    AvatarGroup,
-    Text,
-    Icon,
-    IconButton,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    Divider,
-    Link,
-    Box,
-    Button,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Stack,
-    HStack,
-    VStack,
-} from '@chakra-ui/react'
-
+    Flex,Heading,Avatar,AvatarGroup,Text,Icon,IconButton,Table,Thead,Tbody,Tr,Th,
+    Td,Divider,Link,Box,Button,Input,InputGroup,InputLeftElement,
+    Stack,HStack,VStack} from '@chakra-ui/react'
 
 import {
     FiHome,
@@ -47,7 +25,6 @@ import ProgressDashboard from '../components/ProgressDashoard/index';
 
 function Dashboard() {
     const [value, changeValue] = useState(1)
-
     const themeColor = "#B2F5EA";
     const fontColor = "#@30c040";
     return (
@@ -116,15 +93,10 @@ function Dashboard() {
                                 </Link>
                             </Flex>
 
-
                         </Flex>
                     </Flex>
                     <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
                         <Avatar my={2} src="avatar-1.jpg" />
-
-
-                    
-
                         <Text textAlign="center">TEST REDUX</Text>
                     </Flex>
                 </Flex>
@@ -132,8 +104,7 @@ function Dashboard() {
 
             {/* col 2 */}
             <Flex
-            
-            w={["100%", "100%", "60%", "60%", "55%"]}
+           w={["100%", "100%", "60%", "60%", "55%"]}
             p="3%"
             flexDir="column"
             overflow="auto"
