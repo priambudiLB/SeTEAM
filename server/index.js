@@ -11,7 +11,7 @@ const pool = require('../config/db')
 app
 .prepare()
 .then(()=>{
-    const server = express()
+    let server = express()
     server.get('*',(req,res)=>{
         return handle(req,res) 
     })
