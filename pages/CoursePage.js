@@ -45,12 +45,7 @@ import { useState } from "react";
 import { handlerA } from "./api/hello";
 
 import { Cloudinary } from "@cloudinary/url-gen";
-import { Transformation } from "@cloudinary/url-gen";
-import { reverse, accelerate } from "@cloudinary/url-gen/actions/effect";
-import { brightness } from "@cloudinary/url-gen/actions/adjust";
-import { max } from "@cloudinary/url-gen/actions/roundCorners";
-import { concatenate } from "@cloudinary/url-gen/actions/videoEdit";
-import { Concatenate } from "@cloudinary/url-gen/qualifiers/concatenate";
+import {scale} from "@cloudinary/url-gen/actions/resize";
 
 const cld = new Cloudinary({
     cloud: {
@@ -72,14 +67,10 @@ function CoursePage() {
 
 
     // Instantiate a CloudinaryVideo object for the video with public ID, 'elephants'.
-    const myVideo = cld.video('sea-turtle');
+    const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
 
     // Apply the transformation.
-    myVideo
-        .videoEdit(concatenate(Concatenate.videoSource('sea-turtle').transformation(new Transformation().effect(reverse()))))
-        .videoEdit(concatenate(Concatenate.videoSource('sea-turtle').transformation(new Transformation().effect(accelerate(-50)))))
-        .adjust(brightness(10))
-        .roundCorners(max());
+    myVideo.resize(scale().width(800));
 
     // Get the URL of the video.
     const myURL = myVideo.toURL();
@@ -87,124 +78,116 @@ function CoursePage() {
 
     return (
         <>
-            <Flex>
-                <video
-                    // height="360"
-                    // width="720"
-                    controls
+
+
+
+            <Flex h={[null, null, "100vh"]}
+                maxW="2000px"
+                flexDir={["row", "row", "row"]}
+                overflow="hidden">
+                {/* first col */}
+                <Flex
+                    // w={["50%", "50%", "10%", "15%", "15%"]}
+                    w={["25%", "25%", "10%", "15%"]}
+                    flexDir="column"
+                    alignItems="center"
+                    bgColor="#171A21"
+                    color="#FFF"
+                    overflow="hidden"
                 >
-                    <source src={myURL} type="video/mp4"></source>
-                </video>
-            </Flex>
+                    <Flex
+                        flexDir="column"
+                        h={[null, null, "100vh"]}
+                        justifyContent="space-between"
+                        color={fontColor}
+                    >
+                        <Flex
+                            flexDir="column"
+                            as="nav"
+                        >
+                            <Heading
+                                mt={50}
+                                mb={[25, 50, 100]}
+                                fontSize={["4xl", "5xl", "1.5xl", "2xl"]}
+                                alignSelf="center"
+                                letterSpacing="tight"
+                                display={{ base: "column", md: "none", ld: "none" }}
+                            >
+                                COURSE
+                            </Heading>
 
+                            <Flex
+                                flexDir={["row", "row", "column", "column", "column"]}
+                                align={["center", "center", "center", "flex-start", "flex-start"]}
+                                wrap={["wrap", "wrap", "nowrap", "nowrap", "nowrap"]}
+                                justifyContent="center"
+
+                            >
+                                <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
+                                    <Link display={["none", "none", "flex", "flex", "flex"]} >
+                                        <Icon as={FiHome} fontSize="2xl" className="active-icon" />
+                                    </Link>
+                                    <Link href="/" _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
+                                        <Text className="active" ml={3} >Home</Text>
+                                    </Link>
+                                </Flex>
+                                <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
+                                    <Link display={["none", "none", "flex", "flex", "flex"]}>
+                                        <Icon as={FiBook} fontSize="2xl" />
+                                    </Link>
+                                    <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
+                                        <Text ml={3}>Other Courses</Text>
+                                    </Link>
+                                </Flex>
+                                <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
+                                    <Link display={["none", "none", "flex", "flex", "flex"]}>
+                                        <Icon as={FiUsers} fontSize="2xl" />
+                                    </Link>
+                                    <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
+                                        <Text ml={3}>Instructor</Text>
+                                    </Link>
+                                </Flex>
+
+
+                            </Flex>
+                        </Flex>
+
+                    </Flex>
+                </Flex>
+
+                {/* second col  */}
+                <Flex w={["100%", "100%", "60%", "60%", "55%"]}
+                    flexDir="column"
+                    overflow="auto"
+                    minH="100vh"
+                    ml={"10%"}>
+                    <Flex flexDir="row"
+                        mb={"20px"}>
+                        <Heading>WELCOME TO ..... COURSE</Heading>
+
+                    </Flex>
+                    <Flex mb={"10px"}>
+
+                        <video
+                            // height="360"
+                            // width="720"
+                            controls
+                        >
+                            <source src={myURL} type="video/mp4"></source>
+                        </video>
+
+                    </Flex>
+                    <Flex flexDir="row">
+                        <section>
+                            <h1> About This Course</h1>
+                            <p>Data</p>
+                        </section>
+
+                    </Flex>
+
+                </Flex>
+            </Flex >
         </>
-
-        // <Flex h={[null, null, "100vh"]}
-        //     maxW="2000px"
-        //     flexDir={["row", "row", "row"]}
-        //     overflow="hidden">
-        //     {/* first col */}
-        //     <Flex
-        //         // w={["50%", "50%", "10%", "15%", "15%"]}
-        //         w={["25%", "25%", "10%", "15%"]}
-        //         flexDir="column"
-        //         alignItems="center"
-        //         bgColor="#171A21"
-        //         color="#FFF"
-        //         overflow="hidden"
-        //     >
-        //         <Flex
-        //             flexDir="column"
-        //             h={[null, null, "100vh"]}
-        //             justifyContent="space-between"
-        //             color={fontColor}
-        //         >
-        //             <Flex
-        //                 flexDir="column"
-        //                 as="nav"
-        //             >
-        //                 <Heading
-        //                     mt={50}
-        //                     mb={[25, 50, 100]}
-        //                     fontSize={["4xl", "5xl", "1.5xl", "2xl"]}
-        //                     alignSelf="center"
-        //                     letterSpacing="tight"
-        //                     display={{ base: "column", md: "none", ld: "none" }}
-        //                 >
-        //                     COURSE
-        //                 </Heading>
-
-        //                 <Flex
-        //                     flexDir={["row", "row", "column", "column", "column"]}
-        //                     align={["center", "center", "center", "flex-start", "flex-start"]}
-        //                     wrap={["wrap", "wrap", "nowrap", "nowrap", "nowrap"]}
-        //                     justifyContent="center"
-
-        //                 >
-        //                     <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
-        //                         <Link display={["none", "none", "flex", "flex", "flex"]} >
-        //                             <Icon as={FiHome} fontSize="2xl" className="active-icon" />
-        //                         </Link>
-        //                         <Link href="/" _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-        //                             <Text className="active" ml={3} >Home</Text>
-        //                         </Link>
-        //                     </Flex>
-        //                     <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
-        //                         <Link display={["none", "none", "flex", "flex", "flex"]}>
-        //                             <Icon as={FiBook} fontSize="2xl" />
-        //                         </Link>
-        //                         <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-        //                             <Text ml={3}>Other Courses</Text>
-        //                         </Link>
-        //                     </Flex>
-        //                     <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
-        //                         <Link display={["none", "none", "flex", "flex", "flex"]}>
-        //                             <Icon as={FiUsers} fontSize="2xl" />
-        //                         </Link>
-        //                         <Link _hover={{ textDecor: 'none' }} display={["flex", "flex", "none", "flex", "flex"]}>
-        //                             <Text ml={3}>Instructor</Text>
-        //                         </Link>
-        //                     </Flex>
-
-
-        //                 </Flex>
-        //             </Flex>
-
-        //         </Flex>
-        //     </Flex>
-
-        //     {/* second col  */}
-        //     <Flex w={["100%", "100%", "60%", "60%", "55%"]}
-        //         flexDir="column"
-        //         overflow="auto"
-        //         minH="100vh"
-        //         ml={"10%"}>
-        //         <Flex flexDir="row"
-        //             mb={"20px"}>
-        //             <Heading>WELCOME TO ..... COURSE</Heading>
-
-        //         </Flex>
-        //         <Flex mb={"10px"}>
-
-        //             <video
-        //                 // height="360"
-        //                 // width="720"
-        //                 controls
-        //             >
-        //                 <source src={myURL} type="video/mp4"></source>
-        //             </video>
-
-        //         </Flex>
-        //         <Flex flexDir="row">
-        //             <section>
-        //                 <h1> About This Course</h1>
-        //                 <p>Data</p>
-        //             </section>
-
-        //         </Flex>
-
-        //     </Flex>
-        // </Flex >
 
     )
 }

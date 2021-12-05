@@ -26,11 +26,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-<<<<<<< HEAD
-=======
-.env
-.env.local
->>>>>>> 7445a26659d5a633887c8ab11a831618b844af92
 .env.development.local
 .env.test.local
 .env.production.local
