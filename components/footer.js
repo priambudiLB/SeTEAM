@@ -7,8 +7,10 @@ import { Stack } from "@chakra-ui/layout";
 const Footer = () => {
     return (
         <>
-            <div >
-            <Stack direction={['column', 'row']} spacing='24px'>
+
+            <Stack direction={['column', 'row']} 
+                    spacing='24px'
+                    alignItems="end">
                     <div>
                         Home
                     </div>
@@ -16,7 +18,7 @@ const Footer = () => {
                     <div>Contact Us</div>
                     <div className="#">© 2021</div>
                 </Stack>
-            </div>
+
         </>
     );
 };

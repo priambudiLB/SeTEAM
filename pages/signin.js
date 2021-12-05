@@ -1,13 +1,13 @@
 import styles from '../styles/signin.module.css'
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import Image from 'next/image'
 
-import {FormControl,FormLabel,GridItem,Input,Grid,Center,Alert,FormHelperText,Button,Heading } from "@chakra-ui/react";
+import { FormControl, FormLabel, GridItem, Input, Grid, Center, Alert, FormHelperText, Button, Heading, Flex} from "@chakra-ui/react";
 
 
 import firebase from '../config/firebase';
-import {useRouter} from 'next/router';
-const firebaseAuthentication = firebase.auth();  
+import { useRouter } from 'next/router';
+const firebaseAuthentication = firebase.auth();
 
 export default function Signin() {
   const [error, setError] = useState("");
@@ -15,13 +15,13 @@ export default function Signin() {
   const passwordRef = useRef()
   const router = useRouter()
 
-  async function handleSubmit(e){
+  async function handleSubmit(e) {
     e.preventDefault();
     var errorCode = error.code;
 
     if (errorCode === "auth/worng-password") {
       return setError("Login Failed");
-      
+
     } else {
       await firebaseAuthentication.signInWithEmailAndPassword(
         emailRef.current.value,
@@ -32,41 +32,45 @@ export default function Signin() {
       router.push("/dashboard");
     }
   }
-  
+
   return (
-         <form className={styles.container}>
-   <Grid h="400px" templateRows="repeat(1, 1fr)"templateColumns="repeat(4, 1fr)"
-    gap={0} id='grid'>
-      
-    <GridItem rowSpan={1} colSpan={2} bg="darkgrey" w="700px" >
-    <Image src='/pic.jpg' alt='frontimage' className='img-box' width={700} height={450}/>
-    </GridItem>
-    <GridItem colSpan={2} bg="gainsboro">
-    
-        <Heading className={styles.textSignUp}>Sign In</Heading>
-        {error && <Alert variant="danger">{error}</Alert>}
+    <Flex mb={"15%"}>
+      <form className={styles.container}>
+        <Grid h="400px" templateRows="repeat(1, 1fr)" templateColumns="repeat(4, 1fr)"
+          gap={0} id='grid'>
+
+          <GridItem rowSpan={1} colSpan={2} bg="darkgrey" w="700px" >
+            <Image src='/pic.jpg' alt='frontimage' className='img-box' width={700} height={450} />
+          </GridItem>
+          <GridItem colSpan={2} bg="gainsboro">
+
+            <Heading className={styles.textSignUp}>Sign In</Heading>
+            {error && <Alert variant="danger">{error}</Alert>}
 
 
             <FormControl id="email" className={styles.content} >
-            <FormLabel  padding="3px" ><Center>Email address</Center></FormLabel>
-            <Input type="email" placeholder='Email@email.com' ref={emailRef} w="250px" isRequired/>
-            <FormHelperText>We will never share your email.</FormHelperText>
+              <FormLabel padding="3px" ><Center>Email address</Center></FormLabel>
+              <Input type="email" placeholder='Email@email.com' ref={emailRef} w="250px" isRequired />
+              <FormHelperText>We will never share your email.</FormHelperText>
             </FormControl>
 
             <FormControl id="password" className={styles.content} >
-            <FormLabel   padding="3px"><Center>Passwords</Center></FormLabel>
-            <Input type="password" placeholder='Password' ref={passwordRef} w="250px" isRequired />
+              <FormLabel padding="3px"><Center>Passwords</Center></FormLabel>
+              <Input type="password" placeholder='Password' ref={passwordRef} w="250px" isRequired />
             </FormControl>
 
-            <Button colorScheme="teal" mr="4" h="30px" w="70px"  className={styles.btn} onClick={handleSubmit}>
+            <Button colorScheme="teal" mr="4" h="30px" w="70px" className={styles.btn} onClick={handleSubmit}>
               Sign In
             </Button>
-    
-            
-    </GridItem>
-   
-  </Grid>
-  
-  </form>
-         
-    )}
+
+
+          </GridItem>
+
+        </Grid>
+
+      </form>
+    </Flex>
+
+
+  )
+}
