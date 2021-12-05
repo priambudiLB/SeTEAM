@@ -13,7 +13,8 @@ app
 .then(()=>{
     const svr = express()
     svr.get('*',(req,res)=>{
-        return handle(req,res) 
+        return handle(req,res) && svr.disable("x-powered-by")
+        
     })
 
     svr.post('/api/signup',async(req,res)=>{
