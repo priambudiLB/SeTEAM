@@ -57,8 +57,6 @@ const DataStudent = [
         ]
     }
 ]
-
-
 const copy = [...DataStudent];
 
 copy.forEach((currData, i, arr) => {

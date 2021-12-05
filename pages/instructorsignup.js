@@ -38,7 +38,6 @@ const firebaseAuthentication = firebase.auth();
               .then(() => {
                 alert("Please Kindly Check Your Email")
                 router.push('/instructorsignin')
-    
               })
               .catch((error) => {
                 setError("Login Failed Check your Credential");
