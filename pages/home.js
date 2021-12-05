@@ -14,7 +14,6 @@ export default function Home (){
         reviewCount: 34,
         rating: 4,
       }
-
     return (
         <div>
         <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
@@ -25,7 +24,6 @@ export default function Home (){
     <WrapItem>
         <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
       <Image src={property.imageUrl} alt={property.imageAlt} />
-
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2' colorScheme='teal'>
@@ -42,7 +40,6 @@ export default function Home (){
             Instructor : {property.author1}  &bull; {property.author2} 
           </Box>
         </Box>
-
         <Box
           mt='1'
           fontWeight='semibold'
@@ -52,7 +49,6 @@ export default function Home (){
         >
           {property.title}
         </Box>
-
         <Box>
           {property.formattedPrice}
           <Box as='span' color='gray.600' fontSize='sm'>
@@ -96,7 +92,6 @@ export default function Home (){
             Instructor : {property.author1}  &bull; {property.author2} 
           </Box>
         </Box>
-
         <Box
           mt='1'
           fontWeight='semibold'
@@ -106,7 +101,6 @@ export default function Home (){
         >
           {property.title}
         </Box>
-
         <Box>
           {property.formattedPrice}
           <Box as='span' color='gray.600' fontSize='sm'>
@@ -185,15 +179,12 @@ export default function Home (){
     </Box>
     </WrapItem>
     </Wrap>
-
     </Center>
     <Center>
-
     <Wrap>
         <WrapItem>
         <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
       <Image src={property.imageUrl} alt={property.imageAlt} />
-
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2' colorScheme='teal'>
@@ -210,7 +201,6 @@ export default function Home (){
             Instructor : {property.author1}  &bull; {property.author2} 
           </Box>
         </Box>
-
         <Box
           mt='1'
           fontWeight='semibold'
@@ -220,14 +210,12 @@ export default function Home (){
         >
           {property.title}
         </Box>
-
         <Box>
           {property.formattedPrice}
           <Box as='span' color='gray.600' fontSize='sm'>
             / wk
           </Box>
         </Box>
-
         <Box display='flex' mt='2' alignItems='center'>
           {Array(5)
             .fill('')
@@ -247,7 +235,6 @@ export default function Home (){
         <WrapItem>
         <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
       <Image src={property.imageUrl} alt={property.imageAlt} />
-
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2' colorScheme='teal'>
@@ -264,7 +251,6 @@ export default function Home (){
             Instructor : {property.author1}  &bull; {property.author2} 
           </Box>
         </Box>
-
         <Box
           mt='1'
           fontWeight='semibold'
@@ -274,14 +260,12 @@ export default function Home (){
         >
           {property.title}
         </Box>
-
         <Box>
           {property.formattedPrice}
           <Box as='span' color='gray.600' fontSize='sm'>
             / wk
           </Box>
         </Box>
-
         <Box display='flex' mt='2' alignItems='center'>
           {Array(5)
             .fill('')
@@ -301,7 +285,6 @@ export default function Home (){
         <WrapItem>
         <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
       <Image src={property.imageUrl} alt={property.imageAlt} />
-
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2' colorScheme='teal'>
@@ -318,7 +301,6 @@ export default function Home (){
             Instructor : {property.author1}  &bull; {property.author2} 
           </Box>
         </Box>
-
         <Box
           mt='1'
           fontWeight='semibold'
@@ -335,7 +317,6 @@ export default function Home (){
             / wk
           </Box>
         </Box>
-
         <Box display='flex' mt='2' alignItems='center'>
           {Array(5)
             .fill('')

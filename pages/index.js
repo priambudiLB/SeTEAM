@@ -11,7 +11,6 @@ export default function Home() {
       <Navvbar/>
     <Wrap spacing="10px">
   <WrapItem>
- 
     <div>
     <Container  w="600px" h="800px" bg="Beige.200">
     <br/><br/>

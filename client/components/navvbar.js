@@ -2,31 +2,13 @@ import {
     Box,Flex,HStack,Button,Menu,
     useDisclosure,useColorModeValue,useColorMode,Stack,Image,Text
   } from "@chakra-ui/react";
- 
+import { NavLink } from "react-router-dom";
   import {MoonIcon, SunIcon } from "@chakra-ui/icons";
 import router, { useRouter } from "next/router";
-
-  
-  // const NavLink = ({ children }) => (
-  //   <Link
-  //     px={2}
-  //     py={1}
-  //     rounded={"md"}
-  //     _hover={{
-  //       textDecoration: "none",
-  //       bg: useColorModeValue("gray.200", "gray.700"),
-  //     }}
-  //     href={"#"}
-  //   >
-  //     {children}
-  //   </Link>
-  // );
-  
   export default function Navvbar() {
     const { isOpen } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter()
-
     return (
       <>
         <Box bg={useColorModeValue("red.300", "gray.900")} px={4}>
@@ -40,9 +22,7 @@ import router, { useRouter } from "next/router";
                 display={{ base: "none", md: "flex" }}
               >
                
-                  <Text fontSize='20px'>Welcome to</Text>
-                  <Text fontSize='30px' fontWeight='bold'>Sinau.id</Text>
-                 
+                  <Text fontSize='20px'>Welcome to</Text> 
                 ))
               </HStack>
             </HStack>
@@ -69,11 +49,9 @@ import router, { useRouter } from "next/router";
                 >
                 SignUp 
                 </Button>
-               
               </Menu>
             </Flex>
           </Flex>
-  
           {isOpen ? (
             <Box pb={4} display={{ md: "none" }}>
               <Stack as={"nav"} spacing={4}>

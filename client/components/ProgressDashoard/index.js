@@ -18,20 +18,12 @@ import {
   Flex,
 } from "@chakra-ui/react"
 import { Progress } from "@chakra-ui/react"
-
-
 const ProgressDashboard = () => {
-
-
-
   return (
     <>
       {/* Page content */}
-
       <Container >
-
         <Flex>
-
           <Table variant="simple">
             <TableCaption placement="top" fontSize="large"> Course Progress.</TableCaption>
             <Thead>
@@ -77,18 +69,11 @@ const ProgressDashboard = () => {
                   <Progress hasStripe value={64} />
                 </Td>
               </Tr>
-
-
             </Tbody>
           </Table>
         </Flex>
-
-
       </Container>
     </>
   );
 };
-
-
-
 export default ProgressDashboard;

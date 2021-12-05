@@ -26,8 +26,6 @@ const DataInstructor = [
         ]
     },
 ];
-
-
 const DataStudent = [
     {
         id: 1,
@@ -63,5 +61,4 @@ copy.forEach((currData, i, arr) => {
     if (currData.id === 1) {
         console.log(currData.student_name);
     }
-
 })
