@@ -1,7 +1,6 @@
 .title-homepage {
   color: brown;
 }
-<<<<<<< HEAD
 
 
 
@@ -17,28 +16,13 @@
 }
 
 
-=======
-.container {
-  padding:0 2rem;
-}
-/* <<<<<<< krisna/authlandpage */
-.btnColor{
-  background-color: turquoise;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 10px;
-}
->>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 .table_width {
   padding: 0 20rem;
   padding-left: 50px;
 }
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 /* >>>>>>> branch_lkm */
 .main {
   min-height: 100vh;
@@ -137,7 +121,6 @@
     flex-direction: column;
   }
 }
-<<<<<<< HEAD
 
 
 
@@ -145,11 +128,6 @@
   margin-bottom: 1.5em;
 }
 
-=======
-.sidebar-items:not(:last-child) {
-  margin-bottom: 1.5em;
-}
->>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 @media only screen and (max-width: 767px) {
   .sidebar-items {
     margin-bottom: 0 !important;
@@ -160,7 +138,6 @@
   color: gray;
   font-size: large;
 }
-<<<<<<< HEAD
 
 .sidebar-items p {
   margin-left: 1em;
@@ -181,20 +158,3 @@
 .active-icon {
   color: #B57295 !important;
 }
-=======
-.sidebar-items p {
-  margin-left: 1em;
-}
-.sidebar-items:hover svg {
-  color: #B57295;
-}
-.sidebar-items:hover p {
-  color: #fff;
-}
-.active {
-  color: #fff;
-}
-.active-icon {
-  color: #B57295 !important;
-}
->>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
