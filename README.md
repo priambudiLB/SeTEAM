@@ -1,11 +1,15 @@
 <h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
 
 =======
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=alert_status">
 >>>>>>> ea3237e39d1153a5e3d9c107ea6ccfd267162e22
+=======
+<img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 </a></h1>
 <p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
 
@@ -13,11 +17,15 @@
 
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=bugs">
+<<<<<<< HEAD
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
@@ -33,19 +41,26 @@
 
 =======
 <img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=bugs">
+=======
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=duplicated_lines_density">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=duplicated_lines_density">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
+<<<<<<< HEAD
 <img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 >>>>>>> ea3237e39d1153a5e3d9c107ea6ccfd267162e22
+=======
+<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
+
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 </a>
 
 </p>

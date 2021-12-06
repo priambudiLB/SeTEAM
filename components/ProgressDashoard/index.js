@@ -1,38 +1,16 @@
 import React from "react";
-// node.js library that concatenates classes (strings)
-
-// reactstrap components
-
-// layout for this page
 import {
-  Table,
-  Container,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  Heading,
-  Flex,
+  Table,Container,Thead,Tbody,
+  Tfoot,Tr,Th,Td,TableCaption,Heading,Flex,
 } from "@chakra-ui/react"
 import { Progress } from "@chakra-ui/react"
-
-
 const ProgressDashboard = () => {
-
-
-
   return (
     <>
       {/* Page content */}
-
       <Container >
-
         <Flex>
-
-          <Table variant="simple">
+         <Table variant="simple">
             <TableCaption placement="top" fontSize="large"> Course Progress.</TableCaption>
             <Thead>
               <Th>
@@ -77,18 +55,11 @@ const ProgressDashboard = () => {
                   <Progress hasStripe value={64} />
                 </Td>
               </Tr>
-
-
             </Tbody>
           </Table>
         </Flex>
-
-
       </Container>
     </>
   );
 };
-
-
-
 export default ProgressDashboard;

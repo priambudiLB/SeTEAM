@@ -16,12 +16,17 @@
     "@cloudinary/url-gen": "^1.2.0",
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
+<<<<<<< HEAD
     "cloudinary": "^1.27.1",
     "cloudinary-react": "^1.7.0",
+=======
+    "bcrypt": "^5.0.1",
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "firebase": "^8.10.0",
     "framer-motion": "^4.1.17",
+<<<<<<< HEAD
     "next": "^12.0.5",
     "react": "^17.0.2",
     "@chakra-ui/react": "^1.7.2",
@@ -31,6 +36,11 @@
     "firebase": "^8.10.0",
     "framer-motion": "^4.1.17",
     "next": "12.0.3",
+=======
+    "next": "12.0.3",
+    "pg": "^8.7.1",
+    "postgres": "^1.0.2",
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
     "react": "17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "17.0.2",

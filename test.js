@@ -26,8 +26,11 @@ const DataInstructor = [
         ]
     },
 ];
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 const DataStudent = [
     {
         id: 1,
@@ -57,13 +60,19 @@ const DataStudent = [
         ]
     }
 ]
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 const copy = [...DataStudent];
 
 copy.forEach((currData, i, arr) => {
     if (currData.id === 1) {
         console.log(currData.student_name);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6d75f4b4d7c0f3be9dfa502f6ff7df5cf57b2d7a
 })
