@@ -41,45 +41,27 @@ import {
     FiUsers,
     FiBell
 } from "react-icons/fi"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { handlerA } from "./api/hello";
 
 import { Cloudinary } from "@cloudinary/url-gen";
-import {scale} from "@cloudinary/url-gen/actions/resize";
-
-const cld = new Cloudinary({
-    cloud: {
-        // cloudName: process.env.NEXT_CLDNRY_cloud_name
-        cloudName: process.env.NEXT_CLDNRY_cloud_name,
-        apiKey: process.env.NEXT_CLDNRY_api_key,
-        apiSecret: process.env.NEXT_CLDNRY_api_secret,
-        secure: process.env.NEXT_CLDNRY_secure
-    }
-});
+import { scale } from "@cloudinary/url-gen/actions/resize";
+import { FetchVideo } from '../components/FetchVideo';
 
 
 
-function CoursePage() {
-    const [value, changeValue] = useState(1)
+
+
+function CoursePage(props) {
+    const { url } = props;
+    const [value, changeValue] = useState("")
 
     const themeColor = "#B2F5EA";
     const fontColor = "#@30c040";
 
 
-    // Instantiate a CloudinaryVideo object for the video with public ID, 'elephants'.
-    const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
-
-    // Apply the transformation.
-    myVideo.resize(scale().width(800));
-
-    // Get the URL of the video.
-    const myURL = myVideo.toURL();
-    console.log(myURL)
-
     return (
         <>
-
-
 
             <Flex h={[null, null, "100vh"]}
                 maxW="2000px"
@@ -167,14 +149,16 @@ function CoursePage() {
 
                     </Flex>
                     <Flex mb={"10px"}>
-
                         <video
                             // height="360"
                             // width="720"
                             controls
                         >
-                            <source src={myURL} type="video/mp4"></source>
+                            <source src={url} type="video/mp4"></source>
+                            {/* <source src={FetchVideo} type="video/mp4"></source>  */}
                         </video>
+
+
 
                     </Flex>
                     <Flex flexDir="row">
@@ -191,5 +175,36 @@ function CoursePage() {
 
     )
 }
+
+
+// function yg dijalanin sebelom kasih data HTML
+export async function getServerSideProps(context) {
+
+    // get nama video
+
+    const cld = new Cloudinary({
+        cloud: {
+            // cloudName: process.env.NEXT_CLDNRY_cloud_name
+            cloudName: process.env.NEXT_CLDNRY_cloud_name,
+            apiKey: process.env.NEXT_CLDNRY_api_key,
+            apiSecret: process.env.NEXT_CLDNRY_api_secret,
+            secure: process.env.NEXT_CLDNRY_secure
+        }
+    });
+    const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
+
+    // Apply the transformation.
+    // myVideo.resize(scale().width(800));
+    myVideo.resize(scale().width(800));
+
+    // Get the URL of the video.
+    const myURL = myVideo.toURL();
+
+    return {
+        props: { 
+            url: myURL }, // will be passed to the page component as props
+    }
+}
+
 
 export default CoursePage;
