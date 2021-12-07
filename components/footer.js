@@ -6,7 +6,7 @@ export default function footer() {
     return (
         <Box as="footer" role="contentinfo" mx="auto" mt="350px" pr="5rem" pl="5rem">
             <Stack direction="horizontal" gridGap={5} fontSize="sm">
-                <Link href="instractor">Home</Link>
+                <Link href="/">Home</Link>
                 <Text>About</Text>
                 <Text>Contact Us</Text>
                 <Spacer/>
