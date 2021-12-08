@@ -1,13 +1,18 @@
 import {
-    Flex,Heading,Avatar,AvatarGroup,Text,Icon,IconButton,Table,Thead,Tbody,Tr,Th,
-    Td,Divider,Link,Box,Button,Input,InputGroup,InputLeftElement,
-    Stack,HStack,VStack} from '@chakra-ui/react'
+    Flex, Heading, Avatar, AvatarGroup, Text, Icon, IconButton, Table, Thead, Tbody, Tr, Th,
+    Td, Divider, Link, Box, Button, Input, InputGroup, InputLeftElement,
+    Stack, HStack, VStack
+} from '@chakra-ui/react'
 import {
-    FiHome,FiPieChart,FiBook,FiDollarSign,FiBox,FiCalendar,FiChevronDown,FiChevronUp,
-    FiPlus,FiCreditCard,FiSearch,FiUsers,FiBell
+    FiHome, FiPieChart, FiBook, FiDollarSign, FiBox, FiCalendar, FiChevronDown, FiChevronUp,
+    FiPlus, FiCreditCard, FiSearch, FiUsers, FiBell
 } from "react-icons/fi"
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashboard/index';
+import { ReadDataFromRDB } from "../components/ReadDataFromRDB.js";
+import WriteDataVideo from "../components/WriteDataVideo";
+
+
 function Dashboard() {
     const [value, changeValue] = useState(1)
     const themeColor = "#B2F5EA";
@@ -46,6 +51,7 @@ function Dashboard() {
                         >
                             SeTEAM.
                         </Heading>
+                        <ReadDataFromRDB />
                         <Flex
                             flexDir={["row", "row", "column", "column", "column"]}
                             align={["center", "center", "center", "flex-start", "flex-start"]}
@@ -85,12 +91,14 @@ function Dashboard() {
                     </Flex>
                 </Flex>
             </Flex>
+
+            {/* col2 */}
             <Flex
-           w={["100%", "100%", "60%", "60%", "55%"]}
-            p="3%"
-            flexDir="column"
-            overflow="auto"
-            minH="100vh">
+                w={["100%", "100%", "60%", "60%", "55%"]}
+                p="3%"
+                flexDir="column"
+                overflow="auto"
+                minH="100vh">
                 <VStack
                     spacing={4}
                     align="stretch"
@@ -107,6 +115,9 @@ function Dashboard() {
                     </Box>
                     <Box >
                         <ProgressDashboard />
+                    </Box>
+                    <Box>
+                    <WriteDataVideo/>
                     </Box>
 
                 </VStack>
@@ -160,7 +171,7 @@ function Dashboard() {
                                     <Text color="#1C4532">Data Structure</Text>
                                     <Text fontWeight="bold" fontSize="xl">Rp.100.000,00</Text>
                                 </Flex>
-                                <Flex align="center">   
+                                <Flex align="center">
                                 </Flex>
                             </Flex>
                             <Flex align="flex-end" justify="space-between">
@@ -239,13 +250,13 @@ function Dashboard() {
                     <Button bgColor={value == 3 ? "gray.600" : "gray.400"} size="xs" mx={1} onClick={() => changeValue(3)} />
                 </Flex>
                 <Flex flexDir="column" my={4}>
-                    
+
                 </Flex>
                 <Heading letterSpacing="tight" size="md" my={4}>Send money to</Heading>
                 <Flex>
                     <AvatarGroup size="md" max={3}>
                         <Avatar src="avatar-2.jpg" />
-                     
+
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>

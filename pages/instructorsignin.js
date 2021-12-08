@@ -22,11 +22,12 @@ export default function Signin() {
         emailRef.current.value,
         passwordRef.current.value
       );
-      alert("SuccessFully Login");
-      localStorage.setItem("username", emailRef.current.value);
+      // alert("SuccessFully Login");
+      localStorage.setItem("displayName", emailRef.current.value);
       router.push("/dashboard");
     }
   }
+  
       return (
         <div className={styles.container}>
         <Wrap spacing='3px' >
