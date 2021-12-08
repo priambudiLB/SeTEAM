@@ -7,7 +7,7 @@ import {
     FiPlus,FiCreditCard,FiSearch,FiUsers,FiBell
 } from "react-icons/fi"
 import { useState } from "react";
-import ProgressDashboard from '../components/ProgressDashoard/index';
+import ProgressDashboard from '../components/ProgressDashboard/index';
 function Dashboard() {
     const [value, changeValue] = useState(1)
     const themeColor = "#B2F5EA";
