@@ -11,35 +11,41 @@ import firebase from "../../config/firebase";
 const user = firebase.auth();
 export const ReadDataFromRDB = () => {
 
-    const readDate = () => {
+    const readDate = async () => {
         try {
 
+            if (user) {
+                const db = firebase.database();
+                const ref =  db.ref("instructorData");
+                ref.on("value", getData, errData)
+                function getData(obj) {
+                    console.log(Object.keys(obj.val()))
+                }
+                function errData(error) {
+                    console.log(error)
+                }
 
-            // if (user !== null) {
-            // user.providerData.forEach((profile) => {
-            //     console.log("Sign-in provider: " + profile.providerId);
-            //     console.log("  Provider-specific UID: " + profile.uid);
-            //     console.log("  Email: " + profile.email);
-            //     console.log("  username: " + profile.username);
-            // });
-            // const [...data] = user.providerData
-            // console.log(user.uid);
+                getData(obj)
+            }
 
-
+        
             // }
-
+            // check if user auth as teacher
+            /*
             firebase.auth().onAuthStateChanged((user) => {
                 if (user) {
-                    // User is signed in, see docs for a list of available properties
-                    // https://firebase.google.com/docs/reference/js/firebase.User
                     var uid = user.uid;
-                    console.log(uid)
-                    // ...
+                    // console.log("test: " , user)
+                    const {...data} = user;
+                    console.log("data: ", data)
+                    console.log("meta data: ", data.metadata)
+                    console.log("uid: ", data.uid)
                 } else {
                     // User is signed out
                     // ...
                 }
             });
+            */
 
             // const dbRef = firebase.database().ref("instructorData");
             // dbRef.once("value", (snapshot) => {
