@@ -5,7 +5,9 @@ on:
 jobs:
   coverage:
     name: Codecov
-    uses: codecov/codecov-action@v2
-    with:
-      token: ${{ secrets.CODECOV_TOKEN }}
-      flags: unittests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
