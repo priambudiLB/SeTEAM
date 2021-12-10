@@ -10,11 +10,7 @@ const firebaseConfig = ({
   measurementId: process.env.NEXT_PUBLIC_frb_measurementId,
   databaseURL:process.env.NEXT_PUBLIC_frb_ReltimeDB
 });
-
-
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
-
-
 export default firebase;

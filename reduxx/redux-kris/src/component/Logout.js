@@ -2,14 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../features/userSlice";
 import './logout.css'
-
 export default function Logout (){
     const user = useSelector(selectUser)
-
     const dispatch =useDispatch()
     function handleLogout(e){
-        e.preventDefault()
-        
+        e.preventDefault()  
         dispatch(logout())
     }
     return(
