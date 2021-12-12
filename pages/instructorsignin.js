@@ -24,7 +24,7 @@ export default function Signin() {
       );
       // alert("SuccessFully Login");
       localStorage.setItem("displayName", emailRef.current.value);
-      router.push("/dashboard");
+      router.push("/");
     }
   }
   

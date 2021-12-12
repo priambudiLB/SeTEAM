@@ -1,16 +1,38 @@
 
+import {
+    Container,
+    Flex,
+    VStack,
+    FormControl, FormLabel, Input, Image,
+    FormHelperText, Button, Center, Alert, Wrap, WrapItem, Box, Text
 
-var cloudinary = require('cloudinary').v2;
+} from "@chakra-ui/react"
 
-cloudinary.config({
-    // cloudName: process.env.NEXT_CLDNRY_cloud_name
-    cloudName: process.env.NEXT_CLDNRY_cloud_name,
-    apiKey: process.env.NEXT_CLDNRY_api_key,
-    apiSecret: process.env.NEXT_CLDNRY_api_secret,
-    secure: process.env.NEXT_CLDNRY_secure
-})
 
-const UploadVideoClD =()=> {
+const UploadVideoClD = () => {
+
+
+    return (
+
+        <Flex>
+
+
+            <Container maxW='container.md'>Medium Container</Container>
+            <Flex>
+                {/* upoad data */}
+                {/* <Text fontWeight='bold' fontSize='20px'  >Upload Data Video</Text>
+                <FormControl pt={2} id="email" className >
+                    <FormLabel padding="1px" ><Center>Email address</Center></FormLabel>
+                    <Input type="video_address" placeholder='Upload Video' ref w="250px" isRequired />
+                    <FormHelperText>We will never share your email.</FormHelperText>
+                </FormControl>
+
+                <Button onClick mt={5} colorScheme="teal" mr="4" h="30px" w="70px" className={"#"} >
+                    Upload Video
+                </Button> */}
+            </Flex>
+        </Flex>
+    )
 
 }
 

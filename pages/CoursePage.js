@@ -2,8 +2,6 @@
 import {
     Flex,
     Heading,
-    Avatar,
-    AvatarGroup,
     Text,
     Icon,
     IconButton,
