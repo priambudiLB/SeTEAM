@@ -14,7 +14,7 @@ const cld = new Cloudinary({
 
 export async function FetchVideo() {
      // Instantiate a CloudinaryVideo object for the video with public ID, 'elephants'.
-     const myVideo = await cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
+     const myVideo = await cld.video('/samples/sea-turtle');
 
      // Apply the transformation.
      myVideo.resize(scale().width(800));
