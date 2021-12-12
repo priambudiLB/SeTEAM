@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import NavbarUser from "../components/NavbarUser"
 
 export default function Home() {
+  
   const router = useRouter()
   return (
     <div>

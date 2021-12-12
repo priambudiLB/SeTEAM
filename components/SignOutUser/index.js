@@ -14,6 +14,8 @@ const SignOutUser = () => {
             firebase.auth().signOut().then(() => {
                 // Sign-out successful.
                 alert("You have signed out")
+                localStorage.removeItem("uid")
+                localStorage.removeItem("displayName")
                 window.location.reload();
             }).catch((error) => {
                 // An error happened.

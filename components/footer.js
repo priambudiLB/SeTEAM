@@ -16,7 +16,7 @@ const Footer = (props) => {
                     id="footer"
                     margin={"auto"}>
 
-                    <Link href="/">
+                    <Link href="/" onClick={() => {window.location.reload()}}>
                         <a>Home</a>
                     </Link>
                     <Link href="#">
