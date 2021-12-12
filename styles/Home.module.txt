@@ -11,6 +11,8 @@
   padding-right: 40px;
   border-radius: 10px;
 }
+
+
 .table_width {
   padding: 0 20rem;
   padding-left: 50px;

@@ -18,7 +18,7 @@ const firebaseAuthentication = firebase.auth();
     var userDBRef = db.ref('instructorData')
     async function addDataInstructor(e){
             await userDBRef.push({
-              username: usernameRef.current.value,
+              displayName: usernameRef.current.value,
               email: emailRef.current.value,
               password: passwordRef.current.value,
               confirmationPass:confPassRef.current.value
