@@ -1,13 +1,19 @@
 import {
-    Flex,Heading,Avatar,AvatarGroup,Text,Icon,IconButton,Table,Thead,Tbody,Tr,Th,
-    Td,Divider,Link,Box,Button,Input,InputGroup,InputLeftElement,
-    Stack,HStack,VStack} from '@chakra-ui/react'
+    Flex, Heading, Avatar, AvatarGroup, Text, Icon, IconButton, Table, Thead, Tbody, Tr, Th,
+    Td, Divider, Link, Box, Button, Input, InputGroup, InputLeftElement,
+    Stack, HStack, VStack
+} from '@chakra-ui/react'
 import {
-    FiHome,FiPieChart,FiBook,FiDollarSign,FiBox,FiCalendar,FiChevronDown,FiChevronUp,
-    FiPlus,FiCreditCard,FiSearch,FiUsers,FiBell
+    FiHome, FiBook,
+    FiPlus, FiUsers, FiBell
 } from "react-icons/fi"
 import { useState } from "react";
-import ProgressDashboard from '../components/ProgressDashoard/index';
+import ProgressDashboard from '../components/ProgressDashboard/index';
+import { ReadDataFromRDB } from "../components/ReadDataFromRDB.js";
+import WriteDataVideo from "../components/WriteDataVideo";
+import UploadVideoClD from "../components/UploadVideoCloudinary"
+import SignOutUser from '../components/SignOutUser';
+
 function Dashboard() {
     const [value, changeValue] = useState(1)
     const themeColor = "#B2F5EA";
@@ -21,7 +27,7 @@ function Dashboard() {
         >
             {/* col 1 */}
             <Flex
-                w={["100%", "100%", "10%", "15%", "15%"]}
+                w={["100%", "100%", "10%", "15%"]}
                 flexDir="column"
                 alignItems="center"
                 bgColor="#171A21"
@@ -46,6 +52,7 @@ function Dashboard() {
                         >
                             SeTEAM.
                         </Heading>
+                        <ReadDataFromRDB />
                         <Flex
                             flexDir={["row", "row", "column", "column", "column"]}
                             align={["center", "center", "center", "flex-start", "flex-start"]}
@@ -77,20 +84,24 @@ function Dashboard() {
                                 </Link>
                             </Flex>
 
+
                         </Flex>
                     </Flex>
                     <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
-                        <Avatar my={2} src="avatar-1.jpg" />
+                        <SignOutUser />
+                        <Avatar my={2} src="#" />
                         <Text textAlign="center">TEST REDUX</Text>
                     </Flex>
                 </Flex>
             </Flex>
+
+            {/* col2 */}
             <Flex
-           w={["100%", "100%", "60%", "60%", "55%"]}
-            p="3%"
-            flexDir="column"
-            overflow="auto"
-            minH="100vh">
+                w={["100%", "100%", "60%", "60%", "55%"]}
+                p="3%"
+                flexDir="column"
+                overflow="auto"
+                minH="100vh">
                 <VStack
                     spacing={4}
                     align="stretch"
@@ -107,6 +118,12 @@ function Dashboard() {
                     </Box>
                     <Box >
                         <ProgressDashboard />
+                    </Box>
+                    <Box>
+                        <WriteDataVideo />
+                    </Box>
+                    <Box>
+                        <UploadVideoClD />
                     </Box>
 
                 </VStack>
@@ -160,7 +177,7 @@ function Dashboard() {
                                     <Text color="#1C4532">Data Structure</Text>
                                     <Text fontWeight="bold" fontSize="xl">Rp.100.000,00</Text>
                                 </Flex>
-                                <Flex align="center">   
+                                <Flex align="center">
                                 </Flex>
                             </Flex>
                             <Flex align="flex-end" justify="space-between">
@@ -239,13 +256,11 @@ function Dashboard() {
                     <Button bgColor={value == 3 ? "gray.600" : "gray.400"} size="xs" mx={1} onClick={() => changeValue(3)} />
                 </Flex>
                 <Flex flexDir="column" my={4}>
-                    
                 </Flex>
                 <Heading letterSpacing="tight" size="md" my={4}>Send money to</Heading>
                 <Flex>
                     <AvatarGroup size="md" max={3}>
-                        <Avatar src="avatar-2.jpg" />
-                     
+                        <Avatar src="#" />
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>
@@ -258,6 +273,7 @@ function Dashboard() {
                 </InputGroup>
                 <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
             </Flex>
+            {/* col 4 */}
         </Flex>
     )
 }
