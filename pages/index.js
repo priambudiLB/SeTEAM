@@ -7,7 +7,8 @@ import { useRouter } from 'next/router'
 export default function Home() {
   const router = useRouter()
   return (
-    <div>
+    <Box>
+      <Container display='contents'>
       <Navvbar/>
     <Wrap spacing="10px">
   <WrapItem>
@@ -30,13 +31,12 @@ export default function Home() {
   </Button>
 </Container>
     </div>
-  </WrapItem>
-  <WrapItem>
     <Center w="950px" h="800px" bg="Beige.200">
       <Image src='/devices.png' alt='devicespage' w='850px' h='500px' />
     </Center>
   </WrapItem>
   </Wrap>
-  </div>
+  </Container>
+  </Box>
   )
 }
