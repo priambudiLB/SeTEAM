@@ -43,7 +43,5 @@ export default function WriteDataVideo() {
             </FormControl>
         </div>
 
-        // button trigger
-
     );
 }
