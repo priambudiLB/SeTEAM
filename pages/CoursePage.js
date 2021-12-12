@@ -1,41 +1,15 @@
-
 import {
     Flex,
     Heading,
     Text,
     Icon,
-    IconButton,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    Divider,
     Link,
-    Box,
-    Button,
-    Input,
-    InputGroup,
-    InputLeftElement,
-    Stack,
-    HStack,
-    VStack,
 } from '@chakra-ui/react'
 
 
 import {
     FiHome,
-    FiPieChart,
     FiBook,
-    FiDollarSign,
-    FiBox,
-    FiCalendar,
-    FiChevronDown,
-    FiChevronUp,
-    FiPlus,
-    FiCreditCard,
-    FiSearch,
     FiUsers,
     FiBell
 } from "react-icons/fi"
@@ -44,9 +18,6 @@ import { handlerA } from "./api/hello";
 
 import { Cloudinary } from "@cloudinary/url-gen";
 import { scale } from "@cloudinary/url-gen/actions/resize";
-import { FetchVideo } from '../components/FetchVideo';
-
-
 
 
 
@@ -189,7 +160,8 @@ export async function getServerSideProps(context) {
             secure: process.env.NEXT_CLDNRY_secure
         }
     });
-    const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
+    // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
+    const myVideo = cld.video('samples/sea-turtle');
 
     // Apply the transformation.
     // myVideo.resize(scale().width(800));
