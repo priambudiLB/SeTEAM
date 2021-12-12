@@ -19,11 +19,13 @@ export const ReadDataFromRDB = () => {
             user.onAuthStateChanged((signedUser) => {
                 if (signedUser) {
                     const db = firebase.database();
-                    const ref = db.ref('instructorData');
+                    const ref = db.ref('instructorData')
     
                     // Attach an asynchronous callback to read the data at our posts reference
                     ref.on('value', (snapshot) => {
-                        console.log(snapshot.val());
+                        // console.log(snapshot.val()); --> get all data
+                        const uidCurrUser = signedUser.uid
+                        console.log("unique ID: ", uidCurrUser)
                     }, (errorObject) => {
                         console.log('The read failed: ' + errorObject.name);
                     });
