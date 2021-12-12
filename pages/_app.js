@@ -12,7 +12,11 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
-  );
+
+
+  )
 }
 
-export default MyApp;
+
+export default MyApp
+

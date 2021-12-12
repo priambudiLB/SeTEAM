@@ -34,12 +34,11 @@ export default function Home() {
     <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
       <Heading>Lets Start Learning, Budi </Heading>
-      <Container display='contents'>
-        <Wrap>
-      {property.map((data) => {
+      <Wrap display={"contents"} alignItems={"center"} margin={"auto"}>
+        {property.map((data) => {
 
-        return (
-        
+          return (
+
             <Center key={data.id}>
               <Box maxW='sm' borderWidth='1px' borderRadius='lg' >
                 <Image src={data.imageUrl} alt={data.imageAlt} />
@@ -89,14 +88,14 @@ export default function Home() {
                   </Box>
                 </Box>
               </Box>
-              </Center>
-              
+            </Center>
 
 
-        )
-      })}
-</Wrap>
-</Container>
+
+          )
+        })}
+      </Wrap>
+
     </>
 
   )
