@@ -256,13 +256,11 @@ function Dashboard() {
                     <Button bgColor={value == 3 ? "gray.600" : "gray.400"} size="xs" mx={1} onClick={() => changeValue(3)} />
                 </Flex>
                 <Flex flexDir="column" my={4}>
-
                 </Flex>
                 <Heading letterSpacing="tight" size="md" my={4}>Send money to</Heading>
                 <Flex>
                     <AvatarGroup size="md" max={3}>
                         <Avatar src="#" />
-
                     </AvatarGroup>
                     <Avatar icon={<FiPlus />} ml={2} color="#fff" bgColor="gray.300" />
                 </Flex>
@@ -276,7 +274,6 @@ function Dashboard() {
                 <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
             </Flex>
             {/* col 4 */}
-
         </Flex>
     )
 }

@@ -12,6 +12,7 @@ export default function Signin() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const router = useRouter()
+  
   async function handleSubmit(e) {
     e.preventDefault();
     var errorCode = error.code;
@@ -22,7 +23,6 @@ export default function Signin() {
         emailRef.current.value,
         passwordRef.current.value
       );
-
       // alert("SuccessFully Login");
       localStorage.setItem("displayName", emailRef.current.value);
       await firebaseAuthentication.onAuthStateChanged((signed) => {

@@ -31,7 +31,7 @@ export default function Home() {
       rating: 4,
     }]
   return (
-    <Container display={"contents"} flexDir={"row"}>
+    <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
       <Heading>Lets Start Learning, Budi </Heading>
 
@@ -39,56 +39,56 @@ export default function Home() {
 
         return (
 
-          <Center key={data.id}>
-            <Box maxW='sm' borderWidth='1px' borderRadius='lg' >
-              <Image src={data.imageUrl} alt={data.imageAlt} />
-              <Box p='6'>
-                <Box display='flex' >
-                  <Badge borderRadius='full' px='2' colorScheme='teal'>
-                    New
-                  </Badge>
+            <Center key={data.id}>
+              <Box maxW='sm' borderWidth='1px' borderRadius='lg' >
+                <Image src={data.imageUrl} alt={data.imageAlt} />
+                <Box p='6'>
+                  <Box display='flex' >
+                    <Badge borderRadius='full' px='2' colorScheme='teal'>
+                      New
+                    </Badge>
+                    <Box
+                      color='gray.500'
+                      fontWeight='semibold'
+                      letterSpacing='wide'
+                      fontSize='xs'
+                      textTransform='uppercase'
+                      ml='2'
+                    >
+                      Instructor : {data.author1}  &bull; {data.author2}
+                    </Box>
+                  </Box>
                   <Box
-                    color='gray.500'
+                    mt='1'
                     fontWeight='semibold'
-                    letterSpacing='wide'
-                    fontSize='xs'
-                    textTransform='uppercase'
-                    ml='2'
+                    as='h4'
+                    lineHeight='tight'
+                    isTruncated
                   >
-                    Instructor : {data.author1}  &bull; {data.author2}
+                    {data.title}
                   </Box>
-                </Box>
-                <Box
-                  mt='1'
-                  fontWeight='semibold'
-                  as='h4'
-                  lineHeight='tight'
-                  isTruncated
-                >
-                  {data.title}
-                </Box>
-                <Box>
-                  {data.formattedPrice}
-                  <Box as='span' color='gray.600' fontSize='sm'>
-                    / wk
+                  <Box>
+                    {data.formattedPrice}
+                    <Box as='span' color='gray.600' fontSize='sm'>
+                      / wk
+                    </Box>
                   </Box>
-                </Box>
-                <Box display='flex' mt='2'>
-                  {Array(5)
-                    .fill('')
-                    .map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        color={i < data.rating ? 'teal.500' : 'gray.300'}
-                      />
-                    ))}
-                  <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                    {data.reviewCount} reviews
+                  <Box display='flex' mt='2'>
+                    {Array(5)
+                      .fill('')
+                      .map((_, i) => (
+                        <StarIcon
+                          key={i}
+                          color={i < data.rating ? 'teal.500' : 'gray.300'}
+                        />
+                      ))}
+                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                      {data.reviewCount} reviews
+                    </Box>
                   </Box>
                 </Box>
               </Box>
-            </Box>
-          </Center>
+              </Center>
 
 
 
@@ -96,7 +96,7 @@ export default function Home() {
       })}
 
 
-    </Container>
+    </>
 
   )
 }
