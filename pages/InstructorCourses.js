@@ -34,10 +34,10 @@ export default function Home() {
     <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
       <Heading>Lets Start Learning, Budi </Heading>
+      <Wrap display={"contents"} alignItems={"center"} margin={"auto"}>
+        {property.map((data) => {
 
-      {property.map((data) => {
-
-        return (
+          return (
 
             <Center key={data.id}>
               <Box maxW='sm' borderWidth='1px' borderRadius='lg' >
@@ -88,13 +88,13 @@ export default function Home() {
                   </Box>
                 </Box>
               </Box>
-              </Center>
+            </Center>
 
 
 
-        )
-      })}
-
+          )
+        })}
+      </Wrap>
 
     </>
 

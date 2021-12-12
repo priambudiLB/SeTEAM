@@ -90,8 +90,4 @@ const ProgressDashboard = () => {
 };
 
 
-<<<<<<< HEAD:components/ProgressDashboard/index.js
-
-=======
->>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3:components/ProgressDashoard/index.js
 export default ProgressDashboard;

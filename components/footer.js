@@ -14,7 +14,7 @@ const Footer = (props) => {
                     justifyContent={"space-evenly"}
                     spacing={"60px"}
                     id="footer"
-                    margin={"auto"}>
+                    marginBottom={"10px"}>
 
                     <Link href="/" onClick={() => {window.location.reload()}}>
                         <a>Home</a>
