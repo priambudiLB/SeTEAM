@@ -34,11 +34,12 @@ export default function Home() {
     <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
       <Heading>Lets Start Learning, Budi </Heading>
-
+      <Container display='contents'>
+        <Wrap>
       {property.map((data) => {
 
         return (
-
+        
             <Center key={data.id}>
               <Box maxW='sm' borderWidth='1px' borderRadius='lg' >
                 <Image src={data.imageUrl} alt={data.imageAlt} />
@@ -89,13 +90,13 @@ export default function Home() {
                 </Box>
               </Box>
               </Center>
-
+              
 
 
         )
       })}
-
-
+</Wrap>
+</Container>
     </>
 
   )
