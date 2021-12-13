@@ -35,10 +35,7 @@
 
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<<<<<<< HEAD
-=======
->>>>>>> 48a25744ba97674788453d255d111ca5b041f73e
->>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3
+
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
@@ -48,10 +45,6 @@
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<<<<<<< HEAD
-=======
-
->>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3
 <img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">

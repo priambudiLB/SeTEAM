@@ -3,7 +3,8 @@ import { Wrap, WrapItem, Text, Center, Box, Heading, Container, Stack } from "@c
 import { Image } from "@chakra-ui/image"
 import { Badge } from "@chakra-ui/layout"
 import { StarIcon } from "@chakra-ui/icons"
-export default function Home() {
+import { ChakraProvider } from '@chakra-ui/react';
+export default function Homes() {
   const property = {
     imageUrl: '/stats.png',
     imageAlt: 'Rear view of modern home with pool',
@@ -15,327 +16,329 @@ export default function Home() {
     rating: 4,
   }
   return (
-    <div>
-      <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
-      <Heading>Lets Start Learning, Budi </Heading>
-      <Container display='contents' >
-        <Center>
-          <Wrap >
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
-                    <Box
-                      color='gray.500'
-                      fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
-                    >
-                      Instructor : {property.author1}  &bull; {property.author2}
-                    </Box>
-                  </Box>
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
-                    </Box>
-                  </Box>
 
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+      <ChakraProvider>
+        <Box w='100%' h='200px' bgGradient={"linear(to-l, #7928CA, #FF0080)"} />
+        <Heading>Lets Start Learning, Budi</Heading>
+        <Container display='contents' >
+          <Center>
+            <Wrap >
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
+                    </Box>
+                    <Box
+                      mt='1'
+                      fontWeight='semibold'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
+                    >
+                      {property.title}
+                    </Box>
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
+                    </Box>
+
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
+              </WrapItem>
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
 
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
+                    </Box>
                     <Box
-                      color='gray.500'
+                      mt='1'
                       fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                      {property.title}
                     </Box>
-                  </Box>
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
                     </Box>
-                  </Box>
 
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
+              </WrapItem>
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
 
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
+                    </Box>
+
                     <Box
-                      color='gray.500'
+                      mt='1'
                       fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                      {property.title}
                     </Box>
-                  </Box>
 
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
-
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
                     </Box>
-                  </Box>
 
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-          </Wrap>
-        </Center>
-        <Center>
-          <Wrap>
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
+              </WrapItem>
+            </Wrap>
+          </Center>
+          <Center>
+            <Wrap>
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
+                    </Box>
                     <Box
-                      color='gray.500'
+                      mt='1'
                       fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                      {property.title}
                     </Box>
-                  </Box>
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
+              </WrapItem>
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
+                    </Box>
                     <Box
-                      color='gray.500'
+                      mt='1'
                       fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                      {property.title}
                     </Box>
-                  </Box>
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-            <WrapItem>
-              <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                <Image src={property.imageUrl} alt={property.imageAlt} />
-                <Box p='6'>
-                  <Box display='flex' alignItems='baseline'>
-                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
-                    </Badge>
-                    <Box
-                      color='gray.500'
-                      fontWeight='semibold'
-                      letterSpacing='wide'
-                      fontSize='xs'
-                      textTransform='uppercase'
-                      ml='2'
-                    >
-                      Instructor : {property.author1}  &bull; {property.author2}
+              </WrapItem>
+              <WrapItem>
+                <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                  <Image src={property.imageUrl} alt={property.imageAlt} />
+                  <Box p='6'>
+                    <Box display='flex' alignItems='baseline'>
+                      <Badge borderRadius='full' px='2' colorScheme='teal'>
+                        New
+                      </Badge>
+                      <Box
+                        color='gray.500'
+                        fontWeight='semibold'
+                        letterSpacing='wide'
+                        fontSize='xs'
+                        textTransform='uppercase'
+                        ml='2'
+                      >
+                        Instructor : {property.author1}  &bull; {property.author2}
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box
-                    mt='1'
-                    fontWeight='semibold'
-                    as='h4'
-                    lineHeight='tight'
-                    isTruncated
-                  >
-                    {property.title}
-                  </Box>
+                    <Box
+                      mt='1'
+                      fontWeight='semibold'
+                      as='h4'
+                      lineHeight='tight'
+                      isTruncated
+                    >
+                      {property.title}
+                    </Box>
 
-                  <Box>
-                    {property.formattedPrice}
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                    <Box>
+                      {property.formattedPrice}
+                      <Box as='span' color='gray.600' fontSize='sm'>
+                        / wk
+                      </Box>
                     </Box>
-                  </Box>
-                  <Box display='flex' mt='2' alignItems='center'>
-                    {Array(5)
-                      .fill('')
-                      .map((_, i) => (
-                        <StarIcon
-                          key={i}
-                          color={i < property.rating ? 'teal.500' : 'gray.300'}
-                        />
-                      ))}
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                      {property.reviewCount} reviews
+                    <Box display='flex' mt='2' alignItems='center'>
+                      {Array(5)
+                        .fill('')
+                        .map((_, i) => (
+                          <StarIcon
+                            key={i}
+                            color={i < property.rating ? 'teal.500' : 'gray.300'}
+                          />
+                        ))}
+                      <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+                        {property.reviewCount} reviews
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </WrapItem>
-          </Wrap>
-        </Center>
-      </Container>
-    </div>
+              </WrapItem>
+            </Wrap>
+          </Center>
+        </Container>
+      </ChakraProvider>
+
   )
 }
