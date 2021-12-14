@@ -9,7 +9,6 @@ const studentPage = () => {
       <title>Student Page</title>
       <Navbar></Navbar>
       <Sidebar></Sidebar>
-      <Footer></Footer>
     </div>
   );
 };
