@@ -1,4 +1,4 @@
 export default function InstPage(){
-return(
+  return(
     <div>halo</div>
-)}
+  );}

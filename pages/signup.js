@@ -1,33 +1,33 @@
-import styles from '../styles/signup.module.css'
-import { useState, useRef } from "react";
-import { useRouter } from 'next/router'
-import Image from 'next/image'
+import styles from '../styles/signup.module.css';
+import { useState, useRef } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 import {
   FormControl, FormLabel, GridItem, Input, Grid,
   FormHelperText, Button, Heading, Center, Alert
-} from "@chakra-ui/react"
+} from '@chakra-ui/react';
 import firebase from '../config/firebase';
 const firebaseAuthentication = firebase.auth();
 export default function SignUp() {
-  const [error, setError] = useState("");
-  const usernameRef = useRef()
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const confPassRef = useRef()
-  const router = useRouter()
-  var db = firebase.database()
-  var userDBRef = db.ref('userData')
+  const [error, setError] = useState('');
+  const usernameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const confPassRef = useRef();
+  const router = useRouter();
+  var db = firebase.database();
+  var userDBRef = db.ref('userData');
 
   async function addData(e) {
     await userDBRef.push({
       username: usernameRef.current.value,
       password: passwordRef.current.value,
       email: emailRef.current.value
-    })
-    console.log('This Data was Uploaded to Database')
-    e.preventDefault()
+    });
+    console.log('This Data was Uploaded to Database');
+    e.preventDefault();
     if (passwordRef.current.value !== confPassRef.current.value) {
-      return setError("Invalid Credential")
+      return setError('Invalid Credential');
     }
     await firebaseAuthentication.createUserWithEmailAndPassword(
       emailRef.current.value,
@@ -36,22 +36,22 @@ export default function SignUp() {
         firebaseAuthentication.currentUser
           .sendEmailVerification()
           .then(() => {
-            alert("Please Kindly Check Your Email")
-            router.push('/signin')
+            alert('Please Kindly Check Your Email');
+            router.push('/signin');
           })
           .catch((error) => {
-            setError("Login Failed Check your Credential");
+            setError('Login Failed Check your Credential');
           });
       })
       .catch((err) => {
         alert(err.message);
-      })
+      });
   }
 
   return (
     <form className={styles.container}
       onSubmit={(e) => {
-        userDBRef.on('child_added', addData)
+        userDBRef.on('child_added', addData);
       }} >
       <Grid h="400px" templateRows="repeat(1, 1fr)" templateColumns="repeat(4, 1fr)"
         gap={0} id='grid'>
@@ -101,5 +101,5 @@ export default function SignUp() {
         </GridItem>
       </Grid >
     </form >
-  )
+  );
 }
