@@ -1,8 +1,8 @@
-import styles from '../styles/homepage.module.css'
-import { Wrap, WrapItem, Text, Center, Box, Heading, Container, Stack } from "@chakra-ui/layout"
-import { Image } from "@chakra-ui/image"
-import { Badge } from "@chakra-ui/layout"
-import { StarIcon } from "@chakra-ui/icons"
+import styles from '../styles/homepage.module.css';
+import { Wrap, WrapItem, Text, Center, Box, Heading, Container, Stack } from '@chakra-ui/layout';
+import { Image } from '@chakra-ui/image';
+import { Badge } from '@chakra-ui/layout';
+import { StarIcon } from '@chakra-ui/icons';
 export default function Home() {
   const property = {
     imageUrl: '/stats.png',
@@ -13,7 +13,7 @@ export default function Home() {
     formattedPrice: 'Rp. 1000.000',
     reviewCount: 34,
     rating: 4,
-  }
+  };
   return (
     <div>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
@@ -337,5 +337,5 @@ export default function Home() {
         </Center>
       </Container>
     </div>
-  )
+  );
 }
