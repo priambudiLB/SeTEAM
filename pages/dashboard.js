@@ -10,7 +10,6 @@ import {
 import { useState } from "react";
 import ProgressDashboard from '../components/ProgressDashboard/index';
 import { ReadDataFromRDB } from "../components/ReadDataFromRDB.js";
-import WriteDataVideo from "../components/WriteDataVideo";
 import UploadVideoClD from "../components/UploadVideoCloudinary"
 import SignOutUser from '../components/SignOutUser';
 
@@ -118,9 +117,6 @@ function Dashboard() {
                     </Box>
                     <Box >
                         <ProgressDashboard />
-                    </Box>
-                    <Box>
-                        <WriteDataVideo />
                     </Box>
                     <Box>
                         <UploadVideoClD />
