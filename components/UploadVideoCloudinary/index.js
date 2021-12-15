@@ -11,10 +11,6 @@ import {
 
 const UploadVideoClD = () => {
 
-
-   
-    
-
     return (
 
         <Flex>

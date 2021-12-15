@@ -9,6 +9,13 @@ function AddNewVideoForm(props) {
     const email = useRef();
     const idVideo = useRef();
     const description = useRef();
+    const author1 = useRef();
+    const author2 = useRef();
+    const imageUrl = useRef();
+    const formattedPrice = useRef();
+    // const reviewCount: 34,
+    // const rating: 4,
+
 
     function submitHandler(event) {
         // prevent browser default--> vanila javascript
@@ -16,6 +23,11 @@ function AddNewVideoForm(props) {
         const enterTitle = titleVideo.current.value;
         const enterEmail = email.current.value;
         const enterVid = idVideo.current.value;
+       
+        const enterAuthor1 = author1.current.value;
+        const enterAuthor2 = author2.current.value;
+        const enterImageUrl = imageUrl.current.value;
+        const enterFormattedPrice = formattedPrice.current.value;
         const enterDescription = description.current.value;
 
         const infoData = {
@@ -23,6 +35,12 @@ function AddNewVideoForm(props) {
             email: enterEmail,
             idVideo: enterVid,
             desc: enterDescription,
+            author1: enterAuthor1,
+            author2:enterAuthor2,
+            price: enterFormattedPrice,
+            urlImage: enterImageUrl,
+            reviewCount: 54,
+            rating: 4,
         }
         // console.log(infoData);
         props.onAddVideoData(infoData);
@@ -42,6 +60,22 @@ function AddNewVideoForm(props) {
                 <div className={classes.control}>
                     <label htmlFor="id-video">Video ID in Cloudinary</label>
                     <input type="text" required id="id-video" ref={idVideo} />
+                </div>
+                <div className={classes.control}>
+                    <label htmlFor="author1">Author 1</label>
+                    <input type="text" required id="id-author1" ref={author1} />
+                </div>
+                <div className={classes.control}>
+                    <label htmlFor="author2">Author 2</label>
+                    <input type="text" required id="id-author2" ref={author2} />
+                </div>
+                <div className={classes.control}>
+                    <label htmlFor="imageUrl">URL Image in Cloud</label>
+                    <input type="text" required id="id-imageUrl" ref={imageUrl} />
+                </div>
+                <div className={classes.control}>
+                    <label htmlFor="price">Course Price</label>
+                    <input type="text" required id="id-formattedPrice" ref={formattedPrice} />
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="description">Course Description</label>

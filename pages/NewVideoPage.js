@@ -1,5 +1,4 @@
 import AddNewVideoForm from "../components/AddNewVideoForm";
-import { ChakraProvider } from "@chakra-ui/react";
 import { Wrap, WrapItem, Center } from "@chakra-ui/layout"
 function NewVideoPage() {
 
