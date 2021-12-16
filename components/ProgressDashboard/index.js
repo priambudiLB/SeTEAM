@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import React from 'react';
+>>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 // node.js library that concatenates classes (strings)
 
 // reactstrap components
@@ -16,8 +20,13 @@ import {
   TableCaption,
   Heading,
   Flex,
+<<<<<<< HEAD
 } from "@chakra-ui/react"
 import { Progress } from "@chakra-ui/react"
+=======
+} from '@chakra-ui/react';
+import { Progress } from '@chakra-ui/react';
+>>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 
 
 const ProgressDashboard = () => {

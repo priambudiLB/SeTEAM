@@ -1,35 +1,35 @@
-import styles from '../styles/signin.module.css'
-import { useState,useRef } from "react";
+import styles from '../styles/signin.module.css';
+import { useState,useRef } from 'react';
 import {FormControl,FormLabel,Flex,Input,GridItem,
-  Center,Alert,FormHelperText,Button,Image,Grid,Heading } from "@chakra-ui/react";
+  Center,Alert,FormHelperText,Button,Image,Grid,Heading } from '@chakra-ui/react';
 import firebase from '../config/firebase';
 import {useRouter} from 'next/router';
 const firebaseAuthentication = firebase.auth();  
 
 export default function Signin() {
-  const [error, setError] = useState("");
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const router = useRouter()
+  const [error, setError] = useState('');
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const router = useRouter();
 
   async function handleSubmit(e) {
     e.preventDefault();
     var errorCode = error.code;
-    if (errorCode === "auth/worng-password") {
-      return setError("Login Failed");
+    if (errorCode === 'auth/worng-password') {
+      return setError('Login Failed');
     } else {
       await firebaseAuthentication.signInWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
       );
-      alert("SuccessFully Login");
-      localStorage.setItem("username", emailRef.current.value);
-      router.push("/dashboard")
+      alert('SuccessFully Login');
+      localStorage.setItem('username', emailRef.current.value);
+      router.push('/dashboard');
     }
   }
 
   return (
-    <Flex mb={"15%"}>
+    <Flex mb={'15%'}>
       <form className={styles.container}>
         <Grid h="400px" templateRows="repeat(1, 1fr)" templateColumns="repeat(4, 1fr)"
           gap={0} id='grid'>
@@ -67,5 +67,9 @@ export default function Signin() {
     </Flex>
 
 
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 }

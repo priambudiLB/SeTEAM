@@ -1,10 +1,10 @@
 import styles from '../../styles/homepage.module.css';
-import { Wrap, WrapItem, Text, Center, Flex, Box, Heading, Container, Stack } from "@chakra-ui/layout"
-import { Image } from "@chakra-ui/image"
-import { Badge } from "@chakra-ui/layout"
-import { StarIcon } from "@chakra-ui/icons"
+import { Wrap, WrapItem, Text, Center, Flex, Box, Heading, Container, Stack } from '@chakra-ui/layout';
+import { Image } from '@chakra-ui/image';
+import { Badge } from '@chakra-ui/layout';
+import { StarIcon } from '@chakra-ui/icons';
 import { useContext } from 'react';
-import { VidCoursesContextProvider } from '../../context/AddVideoContext'
+import { VidCoursesContextProvider } from '../../context/AddVideoContext';
 
 export default function CoursesData(props) {
   const property = [
@@ -18,13 +18,13 @@ export default function CoursesData(props) {
       formattedPrice: 'Rp. 1000.000',
       reviewCount: 34,
       rating: 4,
-    }]
+    }];
   return (
     <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
       <Heading>Lets Start Learning, Budi </Heading>
       <Heading><h1> All Available Videos </h1></Heading>
-      <Wrap display={"contents"} alignItems={"center"} margin={"auto"}>
+      <Wrap display={'contents'} alignItems={'center'} margin={'auto'}>
         {props.availVideos.map((data) => {
 
           return (
@@ -82,11 +82,11 @@ export default function CoursesData(props) {
 
 
 
-          )
+          );
         })}
       </Wrap>
 
     </>
 
-  )
+  );
 }

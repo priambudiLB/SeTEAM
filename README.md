@@ -45,6 +45,16 @@
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3
+=======
+>>>>>>> de764c0578364df22eb28caf8a06597df2a92b17
+>>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 <img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
