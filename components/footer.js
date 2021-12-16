@@ -1,38 +1,20 @@
+import React from 'react';
+import { Box, Stack, Spacer } from '@chakra-ui/react';
+import { Text, Link, Grid, GridItem, SimpleGrid } from '@chakra-ui/layout';
 
-import Link from 'next/link';
-import { Stack, Center } from '@chakra-ui/layout';
-
-
-
-const Footer = (props) => {
+export default function Footer() {
   return (
-    <>
-      <Center>
-
-
-        <Stack direction={'row'}
-          justifyContent={'space-evenly'}
-          spacing={'60px'}
-          id="footer"
-          marginBottom={'10px'}>
-
-          <Link href="/" onClick={() => {window.location.reload();}}>
-            <a>Home</a>
-          </Link>
-          <Link href="#">
-            <a>About</a>
-          </Link>
-          <Link href="#">
-            <a>Contact Us</a>
-          </Link>
-          <Link href="#">
-            <a>© 2021</a>
-          </Link>
+    <Box as="footer" role="contentinfo" mx="auto" py="6" px={{ base: '4', md: '8' }} bottom="0">
+      <Stack direction="row" justify="space-between" align="center">
+        <Stack direction="row" spacing="4" align="center">
+          <Link href="/">Home</Link>
+          <Text>About</Text>
+          <Text>Contact Us</Text>
         </Stack>
-      </Center>
-
-    </>
-  );
-};
-
-export default Footer;
+        <Stack direction="row" align="end">
+          <Text>&copy; SeTEAM</Text>
+        </Stack>
+      </Stack>
+    </Box>
+  )
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // node.js library that concatenates classes (strings)
 
 // reactstrap components
@@ -16,8 +16,12 @@ import {
   TableCaption,
   Heading,
   Flex,
-} from '@chakra-ui/react';
-import { Progress } from '@chakra-ui/react';
+} from "@chakra-ui/react"
+import { Progress } from "@chakra-ui/react"
+
+
+
+
 
 
 const ProgressDashboard = () => {
@@ -88,6 +92,7 @@ const ProgressDashboard = () => {
     </>
   );
 };
+
 
 
 export default ProgressDashboard;

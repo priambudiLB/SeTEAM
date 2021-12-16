@@ -1,13 +1,6 @@
 <h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 
-
 <img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
-
-
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=alert_status">
-
-<img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
-
 
 </a></h1>
 <p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
@@ -34,29 +27,6 @@
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 
 </a>
-<a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=code_smells">
-</a>
-<a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=duplicated_lines_density">
-</a>
-<a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
-</a>
-<a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3
-=======
->>>>>>> de764c0578364df22eb28caf8a06597df2a92b17
-<img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
-
-<img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
-
-</a>
 
 </p>
 
@@ -79,11 +49,10 @@ stack yang kita pake masih ini aja sih
 - [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
 - [chakra-ui](https://chakra-ui.com/)
-- [firebase](https://firebase.com)
 
 ### Features
 
-hmm kira-kira pasti bakal udah tahu lah ya fitur-fitur nya apa ja. Kita list in aja dulu deh
+kira-kira pasti bakal udah tahu lah ya fitur-fitur nya apa ja. Kita list in aja dulu deh
 
 1. Login with instructor access or student access
 2. Create/update/delete courses as instructor
