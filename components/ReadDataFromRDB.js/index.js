@@ -4,11 +4,7 @@
     --> https://firebase.google.com/docs/database/admin/retrieve-data#node.js
 
 */
-<<<<<<< HEAD
-import { Button } from "@chakra-ui/button"
-=======
 import { Button } from '@chakra-ui/button';
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 
 
 import firebase from '../../config/firebase';

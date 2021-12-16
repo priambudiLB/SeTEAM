@@ -9,13 +9,8 @@ import {
 } from 'react-icons/fi';
 import { useState } from 'react';
 import ProgressDashboard from '../components/ProgressDashboard/index';
-<<<<<<< HEAD
-import { ReadDataFromRDB } from "../components/ReadDataFromRDB.js";
-import UploadVideoClD from "../components/UploadVideoCloudinary"
-=======
 import { ReadDataFromRDB } from '../components/ReadDataFromRDB.js';
 import UploadVideoClD from '../components/UploadVideoCloudinary';
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 import SignOutUser from '../components/SignOutUser';
 
 function Dashboard() {
@@ -119,16 +114,6 @@ function Dashboard() {
                 color={fontColor}
               >
                             Welcome back, <Flex display="inline-flex" fontWeight="bold">TEST REDUX</Flex>
-<<<<<<< HEAD
-                        </Heading>
-                    </Box>
-                    <Box >
-                        <ProgressDashboard />
-                    </Box>
-                    <Box>
-                        <UploadVideoClD />
-                    </Box>
-=======
               </Heading>
             </Box>
             <Box >
@@ -137,7 +122,6 @@ function Dashboard() {
             <Box>
               <UploadVideoClD />
             </Box>
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 
           </VStack>
         </Flex>

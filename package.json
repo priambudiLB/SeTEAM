@@ -7,11 +7,7 @@
     "dev:fe": "next dev",
     "build": "next build",
     "lint": "next lint",
-<<<<<<< HEAD
-    "test": "jest",
-=======
     "fix":"next lint --fix",
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
     "test": "jest --coverage"
   },
   "dependencies": {

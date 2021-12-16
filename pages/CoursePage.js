@@ -1,26 +1,4 @@
 import {
-<<<<<<< HEAD
-    Flex,
-    Heading,
-    Text,
-    Icon,
-    Link,
-} from '@chakra-ui/react'
-
-
-import {
-    FiHome,
-    FiBook,
-    FiUsers,
-    FiBell
-} from "react-icons/fi"
-import { useEffect, useState } from "react";
-import { handlerA } from "./api/hello";
-
-import { cld } from "../config/cloudinary"
-
-import { scale } from "@cloudinary/url-gen/actions/resize";
-=======
   Flex,
   Heading,
   Text,
@@ -41,7 +19,6 @@ import { handlerA } from './api/hello';
 import { cld } from '../config/cloudinary';
 
 import { scale } from '@cloudinary/url-gen/actions/resize';
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 
 
 
@@ -173,25 +150,6 @@ function CoursePage(props) {
 // function yg dijalanin sebelom kasih data HTML
 export async function getServerSideProps(context) {
 
-<<<<<<< HEAD
-    // get nama video
-
-    
-    // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
-    const myVideo = cld.video('samples/sea-turtle');
-
-    // Apply the transformation.
-    // myVideo.resize(scale().width(800));
-    myVideo.resize(scale().width(800));
-
-    // Get the URL of the video.
-    const myURL = myVideo.toURL();
-
-    return {
-        props: { 
-            url: myURL }, // will be passed to the page component as props
-    }
-=======
   // get nama video
 
   
@@ -209,7 +167,6 @@ export async function getServerSideProps(context) {
     props: { 
       url: myURL }, // will be passed to the page component as props
   };
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
 }
 
 
