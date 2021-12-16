@@ -12,7 +12,7 @@ app
     const svr = express()
     svr.get('*',(req,res)=>{
         return handle(req,res) && svr.disable("x-powered-by")
-    })
+    });
     svr.post('/api/signup',async(req,res)=>{
         let errors={}
             const {username,email,password} = req.body
@@ -26,15 +26,15 @@ app
                 VALUES ($1,$2,$3)`,[username,email,password])
                 res.json(newStudent.rows[0])
         }
-    })
+    });
     svr.listen(PORT,err=>{
         if(err) throw err
         console.log(`THIS SERVER RUNNING ON PORT ${PORT}`)
-    })
+    });
 })
 // ex = exception
 .catch(ex =>{
-    console.error(ex.stack)
-    process.exit(1)
-})
+    console.error(ex.stack);
+    process.exit(1);
+});
 

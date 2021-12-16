@@ -3,7 +3,8 @@ import { Wrap, WrapItem, Text, Center, Box, Heading, Container, Stack } from '@c
 import { Image } from '@chakra-ui/image';
 import { Badge } from '@chakra-ui/layout';
 import { StarIcon } from '@chakra-ui/icons';
-export default function Home() {
+import { ChakraProvider } from '@chakra-ui/react';
+export default function Homes() {
   const property = {
     imageUrl: '/stats.png',
     imageAlt: 'Rear view of modern home with pool',
@@ -15,9 +16,10 @@ export default function Home() {
     rating: 4,
   };
   return (
-    <div>
-      <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
-      <Heading>Lets Start Learning, Budi </Heading>
+
+    <ChakraProvider>
+      <Box w='100%' h='200px' bgGradient={'linear(to-l, #7928CA, #FF0080)'} />
+      <Heading>Lets Start Learning, Budi</Heading>
       <Container display='contents' >
         <Center>
           <Wrap >
@@ -27,7 +29,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -37,7 +39,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
                   <Box
@@ -52,7 +54,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
 
@@ -79,7 +81,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -89,7 +91,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
                   <Box
@@ -104,7 +106,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
 
@@ -131,7 +133,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -141,7 +143,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
 
@@ -158,7 +160,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
 
@@ -188,7 +190,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -198,7 +200,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
                   <Box
@@ -213,7 +215,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
                   <Box display='flex' mt='2' alignItems='center'>
@@ -238,7 +240,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -248,7 +250,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
                   <Box
@@ -263,7 +265,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
                   <Box display='flex' mt='2' alignItems='center'>
@@ -288,7 +290,7 @@ export default function Home() {
                 <Box p='6'>
                   <Box display='flex' alignItems='baseline'>
                     <Badge borderRadius='full' px='2' colorScheme='teal'>
-                      New
+                        New
                     </Badge>
                     <Box
                       color='gray.500'
@@ -298,7 +300,7 @@ export default function Home() {
                       textTransform='uppercase'
                       ml='2'
                     >
-                      Instructor : {property.author1}  &bull; {property.author2}
+                        Instructor : {property.author1}  &bull; {property.author2}
                     </Box>
                   </Box>
                   <Box
@@ -314,7 +316,7 @@ export default function Home() {
                   <Box>
                     {property.formattedPrice}
                     <Box as='span' color='gray.600' fontSize='sm'>
-                      / wk
+                        / wk
                     </Box>
                   </Box>
                   <Box display='flex' mt='2' alignItems='center'>
@@ -336,6 +338,7 @@ export default function Home() {
           </Wrap>
         </Center>
       </Container>
-    </div>
+    </ChakraProvider>
+
   );
 }

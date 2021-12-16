@@ -5,7 +5,6 @@
 
 */
 import { Button } from '@chakra-ui/button';
-import { Alert } from '@chakra-ui/react';
 
 
 import firebase from '../../config/firebase';

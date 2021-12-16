@@ -5,8 +5,10 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import Home from "../pages/index";
+import Homes from "../pages/home";
 
-describe("Home", () => {
+describe("Homes", () => {
+
   it("Renders navbar", () => {
     render(<Home />);
 
@@ -23,6 +25,17 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
+  
+
+  it("Renders Lets Start Budi", () => {
+    render(<Homes />);
+
+    const text = screen.getByText("Lets Start Learning, Budi");
+
+    expect(text).toBeInTheDocument();
+  });
+
+
   describe("Darkmode", () => {
     it("Renders white mode initially", async () => {
       render(<Home />);
@@ -36,4 +49,14 @@ describe("Home", () => {
       });
     });
   });
+
+
 });
+
+
+// components folder
+/*
+describe("component/", () => {
+
+})
+*/
