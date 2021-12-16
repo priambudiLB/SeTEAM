@@ -2,7 +2,7 @@ import React from 'react';
 import { Stack, Button } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
-export default function sidebar() {
+export default function SidebarsInstructor() {
     return (
         <Stack direction='column' align='start' ml="5px" justifyContent="space-between" mt="5px">
             <Button colorScheme='white' variant='ghost'>

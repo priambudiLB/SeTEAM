@@ -10,7 +10,7 @@ const instractorPage = () => {
       <Navbar></Navbar>
       <Sidebar></Sidebar>
       <Stack align='center'>
-        <Button colorScheme='white' variant='ghost' background="green" size="sm" mt="-230px" ml="-60%" width="80px">
+        <Button colorScheme='white' variant='ghost' background="green" size="sm" mt="-230px" ml="-60%" width="80px" href="addcourses">
           ADD
         </Button>
       </Stack> 

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbardashboard";
-import Sidebar from "../components/sidebarsinstractor";
+import Sidebar from "../components/sidebarsinstructor";
 import { Input, Text, FormControl, FormLabel, Switch, Menu, MenuButton, MenuList, Button, MenuItem, Container } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons"
 
