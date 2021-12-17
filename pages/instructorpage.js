@@ -18,15 +18,16 @@ function InstructorPage() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const username = e.target.username.value;
+    const coursename = e.target.coursename.value;
+    const coursedesc = e.target.coursedesc.value;
     const filetype = e.target.type
-    if (!username || !fileUrl) {
+    if (!coursename || !fileUrl) {
       return;
     }
-    await db.collection("users").doc(username).set({
-      name: username,
+    await db.collection("users").doc(coursename).set({
+      coursename: coursename,
       avatar: fileUrl,
-      type: filetype,
+      desc: coursedesc,
     });
   };
 
@@ -47,7 +48,8 @@ function InstructorPage() {
     <>
       <form onSubmit={onSubmit}>
         <input type="file" onChange={onFileChange} />
-        <input type="text" name="username" placeholder="NAME" />
+        <input type="text" name="coursename" placeholder="course name" />
+        <input type="text" name="coursedesc" placeholder="desc" />
         <button>Submit</button>
       </form>
       <ul>
