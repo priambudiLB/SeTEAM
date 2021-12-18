@@ -10,7 +10,6 @@ import {
 import { useState } from 'react';
 import ProgressDashboard from '../components/ProgressDashboard/index';
 import UploadVideoClD from '../components/UploadVideoCloudinary';
-import SignOutUser from '../components/SignOutUser';
 
 function Dashboard() {
   const [value, changeValue] = useState(1);

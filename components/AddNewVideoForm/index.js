@@ -1,6 +1,6 @@
 import CardFrame from '../Card';
 import classes from './NewVideoForm.module.css';
-import { useRef} from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Textarea } from '@chakra-ui/react';
 
@@ -8,7 +8,7 @@ function AddNewVideoForm(props) {
 
   const titleVideo = useRef();
   const email = useRef();
-  const idVideo = useRef();
+  // const idVideo = useRef();
   const description = useRef();
   const author1 = useRef();
   const author2 = useRef();
@@ -17,6 +17,7 @@ function AddNewVideoForm(props) {
   const router = useRouter();
   // const reviewCount: 34,
   // const rating: 4,
+  const [vidSelected, setVidSelected] = useState('');
 
 
   function submitHandler(event) {
@@ -24,8 +25,8 @@ function AddNewVideoForm(props) {
     event.preventDefault();
     const enterTitle = titleVideo.current.value;
     const enterEmail = email.current.value;
-    const enterVid = idVideo.current.value;
-    
+
+
 
     const enterAuthor1 = author1.current.value;
     const enterAuthor2 = author2.current.value;
@@ -36,22 +37,41 @@ function AddNewVideoForm(props) {
     const infoData = {
       title: enterTitle,
       email: enterEmail,
-      idVideo: enterVid,
+      idVideo: vidSelected,
       desc: enterDescription,
       author1: enterAuthor1,
-      author2:enterAuthor2,
+      author2: enterAuthor2,
       price: enterFormattedPrice,
       urlImage: enterImageUrl,
       reviewCount: 54,
       rating: 4,
     };
+
+    // upload video
+    const formData = new FormData();
+    formData.append('file', dataSelected);
+    formData.append('upload_preset', bqvneyqd);
+    // problem, data kredensial terlalu terexpose !!!!!!
+    const address = 'https://api.cloudinary.com/v1_1/di1kxmnrn/image/upload';
+    fetch(address, {
+      method: 'POST', // or 'PUT',
+      body: formData,
+    })
+      .then(data => {
+        console.log('success: ', data);
+      })
+      .catch((error) => {
+        console.log('error: ', error);
+      });
+
+
     // console.log(infoData);
     props.onAddVideoData(infoData);
     router.push('/AvailableCourses');
   }
 
   return (
-    <CardFrame>
+    <CardFrame bg={'black'}>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title-video">Video Title</label>
@@ -62,8 +82,12 @@ function AddNewVideoForm(props) {
           <input type="text" required id="email-instructor" ref={email} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="id-video">Video ID in Cloudinary</label>
-          <input type="text" required id="id-video" ref={idVideo} />
+          <label htmlFor="id-video">Upload Video to Cloudinary</label>
+          {/* <input type="file" required id="id-video" ref={idVideo} /> */}
+          <input type="file"
+            onChange={(event) => {
+              setVidSelected(event.target.files[0]);
+            }} />
         </div>
         <div className={classes.control}>
           <label htmlFor="author1">Author 1</label>
@@ -83,7 +107,7 @@ function AddNewVideoForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor="description">Course Description</label>
-          <Textarea type="text"  id="description" required rows="5" description="course desc" ref={description} />
+          <Textarea type="text" id="description" required rows="5" description="course desc" ref={description} />
         </div>
         <div className={classes.actions}>
           {/* button inside <form> will fire after submitHandler clicked */}

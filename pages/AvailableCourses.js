@@ -1,9 +1,5 @@
-import { Wrap, WrapItem, Text, Center, Flex, Box, Heading, Container, Stack } from '@chakra-ui/layout';
-import { Image } from '@chakra-ui/image';
-import { Badge } from '@chakra-ui/layout';
-import { StarIcon } from '@chakra-ui/icons';
-import { useContext } from 'react';
-import { VidCoursesContextProvider } from '../context/AddVideoContext';
+
+
 import CoursesData from '../components/CoursesData';
 import { useState, useEffect } from 'react';
 
