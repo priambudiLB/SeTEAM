@@ -13,8 +13,6 @@ export default function Home() {
       <Navvbar />
       <NavbarUser />
       <Wrap spacing="10px">
-
-
         <Container w="600px" h="500px" bg="Beige.200" flexDir={'row'} >
           <br /><br />
           <Text fontSize='70px' fontWeight='bold'>KNOWLEDGE ISNT POWER UNTIL IT IS APPLIED</Text>
