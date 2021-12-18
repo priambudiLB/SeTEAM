@@ -12,7 +12,7 @@ export default function Signin() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const router = useRouter();
-  
+
   async function handleSubmit(e) {
     e.preventDefault();
     var errorCode = error.code;
@@ -29,20 +29,28 @@ export default function Signin() {
         if (signed) {
           const db = firebase.database();
           const ref = db.ref('instructorData');
-
+          // guru@gmail.com
           // Attach an asynchronous callback to read the data at our posts reference
           ref.on('value', (snapshot) => {
-            // console.log(snapshot.val()); --> get all data
+            const data = snapshot.val(); //--> get all data
+            const dataUser = [];
+            for (const key in data) {
+              const courseData = {
+                id: key,
+                ...data[key]
+              };
+              dataUser.push(courseData);
+            }
             const uidCurrUser = signed.uid;
-            localStorage.setItem('uid', uidCurrUser);
+            const getUsert = dataUser.filter( (data) => data === uidCurrUser);
+            
+            localStorage.setItem('uid', getUsert);
           }, (errorObject) => {
             console.log('The read failed: ' + errorObject.name);
           });
-        } else {
-          alert('nothing');
-        }
+        } 
       });
-      router.push('/');
+      router.push('/AvailableCourses');
     }
   }
 
@@ -67,7 +75,7 @@ export default function Signin() {
                 <Input type="password" placeholder='Password' ref={passwordRef} w="250px" isRequired />
               </FormControl>
               <Button onClick={handleSubmit} mt={5} colorScheme="teal" mr="4" h="30px" w="70px" className={styles.btn} >
-              Sign In
+                Sign In
               </Button>
             </form>
           </Container>
