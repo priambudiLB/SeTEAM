@@ -1,8 +1,0 @@
-import { useEffect } from "react";
-import { connect, useDispatch} from "react-redux";
-import { ADD_COURSE } from "../../../redux/actions/student";
-
-const stateToProp = (state) => ({
-  state : state,
-  DataStudents : state.student
-})
