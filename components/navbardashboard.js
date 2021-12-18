@@ -1,27 +1,9 @@
-import { ReactNode } from 'react';
 import {
-  Box,
-  Flex,
-  Avatar,
-  HStack,
-  Link,
-  IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  useColorMode,
-  Stack,
-  Input
+  Box,Flex,Avatar,HStack,Link,IconButton,Button,Menu,MenuButton,
+  MenuList,MenuItem,MenuDivider,useDisclosure,useColorModeValue,useColorMode,Stack,Input
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, SearchIcon } from '@chakra-ui/icons';
-
 const Links = ['Courses'];
-
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -36,11 +18,9 @@ const NavLink = ({ children }) => (
     {children}
   </Link>
 );
-
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -94,7 +74,6 @@ export default function Simple() {
             </Menu>
           </Flex>
         </Flex>
-
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
