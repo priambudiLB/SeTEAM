@@ -10,6 +10,7 @@ import ProgressDashboard from '../components/ProgressDashboard/index';
 import { ReadDataFromRDB } from '../components/ReadDataFromRDB.js';
 import UploadVideoClD from '../components/UploadVideoCloudinary';
 import SignOutUser from '../components/SignOutUser';
+import Footer from '../components/footer';
 
 function Dashboard() {
   const [value, changeValue] = useState(1);
@@ -276,6 +277,7 @@ function Dashboard() {
         <Input type="number" placeholder="100.000" />
       </InputGroup>
       <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
+      <Footer/>
     </>
   );
  
