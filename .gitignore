@@ -1,9 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 #pdftron lib
-/public/lib
+/public/webviewer
 
 # misc
+.DS_Store
+/public/assets/webviewer/core
+/public/assets/webviewer/ui
 /public/lib/core
 /public/lib/ui
 
