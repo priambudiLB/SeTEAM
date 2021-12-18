@@ -79,16 +79,6 @@ function Dashboard() {
                     <Text ml={3}>Instructor</Text>
                   </Link>
                 </Flex>
-                <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
-                  <Link display={['none', 'none', 'flex', 'flex', 'flex']}>
-                    <Icon as={FiUsers} fontSize="2xl" />
-                  </Link>
-                  <Link href="/AddNewVideoPage" _hover={{ textDecor: 'none' }} display={['flex', 'flex', 'none', 'flex', 'flex']}>
-                    <Text ml={3}>Add New Course</Text>
-                  </Link>
-                </Flex>
-
-
               </Flex>
             </Flex>
             <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
