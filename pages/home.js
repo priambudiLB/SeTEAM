@@ -16,7 +16,6 @@ export default function Homes() {
     rating: 4,
   };
   return (
-
     <ChakraProvider>
       <Box w='100%' h='200px' bgGradient={'linear(to-l, #7928CA, #FF0080)'} />
       <Heading>Lets Start Learning, Budi</Heading>
