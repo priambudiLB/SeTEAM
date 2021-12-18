@@ -1,7 +1,5 @@
 import {
-  Flex, Heading, Avatar, AvatarGroup, Text, Icon, IconButton, Table, Thead, Tbody, Tr, Th,
-  Td, Divider, Link, Box, Button, Input, InputGroup, InputLeftElement,
-  Stack, HStack, VStack
+  Flex, Heading, Avatar, AvatarGroup, Text, Icon, IconButton, Link, Box, Button, Input, InputGroup, InputLeftElement, VStack
 } from '@chakra-ui/react';
 import {
   FiHome, FiBook,

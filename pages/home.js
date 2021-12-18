@@ -1,5 +1,5 @@
 import styles from '../styles/homepage.module.css';
-import { Wrap, WrapItem, Text, Center, Box, Heading, Container, Stack } from '@chakra-ui/layout';
+import { Wrap, WrapItem, Center, Box, Heading, Container } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { Badge } from '@chakra-ui/layout';
 import { StarIcon } from '@chakra-ui/icons';

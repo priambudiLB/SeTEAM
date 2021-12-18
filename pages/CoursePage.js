@@ -6,12 +6,10 @@ import {
   Link,
 } from '@chakra-ui/react';
 
-
 import {
   FiHome,
   FiBook,
   FiUsers,
-  FiBell
 } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import { handlerA } from './api/hello';
@@ -32,7 +30,6 @@ function CoursePage(props) {
 
   return (
     <>
-
       <Flex h={[null, null, '100vh']}
         maxW="2000px"
         flexDir={['row', 'row', 'row']}
@@ -146,20 +143,12 @@ function CoursePage(props) {
   );
 }
 
-
-// function yg dijalanin sebelom kasih data HTML
 export async function getServerSideProps(context) {
-
-  // get nama video
-
-  
   // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
   const myVideo = cld.video('samples/sea-turtle');
-
   // Apply the transformation.
   // myVideo.resize(scale().width(800));
   myVideo.resize(scale().width(800));
-
   // Get the URL of the video.
   const myURL = myVideo.toURL();
 
