@@ -12,7 +12,6 @@
 /.next/
 /out/
 
-noteaja.txt
 # production
 /build
 
@@ -26,17 +25,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
-.env
 
 # vercel
 .vercel
-
-# media file
-.mp4
-.mp3
-.avi
-.ts
