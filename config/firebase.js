@@ -1,5 +1,5 @@
-import firebase from "firebase";
-import "firebase/storage"
+import firebase from 'firebase';
+import 'firebase/storage';
 
 const firebaseConfig = ({
   apiKey: process.env.NEXT_PUBLIC_frb_key,

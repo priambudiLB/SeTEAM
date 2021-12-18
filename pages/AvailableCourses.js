@@ -52,7 +52,7 @@ export default function AvailableCourses() {
   return (
     <>
       <section>
-
+        
         <CoursesData availVideos={loadedCourses} />
       </section>
 

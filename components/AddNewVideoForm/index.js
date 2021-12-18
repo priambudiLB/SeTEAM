@@ -79,7 +79,7 @@ function AddNewVideoForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor="description">Course Description</label>
-          <Textarea type="text"  id="description" required rows="5" description="course desc" ref={description} />
+          <Textarea type="text"  id="descripftion" required rows="5" description="course desc" ref={description} />
         </div>
         <div className={classes.actions}>
           {/* button inside <form> will fire after submitHandler clicked */}
