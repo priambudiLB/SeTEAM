@@ -81,8 +81,6 @@ function Dashboard() {
                     <Text ml={3}>Instructor</Text>
                   </Link>
                 </Flex>
-
-
               </Flex>
             </Flex>
             <Flex flexDir="column" alignItems="center" mb={10} mt={5}>

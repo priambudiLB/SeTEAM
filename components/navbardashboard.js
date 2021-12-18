@@ -1,6 +1,6 @@
 import {
   Box,Flex,Avatar,HStack,Link,IconButton,Button,Menu,MenuButton,
-  MenuList,MenuItem,MenuDivider,useDisclosure,useColorModeValue,useColorMode,Stack,Input
+  MenuList,Heading,MenuItem,MenuDivider,useDisclosure,useColorModeValue,useColorMode,Stack,Input
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, SearchIcon } from '@chakra-ui/icons';
 const Links = ['Courses'];
@@ -33,7 +33,7 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
+            <Box><Heading as='h2' size='md'>Sinau.Id</Heading></Box>
             <HStack
               as={'nav'}
               spacing={4}
@@ -66,10 +66,10 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
+                <MenuItem><a href='MyProfile'>Your Profile</a></MenuItem>
+                <MenuItem><a href='MyCourse'>Your Course</a></MenuItem>
                 <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
+                <MenuItem><a href='Helper'>Help Desk</a></MenuItem>
               </MenuList>
             </Menu>
           </Flex>
