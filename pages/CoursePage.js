@@ -5,7 +5,7 @@ import {
   Icon,
   Link,
 } from '@chakra-ui/react';
-
+import {title} from '../components/CoursesData/index';
 import {
   FiHome,
   FiBook,
@@ -18,7 +18,7 @@ function CoursePage(props) {
   const { url } = props;
   const themeColor = '#B2F5EA';
   const fontColor = '#@30c040';
-
+  const titles = title;
 
   return (
     <>
@@ -76,7 +76,7 @@ function CoursePage(props) {
                     <Icon as={FiBook} fontSize="2xl" />
                   </Link>
                   <Link _hover={{ textDecor: 'none' }} display={['flex', 'flex', 'none', 'flex', 'flex']}>
-                    <Text ml={3}>Other Courses</Text>
+                    <Text ml={3}><a href='AvailableCourses'>Other Courses</a></Text>
                   </Link>
                 </Flex>
                 <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
@@ -103,7 +103,7 @@ function CoursePage(props) {
           ml={'10%'}>
           <Flex flexDir="row"
             mb={'20px'}>
-            <Heading>WELCOME TO ..... COURSE</Heading>
+            <Heading>WELCOME TO {titles} COURSE</Heading>
 
           </Flex>
           <Flex mb={'10px'}>
