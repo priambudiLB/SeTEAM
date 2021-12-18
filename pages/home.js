@@ -1,4 +1,4 @@
-import styles from '../styles/homepage.module.css';
+// import styles from '../styles/homepage.module.css';
 import { Wrap, WrapItem, Center, Box, Heading, Container } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { Badge } from '@chakra-ui/layout';

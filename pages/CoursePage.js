@@ -11,19 +11,14 @@ import {
   FiBook,
   FiUsers,
 } from 'react-icons/fi';
-import { useEffect, useState } from 'react';
-import { handlerA } from './api/hello';
-
+import { useState } from 'react';
+// import { handlerA } from './api/hello';
 import { cld } from '../config/cloudinary';
-
 import { scale } from '@cloudinary/url-gen/actions/resize';
-
-
 
 function CoursePage(props) {
   const { url } = props;
-  const [value, changeValue] = useState('');
-
+  // const [value, changeValue] = useState('');
   const themeColor = '#B2F5EA';
   const fontColor = '#@30c040';
 
@@ -70,7 +65,6 @@ function CoursePage(props) {
                 align={['center', 'center', 'center', 'flex-start', 'flex-start']}
                 wrap={['wrap', 'wrap', 'nowrap', 'nowrap', 'nowrap']}
                 justifyContent="center"
-
               >
                 <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                   <Link display={['none', 'none', 'flex', 'flex', 'flex']} >
@@ -142,7 +136,6 @@ function CoursePage(props) {
 
   );
 }
-
 export async function getServerSideProps(context) {
   // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
   const myVideo = cld.video('samples/sea-turtle');
