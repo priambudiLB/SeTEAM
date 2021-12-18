@@ -7,7 +7,7 @@ export default function Pdfupload() {
     import('@pdftron/webviewer').then(() => {
       WebViewer(
         {
-          path: 'library',
+          path: 'lib',
           initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf',
         },
         viewer.current
