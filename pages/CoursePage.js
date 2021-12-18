@@ -15,8 +15,11 @@ import { cld } from '../config/cloudinary';
 import { scale } from '@cloudinary/url-gen/actions/resize';
 import { useRouter } from 'next/router';
 import Footer from '../components/footer';
+<<<<<<< HEAD
 
 import Layout from '../components/layout/layout';
+=======
+>>>>>>> ea189f9aff2e94bcc88d142fc5b47c2ddfaab5bf
 
 function CoursePage(props) {
   const { url } = props;
