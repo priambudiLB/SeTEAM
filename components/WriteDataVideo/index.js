@@ -1,5 +1,3 @@
-
-
 // https://medium.com/@hasangi/writing-deleting-and-updating-data-in-firebase-realtime-database-with-javascript-f26113ec8c93
 import { Button } from '@chakra-ui/button';
 import {
@@ -10,8 +8,6 @@ import { useRef } from 'react';
 
 // const user = firebase.auth().currentUser;
 import firebase from '../../config/firebase';
-
-
 
 export default function WriteDataVideo() {
   const urlVideoLesson = useRef();

@@ -2,12 +2,14 @@ import { Button } from '@chakra-ui/react';
 
 import firebase from '../../config/firebase';
 const firebaseAuth = firebase.auth();
-
+import { useState } from 'react';
 
 const SignOutUser = () => {
 
+  // const [signedUser, setSignedUser] = useState('');
 
-  const HandleSignOut = () => {
+  const HandleSignOut = (e) => {
+    e.preventDefault();
     // signout from firebase 
     // delete data on storage
     if (firebaseAuth.currentUser) {
