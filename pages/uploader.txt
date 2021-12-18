@@ -1,0 +1,48 @@
+import { Box } from '@chakra-ui/layout';
+import { Button } from '@chakra-ui/react';
+import { useState } from 'react';
+import styles from '../styles/uploader.module.css';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import { isPdfFile } from 'pdfjs-dist';
+import pdf from '../public/pdf/doc.pdf';
+import { Viewer, Worker } from '@react-pdf-viewer/core'; // install this library
+export default function Uploader (){
+
+  const defaultPdfFile = useState(pdf);
+  const [pdfFile,setPdfFile] = useState(null);
+  const [error,setError] = useState('');
+  const fileType=['application/pdf'];
+  const defaultLayout = defaultLayoutPlugin;
+  const handlePdf=(e)=>{
+    let selectedFile=e.target.files[0];
+    if(selectedFile){
+      if(selectedFile&&fileType.includes(selectedFile.type)){
+        let reader = new FileReader();
+        reader.readAsDataURL(selectedFile);
+        reader.onloadend = (e) =>{
+          setPdfFile(e.target.result);
+          setPdfFileError('');
+        };
+      }
+      else(err)=>{
+        throw console.error(err.message);
+      };
+    }
+  };
+  return(
+    <Box className={styles.pdfContainer} >
+      <form>
+        <input type={'file'} value={pdfFile} onChange={handlePdf}/>
+        <Button type='submit' colorScheme="teal" >Upload</Button>
+      </form>
+      <h4>View PDF</h4>
+      <div className='pdf-container'>
+        show pdf conditionally (if we have one) 
+        {pdf&&<><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
+          <Viewer fileUrl={pdf}
+            plugins={[defaultLayoutPluginInstance]} />
+        </Worker></>}
+      </div>
+    </Box>
+  );
+}
