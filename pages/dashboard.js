@@ -1,5 +1,5 @@
 import {
-  Flex, Heading, Avatar, AvatarGroup, Text, Icon, IconButton, Link, Box, Button, Input, InputGroup, InputLeftElement, VStack
+  Flex, Heading, Center, Avatar, AvatarGroup, Text, Icon, IconButton, Link, Box, Button, Input, InputGroup, InputLeftElement, VStack, HStack
 } from '@chakra-ui/react';
 import {
   FiHome, FiBook,
@@ -8,6 +8,7 @@ import {
 import { useState } from 'react';
 import ProgressDashboard from '../components/ProgressDashboard/index';
 import UploadVideoClD from '../components/UploadVideoCloudinary';
+import Layout from '../components/layout/layout';
 
 function Dashboard() {
   const [value, changeValue] = useState(1);
@@ -112,9 +113,7 @@ function Dashboard() {
             <Box >
               <ProgressDashboard />
             </Box>
-            <Box>
-              <UploadVideoClD />
-            </Box>
+
 
           </VStack>
         </Flex>
@@ -122,7 +121,10 @@ function Dashboard() {
         {/* col 3 */}
  
         {/* col 4 */}
+     
       </Flex>
+
+        <Layout />
      
     </>
   );

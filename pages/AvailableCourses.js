@@ -2,7 +2,8 @@ import CoursesData from '../components/CoursesData';
 import { useState, useEffect } from 'react';
 import Navvbar from '../components/navvbar';
 import Simple from '../components/navbardashboard';
-
+import Layout
+ from '../components/layout/layout';
 export default function AvailableCourses() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedCourses, setLoadedCourses] = useState([]);
@@ -30,14 +31,14 @@ export default function AvailableCourses() {
         <p>Loading...</p>
       </section>);
     }
-  }, [isLoading]);
+  }, []);
 
   return (
     <>
       <section>
         <Simple/>
-        
         <CoursesData availVideos={loadedCourses} />
+        <Layout/>
       </section>
 
     </>

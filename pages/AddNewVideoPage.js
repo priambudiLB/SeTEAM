@@ -1,6 +1,7 @@
 import AddNewVideoForm from '../components/AddNewVideoForm';
 import { Wrap, WrapItem, Center } from '@chakra-ui/layout';
 import Navvbar from '../components/navvbar';
+import Layout from '../components/layout/layout';
 function NewVideoPage() {
 
   function AddVideoData(videoData) {
@@ -30,6 +31,7 @@ function NewVideoPage() {
           </Center>
         </WrapItem>
       </Wrap>
+   
     </>
   );
 

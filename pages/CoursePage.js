@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fi';
 import { cld } from '../config/cloudinary';
 import { scale } from '@cloudinary/url-gen/actions/resize';
+import Layout from '../components/layout/layout';
 
 function CoursePage(props) {
   const { url } = props;
@@ -103,7 +104,7 @@ function CoursePage(props) {
           ml={'10%'}>
           <Flex flexDir="row"
             mb={'20px'}>
-            <Heading>WELCOME TO {titles} COURSE</Heading>
+            <Heading>WELCOME TO COURSE</Heading>
 
           </Flex>
           <Flex mb={'10px'}>
@@ -129,6 +130,7 @@ function CoursePage(props) {
 
         </Flex>
       </Flex >
+      <Layout />
     </>
 
   );
