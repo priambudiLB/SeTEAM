@@ -5,7 +5,6 @@ public/library
 
 # misc
 .DS_Store
-package-lock.json
 /public/assets/webviewer/core
 /public/assets/webviewer/ui
 
