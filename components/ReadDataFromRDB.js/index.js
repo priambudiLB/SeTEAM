@@ -5,8 +5,6 @@
 
 */
 import { Button } from '@chakra-ui/button';
-
-
 import firebase from '../../config/firebase';
 
 const user = firebase.auth();

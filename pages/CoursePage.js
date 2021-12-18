@@ -15,7 +15,6 @@ import { cld } from '../config/cloudinary';
 import { scale } from '@cloudinary/url-gen/actions/resize';
 import { useRouter } from 'next/router';
 import Footer from '../components/footer';
-
 function CoursePage(props) {
   const { url } = props;
   const themeColor = '#B2F5EA';
@@ -114,7 +113,7 @@ function CoursePage(props) {
           ml={'10%'}>
           <Flex flexDir="row"
             mb={'20px'}>
-            <Heading>WELCOME TO {titles} COURSE</Heading>
+            <Heading>WELCOME TO COURSE</Heading>
 
           </Flex>
           <Flex mb={'10px'}>
@@ -126,9 +125,6 @@ function CoursePage(props) {
               <source src={url} type="video/mp4"></source>
               {/* <source src={FetchVideo} type="video/mp4"></source>  */}
             </video>
-
-
-
           </Flex>
           <Flex flexDir="row">
             <section>

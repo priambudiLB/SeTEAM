@@ -14,7 +14,6 @@ export default  function Navvbar() {
           <HStack spacing={8} alignItems={'right'}>
             <Text fontSize='20px' fontWeight='' > {
               user ? 'Welcome, ' + localStorage.getItem('displayName') + ' !!' : ''
-
             } </Text>
           </HStack>
         </Flex>
