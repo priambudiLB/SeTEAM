@@ -1,6 +1,7 @@
 import CardFrame from '../Card';
 import classes from './NewVideoForm.module.css';
-import { useRef } from 'react';
+import { useRef} from 'react';
+import { useRouter } from 'next/router';
 import { Textarea } from '@chakra-ui/react';
 
 function AddNewVideoForm(props) {
@@ -13,6 +14,7 @@ function AddNewVideoForm(props) {
   const author2 = useRef();
   const imageUrl = useRef();
   const formattedPrice = useRef();
+  const router = useRouter();
   // const reviewCount: 34,
   // const rating: 4,
 
@@ -23,7 +25,8 @@ function AddNewVideoForm(props) {
     const enterTitle = titleVideo.current.value;
     const enterEmail = email.current.value;
     const enterVid = idVideo.current.value;
-       
+    
+
     const enterAuthor1 = author1.current.value;
     const enterAuthor2 = author2.current.value;
     const enterImageUrl = imageUrl.current.value;
@@ -44,6 +47,7 @@ function AddNewVideoForm(props) {
     };
     // console.log(infoData);
     props.onAddVideoData(infoData);
+    router.push('/AvailableCourses');
   }
 
   return (
