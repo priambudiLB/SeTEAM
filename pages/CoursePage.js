@@ -126,9 +126,6 @@ function CoursePage(props) {
               <source src={url} type="video/mp4"></source>
               {/* <source src={FetchVideo} type="video/mp4"></source>  */}
             </video>
-
-
-
           </Flex>
           <Flex flexDir="row">
             <section>
