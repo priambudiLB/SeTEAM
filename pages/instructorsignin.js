@@ -50,7 +50,7 @@ export default function Signin() {
           });
         } 
       });
-      router.push('/AvailableCourses');
+      router.push('/dashboard');
     }
   }
 

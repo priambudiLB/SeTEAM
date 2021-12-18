@@ -25,7 +25,6 @@ function NewVideoPage() {
         <WrapItem >
           <Center>
             <section>
-
               <AddNewVideoForm onAddVideoData={AddVideoData} />
             </section>
           </Center>

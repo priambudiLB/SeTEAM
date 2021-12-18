@@ -6,9 +6,12 @@ import { Textarea } from '@chakra-ui/react';
 
 function AddNewVideoForm(props) {
 
+  const [vidSelected, setVidSelected] = useState('');
+  const [nameFile, setNameFile] = useState('');
+
   const titleVideo = useRef();
   const email = useRef();
-  // const idVideo = useRef();
+  const idVideo = useRef(nameFile);
   const description = useRef();
   const author1 = useRef();
   const author2 = useRef();
@@ -17,40 +20,26 @@ function AddNewVideoForm(props) {
   const router = useRouter();
   // const reviewCount: 34,
   // const rating: 4,
-  const [vidSelected, setVidSelected] = useState('');
-
+  
 
   function submitHandler(event) {
     // prevent browser default--> vanila javascript
     event.preventDefault();
     const enterTitle = titleVideo.current.value;
     const enterEmail = email.current.value;
-
-
-
+    const enterIdVid = idVideo.current.value;
     const enterAuthor1 = author1.current.value;
     const enterAuthor2 = author2.current.value;
     const enterImageUrl = imageUrl.current.value;
     const enterFormattedPrice = formattedPrice.current.value;
     const enterDescription = description.current.value;
 
-    const infoData = {
-      title: enterTitle,
-      email: enterEmail,
-      idVideo: vidSelected,
-      desc: enterDescription,
-      author1: enterAuthor1,
-      author2: enterAuthor2,
-      price: enterFormattedPrice,
-      urlImage: enterImageUrl,
-      reviewCount: 54,
-      rating: 4,
-    };
+
 
     // upload video
     const formData = new FormData();
-    formData.append('file', dataSelected);
-    formData.append('upload_preset', bqvneyqd);
+    formData.append('file', vidSelected);
+    formData.append('upload_preset', 'bqvneyqd');
     // problem, data kredensial terlalu terexpose !!!!!!
     const address = 'https://api.cloudinary.com/v1_1/di1kxmnrn/image/upload';
     fetch(address, {
@@ -59,12 +48,24 @@ function AddNewVideoForm(props) {
     })
       .then(data => {
         console.log('success: ', data);
+
       })
       .catch((error) => {
         console.log('error: ', error);
       });
 
-
+    const infoData = {
+      title: enterTitle,
+      email: enterEmail,
+      idVideo: enterIdVid,
+      desc: enterDescription,
+      author1: enterAuthor1,
+      author2: enterAuthor2,
+      price: enterFormattedPrice,
+      urlImage: enterImageUrl,
+      reviewCount: 54,
+      rating: 4,
+    };
     // console.log(infoData);
     props.onAddVideoData(infoData);
     router.push('/AvailableCourses');
@@ -87,7 +88,8 @@ function AddNewVideoForm(props) {
           <input type="file"
             onChange={(event) => {
               setVidSelected(event.target.files[0]);
-            }} />
+              
+            }} ref={idVideo} />
         </div>
         <div className={classes.control}>
           <label htmlFor="author1">Author 1</label>
