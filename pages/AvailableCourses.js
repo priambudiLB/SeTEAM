@@ -37,7 +37,6 @@ export default function AvailableCourses() {
     <>
       <section>
         <Simple/>
-        
         <CoursesData availVideos={loadedCourses} />
         <Footer/>
       </section>

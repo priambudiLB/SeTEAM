@@ -16,6 +16,8 @@ import { scale } from '@cloudinary/url-gen/actions/resize';
 import { useRouter } from 'next/router';
 import Footer from '../components/footer';
 
+import Layout from '../components/layout/layout';
+
 function CoursePage(props) {
   const { url } = props;
   const themeColor = '#B2F5EA';
@@ -114,7 +116,7 @@ function CoursePage(props) {
           ml={'10%'}>
           <Flex flexDir="row"
             mb={'20px'}>
-            <Heading>WELCOME TO {titles} COURSE</Heading>
+            <Heading>WELCOME TO COURSE</Heading>
 
           </Flex>
           <Flex mb={'10px'}>
@@ -163,6 +165,7 @@ Every day. I check the Q and A first thing in the morning when I get up. I answe
 
         </Flex>
       </Flex >
+      <Layout />
     </>
 
   );
