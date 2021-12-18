@@ -11,14 +11,11 @@ import {
   FiBook,
   FiUsers,
 } from 'react-icons/fi';
-import { useState } from 'react';
-// import { handlerA } from './api/hello';
 import { cld } from '../config/cloudinary';
 import { scale } from '@cloudinary/url-gen/actions/resize';
 
 function CoursePage(props) {
   const { url } = props;
-  // const [value, changeValue] = useState('');
   const themeColor = '#B2F5EA';
   const fontColor = '#@30c040';
 
@@ -137,10 +134,8 @@ function CoursePage(props) {
   );
 }
 export async function getServerSideProps(context) {
-  // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
+
   const myVideo = cld.video('samples/sea-turtle');
-  // Apply the transformation.
-  // myVideo.resize(scale().width(800));
   myVideo.resize(scale().width(800));
   // Get the URL of the video.
   const myURL = myVideo.toURL();
@@ -153,13 +148,3 @@ export async function getServerSideProps(context) {
 
 
 export default CoursePage;
-// const cld = new Cloudinary({
-//   cloud: {
-//     // cloudName: process.env.NEXT_CLDNRY_cloud_name
-//     cloudName: process.env.NEXT_CLDNRY_cloud_name,
-//     apiKey: process.env.NEXT_CLDNRY_api_key,
-//     apiSecret: process.env.NEXT_CLDNRY_api_secret,
-//     secure: process.env.NEXT_CLDNRY_secure
-//   }
-//      });
-    
