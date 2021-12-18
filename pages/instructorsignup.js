@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import {
   FormControl, FormLabel, Container, Input, Image,
-  FormHelperText, Button, Center, Alert,Wrap,WrapItem,Box,Text
+  FormHelperText, Button, Center, Alert,Wrap,WrapItem,Text
 } from '@chakra-ui/react';
 import firebase from '../config/firebase';
 const firebaseAuthentication = firebase.auth();

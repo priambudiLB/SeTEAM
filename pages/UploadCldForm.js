@@ -3,9 +3,7 @@ import { useState } from 'react';
 
 function UploadCldForm() {
   // const data_cloud_name = ${process.env.NEXT_CLDNRY_cloud_name}
-
   const [imageSelected, setImageSelected] = useState('');
-
   function UploadingFiles () {
     // console.log(files)
     const formData = new FormData();

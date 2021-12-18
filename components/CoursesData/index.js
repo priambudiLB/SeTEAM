@@ -22,7 +22,7 @@ export default function CoursesData(props) {
   return (
     <>
       <Box w='100%' h='200px' bgGradient='linear(to-l, #7928CA, #FF0080)' />
-      <Heading>Lets Start Learning, Budi </Heading>
+      <Heading>Lets Start Learning </Heading>
       <Heading><h1> All Available Videos </h1></Heading>
       <Wrap display={'contents'} alignItems={'center'} margin={'auto'}>
         {props.availVideos.map((data) => {

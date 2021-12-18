@@ -6,33 +6,22 @@ import {
   Link,
 } from '@chakra-ui/react';
 
-
 import {
   FiHome,
   FiBook,
   FiUsers,
-  FiBell
 } from 'react-icons/fi';
-import { useEffect, useState } from 'react';
-import { handlerA } from './api/hello';
-
 import { cld } from '../config/cloudinary';
-
 import { scale } from '@cloudinary/url-gen/actions/resize';
-
-
 
 function CoursePage(props) {
   const { url } = props;
-  const [value, changeValue] = useState('');
-
   const themeColor = '#B2F5EA';
   const fontColor = '#@30c040';
 
 
   return (
     <>
-
       <Flex h={[null, null, '100vh']}
         maxW="2000px"
         flexDir={['row', 'row', 'row']}
@@ -73,7 +62,6 @@ function CoursePage(props) {
                 align={['center', 'center', 'center', 'flex-start', 'flex-start']}
                 wrap={['wrap', 'wrap', 'nowrap', 'nowrap', 'nowrap']}
                 justifyContent="center"
-
               >
                 <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]} mb={6}>
                   <Link display={['none', 'none', 'flex', 'flex', 'flex']} >
@@ -145,21 +133,10 @@ function CoursePage(props) {
 
   );
 }
-
-
-// function yg dijalanin sebelom kasih data HTML
 export async function getServerSideProps(context) {
 
-  // get nama video
-
-  
-  // const myVideo = cld.video('RANDOM.ORG_-_List_Randomizer_-_Google_Chrome_2021-11-16_17-39-59_bmh6oq');
   const myVideo = cld.video('samples/sea-turtle');
-
-  // Apply the transformation.
-  // myVideo.resize(scale().width(800));
   myVideo.resize(scale().width(800));
-
   // Get the URL of the video.
   const myURL = myVideo.toURL();
 
@@ -171,13 +148,3 @@ export async function getServerSideProps(context) {
 
 
 export default CoursePage;
-// const cld = new Cloudinary({
-//   cloud: {
-//     // cloudName: process.env.NEXT_CLDNRY_cloud_name
-//     cloudName: process.env.NEXT_CLDNRY_cloud_name,
-//     apiKey: process.env.NEXT_CLDNRY_api_key,
-//     apiSecret: process.env.NEXT_CLDNRY_api_secret,
-//     secure: process.env.NEXT_CLDNRY_secure
-//   }
-//      });
-    
