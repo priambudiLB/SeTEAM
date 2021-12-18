@@ -51,7 +51,6 @@ function Dashboard() {
               >
                             SeTEAM.
               </Heading>
-              <ReadDataFromRDB />
               <Flex
                 flexDir={['row', 'row', 'column', 'column', 'column']}
                 align={['center', 'center', 'center', 'flex-start', 'flex-start']}
@@ -85,7 +84,6 @@ function Dashboard() {
               </Flex>
             </Flex>
             <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
-              <SignOutUser />
               <Avatar my={2} src="#" />
               <Text textAlign="center">TEST REDUX</Text>
             </Flex>
@@ -115,9 +113,6 @@ function Dashboard() {
             </Box>
             <Box >
               <ProgressDashboard />
-            </Box>
-            <Box>
-              <UploadVideoClD />
             </Box>
 
           </VStack>
@@ -269,14 +264,6 @@ function Dashboard() {
         </Flex>
         {/* col 4 */}
       </Flex>
-      <Text color="gray" mt={4} mb={2}>Sum</Text>
-      <InputGroup>
-        <InputLeftElement
-          pointerEvents="none"
-        />
-        <Input type="number" placeholder="100.000" />
-      </InputGroup>
-      <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
       <Footer/>
     </>
   );
