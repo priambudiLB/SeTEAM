@@ -4,7 +4,7 @@ import Navbar from '../components/navbardashboard.js';
 import Sidebar from '../components/sidebardashboard.js';
 import { Input, Text, FormControl, Image,FormLabel, Switch, Menu, MenuButton, MenuList, Button, MenuItem, Container } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-
+import Footer from '../components/footer';
 const db = firebase.firestore();
 
 const AddCourses = () => {
@@ -102,6 +102,7 @@ const AddCourses = () => {
           })}
         </ul>
       </Container>
+      <Footer/> 
     </div>
   );
 };

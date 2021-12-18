@@ -8,7 +8,8 @@ import {
 import { useState } from 'react';
 import ProgressDashboard from '../components/ProgressDashboard/index';
 import UploadVideoClD from '../components/UploadVideoCloudinary';
-import Layout from '../components/layout/layout';
+import SignOutUser from '../components/SignOutUser';
+import Footer from '../components/footer';
 
 function Dashboard() {
   const [value, changeValue] = useState(1);
@@ -123,9 +124,15 @@ function Dashboard() {
         {/* col 4 */}
      
       </Flex>
-
-        <Layout />
-     
+      <Text color="gray" mt={4} mb={2}>Sum</Text>
+      <InputGroup>
+        <InputLeftElement
+          pointerEvents="none"
+        />
+        <Input type="number" placeholder="100.000" />
+      </InputGroup>
+      <Button mt={4} bgColor="blackAlpha.900" color="#fff" p={7} borderRadius={15}>Donate Money</Button>
+      <Footer/>
     </>
   );
  

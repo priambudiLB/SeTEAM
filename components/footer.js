@@ -1,12 +1,12 @@
-
+import styles from '../styles/footer.module.css';
 import Link from 'next/link';
-import { Stack, Center } from '@chakra-ui/layout';
+import { Stack, Center, Container } from '@chakra-ui/layout';
 
 
 
 const Footer = (props) => {
   return (
-    <>
+    <Container className={styles.foot}>
       <Center>
 
 
@@ -19,7 +19,7 @@ const Footer = (props) => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="#">
+          <Link href="/about">
             <a>About</a>
           </Link>
           <Link href="#">
@@ -31,7 +31,7 @@ const Footer = (props) => {
         </Stack>
       </Center>
 
-    </>
+    </Container>
   );
 };
 
