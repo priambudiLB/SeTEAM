@@ -1,8 +1,9 @@
 import { Fragment } from 'react';
 import Footer from '../footer';
 
-const Layout = (props) => {
+function Layout () {
   return (
+
       <Footer />
 
   );
