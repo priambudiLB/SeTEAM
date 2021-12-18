@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import firebase from '../config/firebase';
-import Navbar from '../components/navbardashboard.js';
-import Sidebar from '../components/sidebardashboard.js';
-import { Input, Text, FormControl, Image,FormLabel, Switch, Menu, MenuButton, MenuList, Button, MenuItem, Container } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import React, { useEffect } from "react";
+import firebase from "../config/firebase";
+import { Document, Page } from 'react-pdf';
+import Navbar from "../components/navbardashboard.js";
+import Sidebar from "../components/sidebardashboard.js";
+import { Text, FormControl, FormLabel, Switch, Container } from "@chakra-ui/react";
+
 
 const db = firebase.firestore();
 
@@ -23,20 +24,22 @@ const AddCourses = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     const coursename = e.target.coursename.value;
-    const filetype = e.target.type;
-    if (!username || !fileUrl) {
+    const coursedesc = e.target.coursedesc.value;
+    const coursetype = e.target.coursetype.value;
+    if (!coursename || !fileUrl) {
       return;
     }
-    await db.collection('users').doc(username).set({
-      name: username,
+    await db.collection("users").doc(coursename).set({
+      coursename: coursename,
+      coursedesc: coursedesc,
       avatar: fileUrl,
-      type: filetype,
+      coursetype: coursetype,
     });
   };
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const usersCollection = await db.collection('users').get();
+      const usersCollection = await db.collection("users").get();
 
       setUsers(
         usersCollection.docs.map((doc) => {
@@ -56,7 +59,7 @@ const AddCourses = () => {
       <Container mt="-230px" ml="200px">
         <Text mb='8px'>Courses Name</Text>
         <form onSubmit={onSubmit}>
-          <Input
+          <input
             type="text"
             size='sm'
             width='300px'
@@ -65,40 +68,66 @@ const AddCourses = () => {
             name="coursename"
           />
           <Text mb='8px' mt="20px">Description</Text>
-          <Input
+          <input
             size='sm'
             width='300px'
             background='white'
             color='black'
+            name="coursedesc"
           />
           <FormControl display='flex' alignItems='center' mt="20px">
             <Switch size="lg" />
             <FormLabel ml="10px">
-            Free?
+              Free?
             </FormLabel>
           </FormControl>
-          <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} background="white" color="black" mt="20px">
-            File
-            </MenuButton>
-            <MenuList>
-              <MenuItem>PDF</MenuItem>
-              <MenuItem>MP4</MenuItem>
-            </MenuList>
-            <Input type="file" onChange={onFileChange} />
-          </Menu>
+
+          <Text mb='8px' mt="20px">File type</Text>
+          <input type="text" list="data" name="coursetype" />
+          <datalist id="data">
+            <option value="video/mp4" />
+            <option value="image/jpeg" />
+            <option value="application/pdf" />
+          </datalist>
+
+          <br />
+          <input type="file" onChange={onFileChange} />
+          <br />
+          <button> Submit </button>
+          <br />
+          <br />
+
         </form>
         <ul>
           {users.map((user) => {
-            return (
-              <li key={user.name}>
-                <Image width="320" height="240" src={user.avatar} alt={user.name} />
-                <video width="320" height="240" controls>
-                  <source src={user.avatar} type="video/mp4" />
-                </video>
-                <p>{user.name}</p>
-              </li>
-            );
+            if (user.coursetype == "video/mp4") {
+              return (
+                <li key={user.coursename}>
+                  <video width="320" height="240" controls>
+                    <source src={user.avatar} type="video/mp4" />
+                  </video>
+                  <p>{user.coursename}</p>
+                </li>
+              );
+            } else if (user.coursetype == "image/jpeg") {
+              return (
+                <li key={user.coursename}>
+                  <img width="320" height="240" src={user.avatar} alt={user.coursename} />
+                  <p>{user.coursename}</p>
+                </li>
+              );
+            } else if (user.coursetype == "application/pdf") {
+              return (
+                <li key={user.coursename}>
+                  <Document width="320" height="240" file={user.avatar} alt={user.coursename}>
+                    <Page pageNumber={1} />
+                  </Document>
+                  <p>{user.coursename}</p>
+                </li>
+              );
+            } else {
+              return;
+            }
           })}
         </ul>
       </Container>
