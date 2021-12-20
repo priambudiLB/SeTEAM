@@ -30,7 +30,7 @@ export default function AvailableCourses() {
         <p>Loading...</p>
       </section>);
     }
-  },[isLoading]);
+  },[]);
 
   return (
     <>
