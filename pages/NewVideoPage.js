@@ -1,7 +1,7 @@
 import AddNewVideoForm from '../components/AddNewVideoForm';
 import { Wrap, WrapItem, Center } from '@chakra-ui/layout';
-function NewVideoPage() {
 
+function NewVideoPage() {
   function AddVideoData(videoData) {
     fetch(
       'https://auth-sinau-cp10-default-rtdb.firebaseio.com/indexCourses.json',

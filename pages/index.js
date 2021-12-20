@@ -13,25 +13,25 @@ export default function Home() {
     <div>
       <Navvbar />
       <NavbarUser />
-      <Wrap spacing="10px">
-        <Container w="600px" h="500px" bg="Beige.200" flexDir={'row'} >
+      <Wrap spacing='10px'>
+        <Container w='600px' h='500px' bg='Beige.200' flexDir={'row'} >
           <br /><br />
           <Text fontSize='70px' fontWeight='bold'>KNOWLEDGE ISNT POWER UNTIL IT IS APPLIED</Text>
           <br /><br />
           <HStack spacing={5}>
-            <Button data-testid="instructor-signup" colorScheme='teal' variant='solid' 
+            <Button data-testid='instructor-signup' colorScheme='teal' variant='solid' 
               onClick={() => {
                 router.push('/instructorsignup');
               }}>
                 SignUp for Instructor
             </Button>
-            <Button data-testid="instructor-signin" colorScheme='teal' variant='solid'  
+            <Button data-testid='instructor-signin' colorScheme='teal' variant='solid'  
               onClick={() => {
                 router.push('/instructorsignin');
               }}>
                 SignIn for Instructor
             </Button>
-            <Button data-testid="dashboard" colorScheme='teal' variant='solid' 
+            <Button data-testid='dashboard' colorScheme='teal' variant='solid' 
               onClick={() => {
                 router.push('/dashboard');
               }}>
@@ -41,7 +41,7 @@ export default function Home() {
         </Container>
      
         <WrapItem>
-          <Center w="950px" h="800px" bg="Beige.200">
+          <Center w='950px' h='800px' bg='Beige.200'>
             <Image src='/devices.png' alt='devicespage' w='850px' h='500px' />
           </Center>
         </WrapItem>

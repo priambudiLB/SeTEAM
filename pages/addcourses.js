@@ -53,48 +53,48 @@ const AddCourses = () => {
 
       <Navbar></Navbar>
       <Sidebar></Sidebar>
-      <Container mt="-230px" ml="200px">
+      <Container mt='-230px' ml='200px'>
         <Text mb='8px'>Courses Name</Text>
         <form onSubmit={onSubmit}>
           <Input
-            type="text"
+            type='text'
             size='sm'
             width='300px'
             background='white'
             color='black'
-            name="coursename"
+            name='coursename'
           />
-          <Text mb='8px' mt="20px">Description</Text>
+          <Text mb='8px' mt='20px'>Description</Text>
           <Input
             size='sm'
             width='300px'
             background='white'
             color='black'
           />
-          <FormControl display='flex' alignItems='center' mt="20px">
-            <Switch size="lg" />
-            <FormLabel ml="10px">
+          <FormControl display='flex' alignItems='center' mt='20px'>
+            <Switch size='lg' />
+            <FormLabel ml='10px'>
             Free?
             </FormLabel>
           </FormControl>
           <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} background="white" color="black" mt="20px">
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} background='white' color='black' mt='20px'>
             File
             </MenuButton>
             <MenuList>
               <MenuItem>PDF</MenuItem>
               <MenuItem>MP4</MenuItem>
             </MenuList>
-            <Input type="file" onChange={onFileChange} />
+            <Input type='file' onChange={onFileChange} />
           </Menu>
         </form>
         <ul>
           {users.map((user) => {
             return (
               <li key={user.name}>
-                <Image width="320" height="240" src={user.avatar} alt={user.name} />
-                <video width="320" height="240" controls>
-                  <source src={user.avatar} type="video/mp4" />
+                <Image width='320' height='240' src={user.avatar} alt={user.name} />
+                <video width='320' height='240' controls>
+                  <source src={user.avatar} type='video/mp4' />
                 </video>
                 <p>{user.name}</p>
               </li>

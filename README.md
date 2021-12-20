@@ -1,4 +1,4 @@
-<h1 align="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
+<h1 alignItems="center">SeTEAM <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/quality_gate?project=priambudiLB_SeTEAM">
@@ -10,9 +10,9 @@
 
 
 </a></h1>
-<p align="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
+<p alignItems="center">Repository for team SeTEAM Binar Academy FSW Wave 12</p>
 
-<p align="center">
+<p alignItems="center">
 
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
 
@@ -45,22 +45,7 @@
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=ncloc">
 </a>
 <a href="https://sonarcloud.io/summary/new_code?id=priambudiLB_SeTEAM">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ea189f9aff2e94bcc88d142fc5b47c2ddfaab5bf
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 970db7f98d6d8ff7182672b06a31e45cf73230b3
-=======
->>>>>>> de764c0578364df22eb28caf8a06597df2a92b17
-<<<<<<< HEAD
->>>>>>> 7730ccf16bc781fa12463d6ca762eb883c9797b2
-=======
->>>>>>> ea189f9aff2e94bcc88d142fc5b47c2ddfaab5bf
 <img height="18px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">
 
 <img height="20px" src="https://sonarcloud.io/api/project_badges/measure?project=priambudiLB_SeTEAM&metric=vulnerabilities">

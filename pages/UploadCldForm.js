@@ -27,7 +27,7 @@ function UploadCldForm() {
       <h1>The Home Page</h1>
 
       <div>
-        <input type="file"
+        <input type='file'
           onChange={(event) => {
             setImageSelected(event.target.files[0]);
           }} />

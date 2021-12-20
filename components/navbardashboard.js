@@ -67,7 +67,7 @@ export default function Simple() {
               </MenuButton>
               <MenuList>
                 <MenuItem><a href='MyProfile'>Your Profile</a></MenuItem>
-                <MenuItem><a href='MyCourse'>Your Course</a></MenuItem>
+                <MenuItem><a href='dashboard'>Your Course</a></MenuItem>
                 <MenuDivider />
                 <MenuItem><a href='Helper'>Help Desk</a></MenuItem>
               </MenuList>

@@ -4,8 +4,8 @@ import { Image } from '@chakra-ui/image';
 import { Badge } from '@chakra-ui/layout';
 import { StarIcon } from '@chakra-ui/icons';
 import { ChakraProvider } from '@chakra-ui/react';
-import { useContext } from 'react';
-import { VidCoursesContextProvider } from '../../context/AddVideoContext';
+
+
 
 export default function CoursesData(props) {
   const property = [

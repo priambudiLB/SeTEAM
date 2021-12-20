@@ -31,7 +31,7 @@ function NewVideoPage() {
           </Center>
         </WrapItem>
       </Wrap>
-    <Layout/>
+      <Layout/>
     </>
   );
 
