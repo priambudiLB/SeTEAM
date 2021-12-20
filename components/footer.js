@@ -13,19 +13,19 @@ const Footer = (props) => {
         <Stack direction={'row'}
           justifyContent={'space-evenly'}
           spacing={'60px'}
-          id="footer"
+          id='footer'
           marginBottom={'10px'}>
 
-          <Link href="/">
+          <Link href='/'>
             <a>Home</a>
           </Link>
-          <Link href="/about">
+          <Link href='/about'>
             <a>About</a>
           </Link>
-          <Link href="#">
+          <Link href='#'>
             <a>Contact Us</a>
           </Link>
-          <Link href="#">
+          <Link href='#'>
             <a>© 2021</a>
           </Link>
         </Stack>

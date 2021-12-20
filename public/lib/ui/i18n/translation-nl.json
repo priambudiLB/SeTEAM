@@ -199,7 +199,7 @@
     "annotationReplyCount": "{{count}} Antwoord",
     "annotationReplyCount_plural": "{{count}} Antwoorden",
     "printTotalPageCount": "{{count}} pagina",
-    "printTotalPageCount_plural": "{{count}} pagina's",
+    "printTotalPageCount_plural": "{{count}} pagina"s",
     "processing": "Bezig...",
     "searching": "Zoeken...",
     "searchCommentsPlaceholder": "Zoek opmerkingen",
@@ -222,7 +222,7 @@
     "enterUrlHere": "Voer hier de URL in",
     "openLocalFile": "Lokaal bestand openen:",
     "selectFile": "Selecteer bestand",
-    "selectPageToReplace": "Selecteer de pagina's in het document die u wilt vervangen.",
+    "selectPageToReplace": "Selecteer de pagina"s in het document die u wilt vervangen.",
     "embeddedFiles": "Ingesloten bestanden",
     "pageNum": "Paginanummer"
   },
@@ -286,7 +286,7 @@
     },
     "documentControls": {
       "placeholder": "1, 3, 5-10",
-      "selectTooltip": "Selecteer meerdere pagina's",
+      "selectTooltip": "Selecteer meerdere pagina"s",
       "closeTooltip": "Sluit meervoudige selectie"
     },
     "outlineControls": {
@@ -318,7 +318,7 @@
     "print": {
       "all": "Alles",
       "current": "Huidige pagina",
-      "pages": "Pagina's",
+      "pages": "Pagina"s",
       "view": "Huidige weergave",
       "pageQuality": "Print kwaliteit",
       "qualityNormal": "Normaal",
@@ -441,7 +441,7 @@
       "rotateCounterClockwise": "Tegen de klok in"
     },
     "thumbnailsControlOverlay": {
-      "move": "Pagina's verplaatsen"
+      "move": "Pagina"s verplaatsen"
     },
     "richText": {
       "bold": "Vet",
@@ -468,22 +468,22 @@
   "warning": {
     "deletePage": {
       "deleteTitle": "Pagina verwijderen",
-      "deleteMessage": "Weet u zeker dat u de geselecteerde pagina ('s) wilt verwijderen. Dit kan niet ongedaan worden gemaakt",
-      "deleteLastPageMessage": "U kunt niet alle pagina's in het document verwijderen."
+      "deleteMessage": "Weet u zeker dat u de geselecteerde pagina ("s) wilt verwijderen. Dit kan niet ongedaan worden gemaakt",
+      "deleteLastPageMessage": "U kunt niet alle pagina"s in het document verwijderen."
     },
     "extractPage": {
       "title": "Pagina uitpakken",
-      "message": "Weet u zeker dat u de geselecteerde pagina ('s) wilt extraheren?",
-      "confirmBtn": "Extraheer pagina's",
-      "secondaryBtn": "Extraheer en verwijder pagina ('s)"
+      "message": "Weet u zeker dat u de geselecteerde pagina ("s) wilt extraheren?",
+      "confirmBtn": "Extraheer pagina"s",
+      "secondaryBtn": "Extraheer en verwijder pagina ("s)"
     },
     "redaction": {
       "applyTile": "Redactie toepassen",
       "applyMessage": "Met deze actie worden alle items verwijderd die zijn geselecteerd voor redactie. Het kan niet ongedaan gemaakt worden."
     },
     "selectPage": {
-      "selectTitle": "Geen pagina's geselecteerd",
-      "selectMessage": "Selecteer pagina's en probeer het opnieuw."
+      "selectTitle": "Geen pagina"s geselecteerd",
+      "selectMessage": "Selecteer pagina"s en probeer het opnieuw."
     },
     "colorPicker": {
       "deleteTitle": "Aangepaste kleur verwijderen",

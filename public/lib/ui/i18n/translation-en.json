@@ -215,7 +215,7 @@
     "emptyCustomStampInput": "Stamp text cannot be empty",
     "unpostedComment": "Unposted Comment",
     "lockedLayer": "Layer is locked",
-    "layerVisibililtyNoChange": "Layer visibililty can't be changed",
+    "layerVisibililtyNoChange": "Layer visibililty can"t be changed",
     "untitled": "Untitled",
     "selectHowToLoadFile": "Select how to load your document",
     "openFileByUrl": "Open file by URL:",
@@ -468,7 +468,7 @@
   "warning": {
     "deletePage": {
       "deleteTitle": "Delete Page",
-      "deleteMessage": "Are you sure you want to delete the selected page(s). This can't be undone",
+      "deleteMessage": "Are you sure you want to delete the selected page(s). This can"t be undone",
       "deleteLastPageMessage": "You cannot delete all pages in the document."
     },
     "extractPage": {
@@ -661,7 +661,7 @@
       "timestamp": "Trust verification attempted with respect to secure embedded timestamp: {{trustVerificationTime}}"
     },
     "signerIdentity": {
-      "preamble": "The signer's identity is ",
+      "preamble": "The signer"s identity is ",
       "valid": "valid.",
       "unknown": "unknown."
     },
@@ -683,7 +683,7 @@
     "unsignedSignatureField": "Unsigned signature field: {{fieldName}}",
     "trustVerification": {
       "current": "Verification time used was the current time",
-      "signing": "Verification time is from the clock on the signer's computer",
+      "signing": "Verification time is from the clock on the signer"s computer",
       "timestamp": "Verification time is from the secure timestamp embedded in the document",
       "verifiedTrust": "Trust verification result: Verified",
       "noTrustVerification": "No detailed trust verification result available."
@@ -707,7 +707,7 @@
       "digestVerificationDisabled": "Digest verification has been disabled.",
       "weakDigestAlgorithmButDigestVerifiable": "The digest is correct, but the digest algorithm is weak and not secure.",
       "noDigestStatus": "No digest status to report.",
-      "unsupportedEncoding": "No installed SignatureHandler was able to recognize the signature's encoding"
+      "unsupportedEncoding": "No installed SignatureHandler was able to recognize the signature"s encoding"
     },
     "documentStatus": {
       "noError": "No general error to report.",

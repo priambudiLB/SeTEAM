@@ -59,8 +59,8 @@
     "nextResult": "Résultat suivant",
     "prev": "précédent",
     "next": "Prochain",
-    "startFormEditing": "Commencer l'édition du formulaire",
-    "exitFormEditing": "Quitter le mode d'édition de formulaire",
+    "startFormEditing": "Commencer l"édition du formulaire",
+    "exitFormEditing": "Quitter le mode d"édition de formulaire",
     "exit": "Sortie",
     "addOption": "Ajouter une option",
     "formFieldEdit": "Modifier le champ de formulaire",
@@ -169,7 +169,7 @@
     "thumbnailsPanel": "Vignettes",
     "toolsButton": "Outils",
     "redaction": "Biffure",
-    "viewControlsOverlay": "Contrôles de l'affichage",
+    "viewControlsOverlay": "Contrôles de l"affichage",
     "calibration": "Étalonnage",
     "zoomOverlay": "Superposition de zoom",
     "textPopup": "Popup texte",
@@ -187,15 +187,15 @@
     "enterPassword": "Ce document est protégé par un mot de passe. Veuillez saisir ce mot de passe.",
     "incorrectPassword": "Mot de passe incorrect. Tentatives restantes: {{remainingAttempts}}",
     "noAnnotations": "Commencez à faire des annotations pour laisser un commentaire.",
-    "noAnnotationsReadOnly": "Ce document n'a pas d'annotations.",
+    "noAnnotationsReadOnly": "Ce document n"a pas d"annotations.",
     "noAnnotationsFilter": "Commencez à créer des annotations et des filtres apparaîtront ici.",
-    "noOutlines": "Ce document n'a pas de plan.",
-    "noAttachments": "Ce document n'a pas de pièces jointes.",
+    "noOutlines": "Ce document n"a pas de plan.",
+    "noAttachments": "Ce document n"a pas de pièces jointes.",
     "noResults": "Aucun résultat trouvé.",
     "numResultsFound": "résultats trouvés",
-    "notSupported": "Ce type de fichier n'est pas pris en charge.",
+    "notSupported": "Ce type de fichier n"est pas pris en charge.",
     "passwordRequired": "Mot de passe requis",
-    "preparingToPrint": "Préparation à l'impression...",
+    "preparingToPrint": "Préparation à l"impression...",
     "annotationReplyCount": "{{count}} Répondre",
     "annotationReplyCount_plural": "{{count}} réponses",
     "printTotalPageCount": "{{count}} page",
@@ -219,7 +219,7 @@
     "untitled": "Sans titre",
     "selectHowToLoadFile": "Sélectionnez comment charger votre document",
     "openFileByUrl": "Ouvrir le fichier par URL:",
-    "enterUrlHere": "Entrez l'URL ici",
+    "enterUrlHere": "Entrez l"URL ici",
     "openLocalFile": "Ouvrir le fichier local:",
     "selectFile": "Choisir le dossier",
     "selectPageToReplace": "Sélectionnez les pages du document que vous souhaitez remplacer.",
@@ -262,7 +262,7 @@
       "modifiedDate": "Date modifiée"
     },
     "toolbarGroup": {
-      "dropdownLabel": "Groupes de barres d'outils",
+      "dropdownLabel": "Groupes de barres d"outils",
       "toolbarGroup-View": "Vue",
       "toolbarGroup-Annotate": "Annoter",
       "toolbarGroup-Shapes": "Formes",
@@ -301,7 +301,7 @@
     "mathSymbols": "Symboles mathématiques",
     "notesPanel": {
       "separator": {
-        "today": "Aujourd'hui",
+        "today": "Aujourd"hui",
         "yesterday": "Hier",
         "unknown": "Inconnu"
       },
@@ -320,7 +320,7 @@
       "current": "Page actuelle",
       "pages": "Pages",
       "view": "Vue actuelle",
-      "pageQuality": "Qualité d'impression",
+      "pageQuality": "Qualité d"impression",
       "qualityNormal": "Ordinaire",
       "qualityHigh": "Haute",
       "includeAnnotations": "Inclure des annotations",
@@ -355,7 +355,7 @@
       "saveSignature": "Enregistrer la signature",
       "dragAndDrop": "Faites glisser et déposez votre image ici",
       "or": "Ou",
-      "pickImage": "Choisir l'image de signature"
+      "pickImage": "Choisir l"image de signature"
     },
     "pageReplacementModal": {
       "dragAndDrop": "Glissez & Déposez votre fichier ici",
@@ -383,7 +383,7 @@
       "unmarked": "Mon marqué"
     },
     "measurementOverlay": {
-      "scale": "Ratio d'échelle",
+      "scale": "Ratio d"échelle",
       "angle": "Angle",
       "distance": "Distance",
       "perimeter": "Périmètre",
@@ -450,7 +450,7 @@
       "strikeout": "Barré",
       "alignLeft": "Texte aligné à gauche",
       "alignRight": "Texte aligné à droite",
-      "alignCenter": "Centre d'alignement du texte",
+      "alignCenter": "Centre d"alignement du texte",
       "justifyCenter": "Centre de justification du texte",
       "alignTop": "Aligner en haut",
       "alignMiddle": "Aligner au milieu",
@@ -458,9 +458,9 @@
     },
     "customStampModal": {
       "stampText": "Texte du tampon:",
-      "timestampText": "Texte d'horodatage:",
+      "timestampText": "Texte d"horodatage:",
       "stampColor": "Couleur du tampon:",
-      "Username": "Nom d'utilisateur",
+      "Username": "Nom d"utilisateur",
       "Date": "Date",
       "Time": "Temps"
     }
@@ -537,13 +537,13 @@
   "link": {
     "url": "URL",
     "page": "Page",
-    "enterurl": "Entrez l'URL à laquelle vous souhaitez créer un lien",
+    "enterurl": "Entrez l"URL à laquelle vous souhaitez créer un lien",
     "enterpage": "Sélectionnez le numéro de page auquel vous souhaitez lier"
   },
   "Model3D": {
     "add3D": "Ajoutez une annotation 3D en saisissant une URL",
-    "enterurl": "Entrez l'URL de l'objet 3D au format glTF",
-    "enterurlOrLocalFile": "Entrez l'URL ou téléchargez un objet 3D au format glTF",
+    "enterurl": "Entrez l"URL de l"objet 3D au format glTF",
+    "enterurlOrLocalFile": "Entrez l"URL ou téléchargez un objet 3D au format glTF",
     "formatError": "Seul le format glTF (.glb) est pris en charge"
   },
   "datePicker": {
@@ -645,23 +645,23 @@
       "digestStatus": "État du résumé"
     },
     "documentPermission": {
-      "noChangesAllowed": "Le {{editor}} a spécifié qu'aucune modification n'est autorisée pour ce document",
-      "formfillingSigningAllowed": "Le {{editor}} a spécifié que le remplissage et la signature de formulaire sont autorisés pour ce document. Aucun autre changement n'est autorisé.",
-      "annotatingFormfillingSigningAllowed": "Le {{editor}} a spécifié que le remplissage, la signature et les commentaires de formulaire sont autorisés pour ce document. Aucun autre changement n'est autorisé.",
-      "unrestricted": "Le {{editor}} a spécifié qu'il n'y avait aucune restriction pour ce document."
+      "noChangesAllowed": "Le {{editor}} a spécifié qu"aucune modification n"est autorisée pour ce document",
+      "formfillingSigningAllowed": "Le {{editor}} a spécifié que le remplissage et la signature de formulaire sont autorisés pour ce document. Aucun autre changement n"est autorisé.",
+      "annotatingFormfillingSigningAllowed": "Le {{editor}} a spécifié que le remplissage, la signature et les commentaires de formulaire sont autorisés pour ce document. Aucun autre changement n"est autorisé.",
+      "unrestricted": "Le {{editor}} a spécifié qu"il n"y avait aucune restriction pour ce document."
     },
     "digestAlgorithm": {
-      "preamble": "L'algorithme de résumé utilisé pour signer la signature:",
-      "unknown": "L'algorithme de résumé utilisé pour signer la signature est inconnu."
+      "preamble": "L"algorithme de résumé utilisé pour signer la signature:",
+      "unknown": "L"algorithme de résumé utilisé pour signer la signature est inconnu."
     },
     "trustVerification": {
       "none": "Aucun résultat de vérification de confiance détaillé disponible.",
-      "current": "Vérification de la confiance tentée par rapport à l'heure actuelle",
-      "signing": "Vérification de la confiance tentée en ce qui concerne l'heure de signature: {{trustVerificationTime}}",
-      "timestamp": "Tentative de vérification de la confiance en ce qui concerne l'horodatage intégré sécurisé: {{trustVerificationTime}}"
+      "current": "Vérification de la confiance tentée par rapport à l"heure actuelle",
+      "signing": "Vérification de la confiance tentée en ce qui concerne l"heure de signature: {{trustVerificationTime}}",
+      "timestamp": "Tentative de vérification de la confiance en ce qui concerne l"horodatage intégré sécurisé: {{trustVerificationTime}}"
     },
     "signerIdentity": {
-      "preamble": "L'identité du signataire est",
+      "preamble": "L"identité du signataire est",
       "valid": "valide.",
       "unknown": "inconnue."
     },
@@ -682,22 +682,22 @@
     "disallowedChange": "Modification interdite: {{type}}, objnum: {{objnum}}",
     "unsignedSignatureField": "Champ de signature non signé : {{fieldName}}",
     "trustVerification": {
-      "current": "L'heure de vérification utilisée était l'heure actuelle",
-      "signing": "L'heure de vérification provient de l'horloge de l'ordinateur du signataire",
-      "timestamp": "L'heure de vérification provient de l'horodatage sécurisé intégré dans le document",
+      "current": "L"heure de vérification utilisée était l"heure actuelle",
+      "signing": "L"heure de vérification provient de l"horloge de l"ordinateur du signataire",
+      "timestamp": "L"heure de vérification provient de l"horodatage sécurisé intégré dans le document",
       "verifiedTrust": "Résultat de la vérification de confiance: vérifié",
       "noTrustVerification": "Aucun résultat de vérification de confiance détaillé disponible."
     },
     "permissionStatus": {
-      "noPermissionsStatus": "Aucun statut d'autorisation à signaler.",
+      "noPermissionsStatus": "Aucun statut d"autorisation à signaler.",
       "permissionsVerificationDisabled": "La vérification des autorisations a été désactivée.",
-      "hasAllowedChanges": "Le document comporte des modifications autorisées par les paramètres d'autorisations de signatures.",
-      "invalidatedByDisallowedChanges": "Le document comporte des modifications qui ne sont pas autorisées par les paramètres d'autorisations de signatures.",
-      "unmodified": "Le document n'a pas été modifié depuis qu'il"
+      "hasAllowedChanges": "Le document comporte des modifications autorisées par les paramètres d"autorisations de signatures.",
+      "invalidatedByDisallowedChanges": "Le document comporte des modifications qui ne sont pas autorisées par les paramètres d"autorisations de signatures.",
+      "unmodified": "Le document n"a pas été modifié depuis qu"il"
     },
     "trustStatus": {
       "trustVerified": "Confiance établie avec {{verificationType}} avec succès.",
-      "untrusted": "La confiance n'a pas pu être établie.",
+      "untrusted": "La confiance n"a pas pu être établie.",
       "trustVerificationDisabled": "La vérification de la confiance a été désactivée.",
       "noTrustStatus": "Aucun statut de confiance à signaler."
     },
@@ -705,14 +705,14 @@
       "digestInvalid": "Le résumé est incorrect.",
       "digestVerified": "Le résumé est correct.",
       "digestVerificationDisabled": "La vérification du résumé a été désactivée.",
-      "weakDigestAlgorithmButDigestVerifiable": "Le résumé est correct, mais l'algorithme de résumé est faible et non sécurisé.",
+      "weakDigestAlgorithmButDigestVerifiable": "Le résumé est correct, mais l"algorithme de résumé est faible et non sécurisé.",
       "noDigestStatus": "Aucun état de résumé à signaler.",
-      "unsupportedEncoding": "Aucun SignatureHandler installé n'a pu reconnaître le codage de la signature"
+      "unsupportedEncoding": "Aucun SignatureHandler installé n"a pu reconnaître le codage de la signature"
     },
     "documentStatus": {
       "noError": "Aucune erreur générale à signaler.",
       "corruptFile": "SignatureHandler a signalé une corruption de fichier.",
-      "unsigned": "La signature n'a pas encore été signée cryptographiquement.",
+      "unsigned": "La signature n"a pas encore été signée cryptographiquement.",
       "badByteRanges": "SignatureHandler signale une corruption dans les ByteRanges de la signature numérique.",
       "corruptCryptographicContents": "SignatureHandler signale une corruption dans le contenu de la signature numérique."
     },
@@ -728,9 +728,9 @@
       "noSigningTime": "Aucune heure de signature trouvée"
     },
     "panelMessages": {
-      "noSignatureFields": "Ce document n'a pas de champs de signature",
-      "certificateDownloadError": "Erreur rencontrée lors de la tentative de téléchargement d'un certificat de confiance",
-      "localCertificateError": "Il y a quelques problèmes avec la lecture d'un certificat local"
+      "noSignatureFields": "Ce document n"a pas de champs de signature",
+      "certificateDownloadError": "Erreur rencontrée lors de la tentative de téléchargement d"un certificat de confiance",
+      "localCertificateError": "Il y a quelques problèmes avec la lecture d"un certificat local"
     }
   }
 }

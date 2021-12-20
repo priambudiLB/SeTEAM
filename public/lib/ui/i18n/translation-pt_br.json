@@ -325,7 +325,7 @@
       "qualityHigh": "Alto",
       "includeAnnotations": "Incluir anotações",
       "includeComments": "Incluir comentários",
-      "addWatermarkSettings": "Adicionar marca d'água"
+      "addWatermarkSettings": "Adicionar marca d"água"
     },
     "printInfo": {
       "author": "Autor",
@@ -420,7 +420,7 @@
     },
     "watermark": {
       "size": "Tamanho",
-      "location": "Escolha um local para editar marcas d'água",
+      "location": "Escolha um local para editar marcas d"água",
       "text": "Texto",
       "style": "Estilo",
       "resetAllSettings": "Voltar às configurações padrão",

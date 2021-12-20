@@ -82,7 +82,7 @@
     "moveToBottom": "Sposta in basso"
   },
   "annotation": {
-    "areaMeasurement": "Misurazione dell'area",
+    "areaMeasurement": "Misurazione dell"area",
     "arrow": "Freccia",
     "callout": "Chiamare",
     "crop": "Ritaglia pagina",
@@ -219,7 +219,7 @@
     "untitled": "Senza titolo",
     "selectHowToLoadFile": "Seleziona come caricare il tuo documento",
     "openFileByUrl": "Apri file tramite URL:",
-    "enterUrlHere": "Inserisci l'URL qui",
+    "enterUrlHere": "Inserisci l"URL qui",
     "openLocalFile": "Apri file locale:",
     "selectFile": "Seleziona il file",
     "selectPageToReplace": "Seleziona le pagine del documento con cui desideri sostituire.",
@@ -353,9 +353,9 @@
     },
     "signatureModal": {
       "saveSignature": "Salva firma",
-      "dragAndDrop": "Trascina e rilascia l'immagine qui",
+      "dragAndDrop": "Trascina e rilascia l"immagine qui",
       "or": "O",
-      "pickImage": "Scegli l'immagine della firma"
+      "pickImage": "Scegli l"immagine della firma"
     },
     "pageReplacementModal": {
       "dragAndDrop": "Trascina e rilascia il tuo file qui",
@@ -390,7 +390,7 @@
       "area": "La zona",
       "distanceMeasurement": "Misurazione della distanza",
       "perimeterMeasurement": "Misura perimetrale",
-      "areaMeasurement": "Misura dell'area",
+      "areaMeasurement": "Misura dell"area",
       "countMeasurement": "Misurazione del conteggio",
       "radius": "Raggio",
       "count": "Contare"
@@ -537,13 +537,13 @@
   "link": {
     "url": "URL",
     "page": "Pagina",
-    "enterurl": "Inserisci l'URL che desideri collegare",
+    "enterurl": "Inserisci l"URL che desideri collegare",
     "enterpage": "Seleziona il numero di pagina che desideri collegare"
   },
   "Model3D": {
-    "add3D": "Aggiungi un'annotazione 3D inserendo l'URL",
-    "enterurl": "Immettere l'URL per l'oggetto 3D in formato glTF",
-    "enterurlOrLocalFile": "Inserisci l'URL o carica un oggetto 3D in formato glTF",
+    "add3D": "Aggiungi un"annotazione 3D inserendo l"URL",
+    "enterurl": "Immettere l"URL per l"oggetto 3D in formato glTF",
+    "enterurlOrLocalFile": "Inserisci l"URL o carica un oggetto 3D in formato glTF",
     "formatError": "È supportato solo il formato glTF (.glb)"
   },
   "datePicker": {
@@ -645,23 +645,23 @@
       "digestStatus": "Stato digest"
     },
     "documentPermission": {
-      "noChangesAllowed": "L '{{editor}} ha specificato che non sono consentite modifiche per questo documento",
-      "formfillingSigningAllowed": "L '{{editor}} ha specificato che la compilazione del modulo e la firma sono consentite per questo documento. Non sono consentite altre modifiche.",
-      "annotatingFormfillingSigningAllowed": "L '{{editor}} ha specificato che per questo documento sono consentite la compilazione di moduli, la firma e i commenti. Non sono consentite altre modifiche.",
-      "unrestricted": "L '{{editor}} ha specificato che non ci sono restrizioni per questo documento."
+      "noChangesAllowed": "L "{{editor}} ha specificato che non sono consentite modifiche per questo documento",
+      "formfillingSigningAllowed": "L "{{editor}} ha specificato che la compilazione del modulo e la firma sono consentite per questo documento. Non sono consentite altre modifiche.",
+      "annotatingFormfillingSigningAllowed": "L "{{editor}} ha specificato che per questo documento sono consentite la compilazione di moduli, la firma e i commenti. Non sono consentite altre modifiche.",
+      "unrestricted": "L "{{editor}} ha specificato che non ci sono restrizioni per questo documento."
     },
     "digestAlgorithm": {
-      "preamble": "L'algoritmo digest utilizzato per firmare la firma:",
-      "unknown": "L'algoritmo digest utilizzato per firmare la firma è sconosciuto."
+      "preamble": "L"algoritmo digest utilizzato per firmare la firma:",
+      "unknown": "L"algoritmo digest utilizzato per firmare la firma è sconosciuto."
     },
     "trustVerification": {
-      "none": "Nessun risultato dettagliato della verifica dell'attendibilità disponibile.",
-      "current": "Tentativo di verifica dell'attendibilità rispetto all'ora corrente",
-      "signing": "Tentativo di verifica dell'attendibilità rispetto all'ora della firma: {{trustVerificationTime}}",
-      "timestamp": "Tentativo di verifica dell'attendibilità rispetto al timestamp protetto incorporato: {{trustVerificationTime}}"
+      "none": "Nessun risultato dettagliato della verifica dell"attendibilità disponibile.",
+      "current": "Tentativo di verifica dell"attendibilità rispetto all"ora corrente",
+      "signing": "Tentativo di verifica dell"attendibilità rispetto all"ora della firma: {{trustVerificationTime}}",
+      "timestamp": "Tentativo di verifica dell"attendibilità rispetto al timestamp protetto incorporato: {{trustVerificationTime}}"
     },
     "signerIdentity": {
-      "preamble": "L'identità del firmatario è",
+      "preamble": "L"identità del firmatario è",
       "valid": "valido.",
       "unknown": "sconosciuto."
     },
@@ -682,11 +682,11 @@
     "disallowedChange": "Modifica non consentita: {{type}}, objnum: {{objnum}}",
     "unsignedSignatureField": "Campo firma non firmato: {{fieldName}}",
     "trustVerification": {
-      "current": "L'ora di verifica utilizzata era l'ora corrente",
-      "signing": "L'ora della verifica è dall'orologio sul computer del firmatario",
-      "timestamp": "L'orario di verifica proviene dal timestamp protetto incorporato nel documento",
-      "verifiedTrust": "Risultato della verifica dell'attendibilità: verificato",
-      "noTrustVerification": "Nessun risultato dettagliato della verifica dell'attendibilità disponibile."
+      "current": "L"ora di verifica utilizzata era l"ora corrente",
+      "signing": "L"ora della verifica è dall"orologio sul computer del firmatario",
+      "timestamp": "L"orario di verifica proviene dal timestamp protetto incorporato nel documento",
+      "verifiedTrust": "Risultato della verifica dell"attendibilità: verificato",
+      "noTrustVerification": "Nessun risultato dettagliato della verifica dell"attendibilità disponibile."
     },
     "permissionStatus": {
       "noPermissionsStatus": "Nessuno stato delle autorizzazioni da segnalare.",
@@ -698,14 +698,14 @@
     "trustStatus": {
       "trustVerified": "Affidabilità stabilita in {{verificationType}} correttamente.",
       "untrusted": "Non è stato possibile stabilire la fiducia.",
-      "trustVerificationDisabled": "La verifica dell'attendibilità è stata disabilitata.",
+      "trustVerificationDisabled": "La verifica dell"attendibilità è stata disabilitata.",
       "noTrustStatus": "Nessuno stato di attendibilità da segnalare."
     },
     "digestStatus": {
       "digestInvalid": "Il digest non è corretto.",
       "digestVerified": "Il digest è corretto.",
       "digestVerificationDisabled": "La verifica del digest è stata disabilitata.",
-      "weakDigestAlgorithmButDigestVerifiable": "Il digest è corretto, ma l'algoritmo del digest è debole e non sicuro.",
+      "weakDigestAlgorithmButDigestVerifiable": "Il digest è corretto, ma l"algoritmo del digest è debole e non sicuro.",
       "noDigestStatus": "Nessuno stato del digest da segnalare.",
       "unsupportedEncoding": "Nessun SignatureHandler installato è stato in grado di riconoscere la codifica della firma"
     },

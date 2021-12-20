@@ -6,7 +6,7 @@ import {
   FormControl, FormLabel, Input, Image,
   FormHelperText, Button, Center, Alert, Wrap, WrapItem, Box, Text
 
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 
 const UploadVideoClD = () => {

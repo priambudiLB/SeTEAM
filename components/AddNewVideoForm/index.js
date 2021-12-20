@@ -1,13 +1,13 @@
-import CardFrame from '../Card';
-import classes from './NewVideoForm.module.css';
-import { useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-import { Textarea } from '@chakra-ui/react';
+import CardFrame from "../Card";
+import classes from "./NewVideoForm.module.css";
+import { useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { Textarea } from "@chakra-ui/react";
 
 function AddNewVideoForm(props) {
 
-  const [vidSelected, setVidSelected] = useState('');
-  const [nameFile, setNameFile] = useState('');
+  const [vidSelected, setVidSelected] = useState("");
+  const [nameFile, setNameFile] = useState("");
 
   const titleVideo = useRef();
   const email = useRef();
@@ -38,20 +38,20 @@ function AddNewVideoForm(props) {
 
     // upload video
     const formData = new FormData();
-    formData.append('file', vidSelected);
-    formData.append('upload_preset', 'bqvneyqd');
+    formData.append("file", vidSelected);
+    formData.append("upload_preset", "bqvneyqd");
     // problem, data kredensial terlalu terexpose !!!!!!
-    const address = 'https://api.cloudinary.com/v1_1/di1kxmnrn/image/upload';
+    const address = "https://api.cloudinary.com/v1_1/di1kxmnrn/image/upload";
     fetch(address, {
-      method: 'POST', // or 'PUT',
+      method: "POST", // or "PUT",
       body: formData,
     })
       .then(data => {
-        console.log('success: ', data);
+        console.log("success: ", data);
 
       })
       .catch((error) => {
-        console.log('error: ', error);
+        console.log("error: ", error);
       });
 
     const infoData = {
@@ -68,11 +68,11 @@ function AddNewVideoForm(props) {
     };
     // console.log(infoData);
     props.onAddVideoData(infoData);
-    router.push('/AvailableCourses');
+    router.push("/AvailableCourses");
   }
 
   return (
-    <CardFrame bg={'black'}>
+    <CardFrame bg={"black"}>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title-video">Video Title</label>
