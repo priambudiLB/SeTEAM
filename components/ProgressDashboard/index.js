@@ -16,8 +16,8 @@ import {
   TableCaption,
   Heading,
   Flex,
-} from "@chakra-ui/react"
-import { Progress } from "@chakra-ui/react"
+} from "@chakra-ui/react";
+import { Progress } from "@chakra-ui/react";
 
 
 const ProgressDashboard = () => {
@@ -88,7 +88,6 @@ const ProgressDashboard = () => {
     </>
   );
 };
-
 
 
 export default ProgressDashboard;
